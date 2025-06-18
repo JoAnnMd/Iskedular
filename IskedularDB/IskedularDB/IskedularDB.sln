@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Version 21
+VisualStudioVersion = 17.14.36127.28 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "IskedularDB", "IskedularDB.ssmssqlproj", "{BC132343-F4A8-4016-AC57-87E626D537D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BC132343-F4A8-4016-AC57-87E626D537D0}.Default|Default.ActiveCfg = Default
+		{8E2BB37B-43FB-449A-A05D-C008F3FBDBAC}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {58D9DF8D-7DBC-4AB3-B998-EFF3E5C79084}
+	EndGlobalSection
+EndGlobal
