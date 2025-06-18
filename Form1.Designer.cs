@@ -39,7 +39,6 @@
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.textBox13 = new System.Windows.Forms.TextBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -47,6 +46,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -67,9 +67,9 @@
             // pictureBox2
             // 
             this.pictureBox2.BackColor = System.Drawing.Color.Maroon;
-            this.pictureBox2.Location = new System.Drawing.Point(1, 63);
+            this.pictureBox2.Location = new System.Drawing.Point(1, 69);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(309, 392);
+            this.pictureBox2.Size = new System.Drawing.Size(309, 384);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
@@ -77,7 +77,7 @@
             // 
             this.monthCalendar1.BackColor = System.Drawing.Color.Maroon;
             this.monthCalendar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.monthCalendar1.Location = new System.Drawing.Point(1, 66);
+            this.monthCalendar1.Location = new System.Drawing.Point(2, 71);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 3;
             this.monthCalendar1.TitleBackColor = System.Drawing.Color.DarkRed;
@@ -170,18 +170,6 @@
             this.textBox13.TabIndex = 92;
             this.textBox13.Text = "Iskedular";
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(14, 1);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(89, 62);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 93;
-            this.pictureBox4.TabStop = false;
-            // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -237,9 +225,9 @@
             this.label1.Font = new System.Drawing.Font("Elephant", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(354, 290);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 22);
+            this.label1.Size = new System.Drawing.Size(150, 22);
             this.label1.TabIndex = 97;
-            this.label1.Text = "zs";
+            this.label1.Text = "Announcement";
             // 
             // label2
             // 
@@ -266,18 +254,32 @@
             this.textBox8.TabIndex = 86;
             this.textBox8.Text = "Pending";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox4.Enabled = false;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(9, 1);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 99;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.textBox13);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.textBox12);
@@ -313,7 +315,6 @@
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
@@ -321,6 +322,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
 
