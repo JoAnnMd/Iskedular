@@ -1,12 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\ASUS\\source\\repos\\Iskedular_NewRoot - Copy\\Iskedular\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{804C39D9-9A22-4637-87F9-89622727F76E}|Iskedular.Data\\Iskedular.Data.csproj|c:\\users\\asus\\source\\repos\\iskedular_newroot - copy\\iskedular\\iskedular.data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{804C39D9-9A22-4637-87F9-89622727F76E}|Iskedular.Data\\Iskedular.Data.csproj|solutionrelative:iskedular.data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -31,19 +26,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\source\\repos\\Iskedular_NewRoot - Copy\\Iskedular\\Iskedular.Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Iskedular.Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\ASUS\\source\\repos\\Iskedular_NewRoot - Copy\\Iskedular\\Iskedular.Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Iskedular.Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAswBUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-21T08:54:30.901Z",
-              "EditorCaption": ""
             }
           ]
         }
