@@ -2714,23 +2714,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ASUS\\.nuget\\packages\\": {},
+    "C:\\Users\\Jo Ann\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ASUS\\source\\repos\\Iskedular_NewRoot - Copy\\Iskedular\\Iskedular.Core\\Iskedular.Core.csproj",
+      "projectUniqueName": "C:\\Users\\Jo Ann\\Downloads\\Iskedular - Copy - Copy\\Iskedular - Copy - Copy\\Iskedular.Core\\Iskedular.Core.csproj",
       "projectName": "Iskedular.Core",
-      "projectPath": "C:\\Users\\ASUS\\source\\repos\\Iskedular_NewRoot - Copy\\Iskedular\\Iskedular.Core\\Iskedular.Core.csproj",
-      "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ASUS\\source\\repos\\Iskedular_NewRoot - Copy\\Iskedular\\Iskedular.Core\\obj\\",
+      "projectPath": "C:\\Users\\Jo Ann\\Downloads\\Iskedular - Copy - Copy\\Iskedular - Copy - Copy\\Iskedular.Core\\Iskedular.Core.csproj",
+      "packagesPath": "C:\\Users\\Jo Ann\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Jo Ann\\Downloads\\Iskedular - Copy - Copy\\Iskedular - Copy - Copy\\Iskedular.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Jo Ann\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2784,7 +2784,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

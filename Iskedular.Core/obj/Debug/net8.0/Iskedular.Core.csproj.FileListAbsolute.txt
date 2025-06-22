@@ -11,3 +11,29 @@ C:\Users\ASUS\source\repos\Iskedular_NewRoot - Copy\Iskedular\Iskedular.Core\obj
 C:\Users\ASUS\source\repos\Iskedular_NewRoot - Copy\Iskedular\Iskedular.Core\obj\Debug\net8.0\refint\Iskedular.Core.dll
 C:\Users\ASUS\source\repos\Iskedular_NewRoot - Copy\Iskedular\Iskedular.Core\obj\Debug\net8.0\Iskedular.Core.pdb
 C:\Users\ASUS\source\repos\Iskedular_NewRoot - Copy\Iskedular\Iskedular.Core\obj\Debug\net8.0\ref\Iskedular.Core.dll
+C:\Users\i pc\Desktop\Iskedular - Copy\Iskedular.Core\bin\Debug\net8.0\Iskedular.Core.deps.json
+C:\Users\i pc\Desktop\Iskedular - Copy\Iskedular.Core\bin\Debug\net8.0\Iskedular.Core.dll
+C:\Users\i pc\Desktop\Iskedular - Copy\Iskedular.Core\bin\Debug\net8.0\Iskedular.Core.pdb
+C:\Users\i pc\Desktop\Iskedular - Copy\Iskedular.Core\obj\Debug\net8.0\Iskedular.Core.csproj.AssemblyReference.cache
+C:\Users\i pc\Desktop\Iskedular - Copy\Iskedular.Core\obj\Debug\net8.0\Iskedular.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\i pc\Desktop\Iskedular - Copy\Iskedular.Core\obj\Debug\net8.0\Iskedular.Core.AssemblyInfoInputs.cache
+C:\Users\i pc\Desktop\Iskedular - Copy\Iskedular.Core\obj\Debug\net8.0\Iskedular.Core.AssemblyInfo.cs
+C:\Users\i pc\Desktop\Iskedular - Copy\Iskedular.Core\obj\Debug\net8.0\Iskedular.Core.csproj.CoreCompileInputs.cache
+C:\Users\i pc\Desktop\Iskedular - Copy\Iskedular.Core\obj\Debug\net8.0\Iskedular.Core.sourcelink.json
+C:\Users\i pc\Desktop\Iskedular - Copy\Iskedular.Core\obj\Debug\net8.0\Iskedular.Core.dll
+C:\Users\i pc\Desktop\Iskedular - Copy\Iskedular.Core\obj\Debug\net8.0\refint\Iskedular.Core.dll
+C:\Users\i pc\Desktop\Iskedular - Copy\Iskedular.Core\obj\Debug\net8.0\Iskedular.Core.pdb
+C:\Users\i pc\Desktop\Iskedular - Copy\Iskedular.Core\obj\Debug\net8.0\ref\Iskedular.Core.dll
+C:\Users\Jo Ann\Downloads\Iskedular - Copy - Copy\Iskedular - Copy - Copy\Iskedular.Core\bin\Debug\net8.0\Iskedular.Core.deps.json
+C:\Users\Jo Ann\Downloads\Iskedular - Copy - Copy\Iskedular - Copy - Copy\Iskedular.Core\bin\Debug\net8.0\Iskedular.Core.dll
+C:\Users\Jo Ann\Downloads\Iskedular - Copy - Copy\Iskedular - Copy - Copy\Iskedular.Core\bin\Debug\net8.0\Iskedular.Core.pdb
+C:\Users\Jo Ann\Downloads\Iskedular - Copy - Copy\Iskedular - Copy - Copy\Iskedular.Core\obj\Debug\net8.0\Iskedular.Core.csproj.AssemblyReference.cache
+C:\Users\Jo Ann\Downloads\Iskedular - Copy - Copy\Iskedular - Copy - Copy\Iskedular.Core\obj\Debug\net8.0\Iskedular.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Jo Ann\Downloads\Iskedular - Copy - Copy\Iskedular - Copy - Copy\Iskedular.Core\obj\Debug\net8.0\Iskedular.Core.AssemblyInfoInputs.cache
+C:\Users\Jo Ann\Downloads\Iskedular - Copy - Copy\Iskedular - Copy - Copy\Iskedular.Core\obj\Debug\net8.0\Iskedular.Core.AssemblyInfo.cs
+C:\Users\Jo Ann\Downloads\Iskedular - Copy - Copy\Iskedular - Copy - Copy\Iskedular.Core\obj\Debug\net8.0\Iskedular.Core.csproj.CoreCompileInputs.cache
+C:\Users\Jo Ann\Downloads\Iskedular - Copy - Copy\Iskedular - Copy - Copy\Iskedular.Core\obj\Debug\net8.0\Iskedular.Core.sourcelink.json
+C:\Users\Jo Ann\Downloads\Iskedular - Copy - Copy\Iskedular - Copy - Copy\Iskedular.Core\obj\Debug\net8.0\Iskedular.Core.dll
+C:\Users\Jo Ann\Downloads\Iskedular - Copy - Copy\Iskedular - Copy - Copy\Iskedular.Core\obj\Debug\net8.0\refint\Iskedular.Core.dll
+C:\Users\Jo Ann\Downloads\Iskedular - Copy - Copy\Iskedular - Copy - Copy\Iskedular.Core\obj\Debug\net8.0\Iskedular.Core.pdb
+C:\Users\Jo Ann\Downloads\Iskedular - Copy - Copy\Iskedular - Copy - Copy\Iskedular.Core\obj\Debug\net8.0\ref\Iskedular.Core.dll

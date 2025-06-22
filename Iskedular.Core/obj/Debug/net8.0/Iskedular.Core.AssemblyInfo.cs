@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Iskedular.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+52b9aae294987983f885057b4ca2e5b75ca93083")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bc370b423ab63a2082417b2b5956fabaf48ed26c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Iskedular.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Iskedular.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
