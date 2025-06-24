@@ -1,5 +1,3 @@
---This section outlines the SQL scripts to create the database and tables in MS SQL Server, based on the provided schema diagram.
-
 -- Ensure proper error handling and batch separation
 SET NOCOUNT ON;
 SET XACT_ABORT ON; -- Abort the batch if a runtime error occurs
@@ -16,7 +14,6 @@ USE UniversityDB;
 GO
 
 -- 3. Create Tables (ensure these run before any DELETE/INSERT statements)
-
 -- Create the Role table
 IF NOT EXISTS (SELECT * FROM sysobjects WHERE id = OBJECT_ID(N'[dbo].[Role]') AND OBJECTPROPERTY(id, N'IsUserTable') = 1)
 BEGIN
@@ -93,11 +90,6 @@ END;
 GO
 
 -- 4. Clean up existing data before inserting new data
--- This order is crucial due to foreign key constraints:
--- Reservations references Users and Rooms
--- RoomFeatures references Rooms and Features
--- Users references Roles
--- So delete from dependent tables first.
 DELETE FROM Reservation;
 DELETE FROM RoomFeatures;
 DELETE FROM [User];
@@ -112,14 +104,7 @@ GO
 INSERT INTO Role (RoleName) VALUES ('Admin'), ('Faculty'), ('Student');
 GO
 
--- Users
-INSERT INTO [User] (User_Lname, User_Fname, User_Mname, Email, Password, RoleID) VALUES
-('Smith', 'John', NULL, 'john.smith@university.edu', 'hashedpassword1', (SELECT RoleID FROM Role WHERE RoleName = 'Admin')),
-('Doe', 'Jane', 'A', 'jane.doe@university.edu', 'hashedpassword2', (SELECT RoleID FROM Role WHERE RoleName = 'Faculty')),
-('Williams', 'Alice', NULL, 'alice.williams@university.edu', 'hashedpassword3', (SELECT RoleID FROM Role WHERE RoleName = 'Student'));
-GO
-
--- Features (updated based on new room details)
+-- Features
 INSERT INTO Features (FeatureName) VALUES
 ('Whiteboard'),
 ('Projector'),
@@ -128,7 +113,7 @@ INSERT INTO Features (FeatureName) VALUES
 ('Air conditioning');
 GO
 
--- Rooms (updated based on new details)
+-- Rooms
 INSERT INTO Room (RoomNumber, Capacity) VALUES
 ('Room 101', 30),
 ('Room 102', 30),
@@ -232,10 +217,4 @@ INSERT INTO RoomFeatures (RoomID, FeatureID) VALUES
 ((SELECT RoomID FROM Room WHERE RoomNumber = '(AVR) Audio visual room'), (SELECT FeatureID FROM Features WHERE FeatureName = 'Whiteboard')),
 ((SELECT RoomID FROM Room WHERE RoomNumber = '(AVR) Audio visual room'), (SELECT FeatureID FROM Features WHERE FeatureName = 'TV')),
 ((SELECT RoomID FROM Room WHERE RoomNumber = '(AVR) Audio visual room'), (SELECT FeatureID FROM Features WHERE FeatureName = 'Air conditioning'));
-GO
-
--- Reservations (example)
-INSERT INTO Reservation (Start_time, End_time, UserID, RoomID) VALUES
-('2025-07-01 09:00:00', '2025-07-01 10:00:00', (SELECT UserID FROM [User] WHERE Email = 'john.smith@university.edu'), (SELECT RoomID FROM Room WHERE RoomNumber = 'Room 101')),
-('2025-07-01 11:00:00', '2025-07-01 12:00:00', (SELECT UserID FROM [User] WHERE Email = 'jane.doe@university.edu'), (SELECT RoomID FROM Room WHERE RoomNumber = 'Computer Laboratory'));
 GO
