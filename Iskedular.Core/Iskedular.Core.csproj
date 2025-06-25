@@ -1,14 +1,23 @@
-<Project Sdk="Microsoft.NET.Sdk">
+    <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-    <RootNamespace>Iskedular.Core</RootNamespace>
-  </PropertyGroup>
+      <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>Iskedular.Core</RootNamespace>
+      </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.17" />
-  </ItemGroup>
+      <ItemGroup>
+        <PackageReference Include="BCrypt.Net-Core" Version="1.6.0" />
+        <!-- REMOVED: Microsoft.EntityFrameworkCore.SqlServer as it's not directly needed in Core now -->
+      </ItemGroup>
 
-</Project>
+      <ItemGroup>
+        <!-- This reference is necessary for UserService to use ApplicationDbContext -->
+        <ProjectReference Include="..\Iskedular.Data\Iskedular.Data.csproj" />
+        <!-- ADDED: Project Reference to Iskedular.Models -->
+        <ProjectReference Include="..\Iskedular.Models\Iskedular.Models.csproj" />
+      </ItemGroup>
+
+    </Project>
+    
