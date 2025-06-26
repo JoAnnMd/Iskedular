@@ -1,5 +1,4 @@
-﻿// In Iskedular.Core/Models/Room.cs (Adjust namespace if different, e.g., Iskedular.Core.Models)
-using System.Collections.Generic;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace Iskedular.Models
 {
@@ -7,23 +6,36 @@ namespace Iskedular.Models
     {
         public int Id { get; set; }
 
-        // Non-nullable string property initialized in the constructor
-        public string Name { get; set; } // e.g., "Room 401" or "Computer Lab A"
+        [Required(ErrorMessage = "Room Name is required.")]
+        [MaxLength(100)]
+        public string Name { get; set; } = string.Empty;
 
+        [Required(ErrorMessage = "Capacity is required.")]
+        [Range(1, int.MaxValue, ErrorMessage = "Capacity must be at least 1.")]
         public int Capacity { get; set; }
+
+        // Existing features
         public bool HasProjector { get; set; }
+
         public bool HasWhiteboard { get; set; }
-        // Add any other features as simple boolean flags
 
-        // Navigation property: A room can have many reservations.
-        // Collections should always be initialized to prevent NullReferenceExceptions
-        public virtual ICollection<Reservation> Reservations { get; set; }
+        // NEW FEATURES ADDED BELOW:
 
-        // Constructor to initialize non-nullable reference type properties
-        public Room()
-        {
-            Name = string.Empty; // Initialize string to empty
-            Reservations = new List<Reservation>(); // Initialize the collection
-        }
+        // Indicates if the room has a TV.
+        public bool HasTV { get; set; }
+
+        // Indicates if the room has Air Conditioning.
+        public bool HasAirConditioning { get; set; }
+
+        // Indicates if the room has a Sound System.
+        public bool HasSoundSystem { get; set; }
+
+        // Stores the number of computers in the room. Default to 0 if not applicable.
+        public int NumberOfComputers { get; set; } = 0; // Default to 0, since not all rooms have computers.
+
+        // Stores the floor on which the room is located.
+        [Required(ErrorMessage = "Floor information is required.")]
+        [MaxLength(50)]
+        public string Floor { get; set; } = string.Empty; // e.g., "1st Floor", "2nd Floor"
     }
 }

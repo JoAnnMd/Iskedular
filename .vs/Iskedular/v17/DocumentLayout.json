@@ -3,43 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|c:\\users\\asus\\downloads\\updated_u.i (2)\\updated_u.i\\ui_winforms\\user pages\\form6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|solutionrelative:ui_winforms\\user pages\\form6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|c:\\users\\asus\\downloads\\updated_u.i (2)\\updated_u.i\\ui_winforms\\admin pages\\formaddeditroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|solutionrelative:ui_winforms\\admin pages\\formaddeditroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\ui_winforms\\user pages\\form6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|solutionrelative:ui_winforms\\user pages\\form6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|c:\\users\\asus\\downloads\\updated_u.i (2)\\updated_u.i\\ui_winforms\\admin pages\\form18.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|solutionrelative:ui_winforms\\admin pages\\form18.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\ui_winforms\\admin pages\\form18.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|solutionrelative:ui_winforms\\admin pages\\form18.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|c:\\users\\asus\\downloads\\updated_u.i (2)\\updated_u.i\\ui_winforms\\admin pages\\adminlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|solutionrelative:ui_winforms\\admin pages\\adminlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\ui_winforms\\admin pages\\adminlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|solutionrelative:ui_winforms\\admin pages\\adminlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|c:\\users\\asus\\downloads\\updated_u.i (2)\\updated_u.i\\ui_winforms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|solutionrelative:ui_winforms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01DCE831-FE23-4805-AEBC-450ADAA09289}|Iskedular.Core\\Iskedular.Core.csproj|c:\\users\\asus\\downloads\\updated_u.i (2)\\updated_u.i\\iskedular.core\\services\\sessionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01DCE831-FE23-4805-AEBC-450ADAA09289}|Iskedular.Core\\Iskedular.Core.csproj|solutionrelative:iskedular.core\\services\\sessionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/IskedularDb/True/SqlTable/dbo.Rooms.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/IskedularDb/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{804C39D9-9A22-4637-87F9-89622727F76E}|Iskedular.Data\\Iskedular.Data.csproj|c:\\users\\asus\\downloads\\updated_u.i (2)\\updated_u.i\\iskedular.data\\migrations\\20250625184940_initialcleansetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{804C39D9-9A22-4637-87F9-89622727F76E}|Iskedular.Data\\Iskedular.Data.csproj|solutionrelative:iskedular.data\\migrations\\20250625184940_initialcleansetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\Iskedular.Data\\Migrations\\20250626154601_rooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Iskedular.Data\\Migrations\\20250626154601_rooms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|c:\\users\\asus\\downloads\\updated_u.i (2)\\updated_u.i\\ui_winforms\\admin pages\\form13.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|solutionrelative:ui_winforms\\admin pages\\form13.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -49,8 +28,21 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FormAddEditRoom.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\UI_WinForms\\ADMIN PAGES\\FormAddEditRoom.cs",
+              "RelativeDocumentMoniker": "UI_WinForms\\ADMIN PAGES\\FormAddEditRoom.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\UI_WinForms\\ADMIN PAGES\\FormAddEditRoom.cs",
+              "RelativeToolTip": "UI_WinForms\\ADMIN PAGES\\FormAddEditRoom.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAuwB4AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T15:53:31.205Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -65,120 +57,48 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "dbo.Rooms [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/IskedularDb/True/SqlTable/dbo.Rooms.sql",
+              "ToolTip": "dbo.Rooms [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-06-26T15:47:34.529Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Form18.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\UI_WinForms\\ADMIN PAGES\\Form18.cs",
-              "RelativeDocumentMoniker": "UI_WinForms\\ADMIN PAGES\\Form18.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\UI_WinForms\\ADMIN PAGES\\Form18.cs",
-              "RelativeToolTip": "UI_WinForms\\ADMIN PAGES\\Form18.cs",
-              "ViewState": "AgIAAHsAAAAAAAAAAAAzwH4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T19:10:34.828Z",
+              "Title": "dbo.Users [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/IskedularDb/True/SqlTable/dbo.Users.sql",
+              "ToolTip": "dbo.Users [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-06-26T15:47:02.286Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Form18.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\UI_WinForms\\ADMIN PAGES\\Form18.cs",
-              "RelativeDocumentMoniker": "UI_WinForms\\ADMIN PAGES\\Form18.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\UI_WinForms\\ADMIN PAGES\\Form18.cs [Design]",
-              "RelativeToolTip": "UI_WinForms\\ADMIN PAGES\\Form18.cs [Design]",
+              "Title": "20250626154601_rooms.cs",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\Iskedular.Data\\Migrations\\20250626154601_rooms.cs",
+              "RelativeDocumentMoniker": "Iskedular.Data\\Migrations\\20250626154601_rooms.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\Iskedular.Data\\Migrations\\20250626154601_rooms.cs",
+              "RelativeToolTip": "Iskedular.Data\\Migrations\\20250626154601_rooms.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T19:10:31.231Z"
+              "WhenOpened": "2025-06-26T15:46:01.403Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "AdminLogin.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\UI_WinForms\\ADMIN PAGES\\AdminLogin.cs",
-              "RelativeDocumentMoniker": "UI_WinForms\\ADMIN PAGES\\AdminLogin.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\UI_WinForms\\ADMIN PAGES\\AdminLogin.cs",
-              "RelativeToolTip": "UI_WinForms\\ADMIN PAGES\\AdminLogin.cs",
-              "ViewState": "AgIAAHYAAAAAAAAAAAA4wIcAAAAAAAAAAAAAAA==",
+              "Title": "Form13.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\UI_WinForms\\ADMIN PAGES\\Form13.cs",
+              "RelativeDocumentMoniker": "UI_WinForms\\ADMIN PAGES\\Form13.cs",
+              "ToolTip": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\UI_WinForms\\ADMIN PAGES\\Form13.cs [Design]",
+              "RelativeToolTip": "UI_WinForms\\ADMIN PAGES\\Form13.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T19:09:40.433Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AdminLogin.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\UI_WinForms\\ADMIN PAGES\\AdminLogin.cs",
-              "RelativeDocumentMoniker": "UI_WinForms\\ADMIN PAGES\\AdminLogin.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\UI_WinForms\\ADMIN PAGES\\AdminLogin.cs [Design]",
-              "RelativeToolTip": "UI_WinForms\\ADMIN PAGES\\AdminLogin.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T19:09:35.846Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\UI_WinForms\\Program.cs",
-              "RelativeDocumentMoniker": "UI_WinForms\\Program.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\UI_WinForms\\Program.cs",
-              "RelativeToolTip": "UI_WinForms\\Program.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAA4wFQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T19:08:06.656Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SessionService.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\Iskedular.Core\\Services\\SessionService.cs",
-              "RelativeDocumentMoniker": "Iskedular.Core\\Services\\SessionService.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\Iskedular.Core\\Services\\SessionService.cs",
-              "RelativeToolTip": "Iskedular.Core\\Services\\SessionService.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAiwBgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T19:06:56.167Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form6.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\UI_WinForms\\USER PAGES\\Form6.cs",
-              "RelativeDocumentMoniker": "UI_WinForms\\USER PAGES\\Form6.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\UI_WinForms\\USER PAGES\\Form6.cs",
-              "RelativeToolTip": "UI_WinForms\\USER PAGES\\Form6.cs",
-              "ViewState": "AgIAAKkAAAAAAAAAAAA4wLcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T18:56:15.556Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form6.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\UI_WinForms\\USER PAGES\\Form6.cs",
-              "RelativeDocumentMoniker": "UI_WinForms\\USER PAGES\\Form6.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\UI_WinForms\\USER PAGES\\Form6.cs [Design]",
-              "RelativeToolTip": "UI_WinForms\\USER PAGES\\Form6.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T18:55:58.952Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "dbo.Users.sql",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/IskedularDb/True/SqlTable/dbo.Users.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/IskedularDb/True/SqlTable/dbo.Users.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-06-25T18:51:19.975Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "20250625184940_InitialCleanSetup.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\Iskedular.Data\\Migrations\\20250625184940_InitialCleanSetup.cs",
-              "RelativeDocumentMoniker": "Iskedular.Data\\Migrations\\20250625184940_InitialCleanSetup.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\Iskedular.Data\\Migrations\\20250625184940_InitialCleanSetup.cs",
-              "RelativeToolTip": "Iskedular.Data\\Migrations\\20250625184940_InitialCleanSetup.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T18:49:40.796Z"
+              "WhenOpened": "2025-06-26T15:41:00.64Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

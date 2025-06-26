@@ -1,0 +1,13 @@
+C:\Users\ASUS\Downloads\updated_U.I (2)\updated_U.I\Iskedular.Models\bin\Debug\net8.0\Iskedular.Models.deps.json
+C:\Users\ASUS\Downloads\updated_U.I (2)\updated_U.I\Iskedular.Models\bin\Debug\net8.0\Iskedular.Models.dll
+C:\Users\ASUS\Downloads\updated_U.I (2)\updated_U.I\Iskedular.Models\bin\Debug\net8.0\Iskedular.Models.pdb
+C:\Users\ASUS\Downloads\updated_U.I (2)\updated_U.I\Iskedular.Models\obj\Debug\net8.0\Iskedular.Models.csproj.AssemblyReference.cache
+C:\Users\ASUS\Downloads\updated_U.I (2)\updated_U.I\Iskedular.Models\obj\Debug\net8.0\Iskedular.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\Downloads\updated_U.I (2)\updated_U.I\Iskedular.Models\obj\Debug\net8.0\Iskedular.Models.AssemblyInfoInputs.cache
+C:\Users\ASUS\Downloads\updated_U.I (2)\updated_U.I\Iskedular.Models\obj\Debug\net8.0\Iskedular.Models.AssemblyInfo.cs
+C:\Users\ASUS\Downloads\updated_U.I (2)\updated_U.I\Iskedular.Models\obj\Debug\net8.0\Iskedular.Models.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Downloads\updated_U.I (2)\updated_U.I\Iskedular.Models\obj\Debug\net8.0\Iskedular.Models.sourcelink.json
+C:\Users\ASUS\Downloads\updated_U.I (2)\updated_U.I\Iskedular.Models\obj\Debug\net8.0\Iskedular.Models.dll
+C:\Users\ASUS\Downloads\updated_U.I (2)\updated_U.I\Iskedular.Models\obj\Debug\net8.0\refint\Iskedular.Models.dll
+C:\Users\ASUS\Downloads\updated_U.I (2)\updated_U.I\Iskedular.Models\obj\Debug\net8.0\Iskedular.Models.pdb
+C:\Users\ASUS\Downloads\updated_U.I (2)\updated_U.I\Iskedular.Models\obj\Debug\net8.0\ref\Iskedular.Models.dll
