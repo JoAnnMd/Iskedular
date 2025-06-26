@@ -13,99 +13,93 @@ namespace UI_WinForms
         public Form3()
         {
             InitializeComponent();
-            _context = RuntimeDbContextFactory.Create(); // ✅ fixed constructor usage
+            _context = RuntimeDbContextFactory.Create();
 
-            LoadRooms();
-            LoadTimeSlots();
+            LoadRooms();      // 💡 loads into comboBox1
+            LoadTimeSlots();  // 💡 loads into comboBox2
         }
+
 
         private void LoadRooms()
         {
             var rooms = _context.Rooms.ToList();
             comboBox1.DataSource = rooms;
-            comboBox1.DisplayMember = "Name"; // Make sure Room model has a Name property
-            comboBox1.ValueMember = "Id";
+            comboBox1.DisplayMember = "Name";     // What the user sees
+            comboBox1.ValueMember = "Id";         // What SelectedValue returns
         }
+
+
+
+
 
         private void LoadTimeSlots()
         {
             comboBox2.Items.Clear();
-            comboBox2.Items.AddRange(new string[]
+
+            for (int hour = 6; hour < 21; hour++) // From 6 AM to 8 PM (last slot ends 9 PM)
             {
-                "8:00am - 12:00pm",
-                "1:00pm - 5:00pm",
-                "5:00pm - 9:00pm"
-            });
+                var start = DateTime.Today.AddHours(hour);
+                var end = start.AddHours(1);
+                comboBox2.Items.Add($"{start:hh\\:mmtt} - {end:hh\\:mmtt}".ToLower());
+            }
+
             comboBox2.SelectedIndex = 0;
         }
 
+
         private void button2_Click(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedValue is not int selectedRoomId)
+            if (comboBox1.SelectedItem is not Room selectedRoom)
             {
                 MessageBox.Show("No room selected.");
                 return;
             }
 
-            var selectedRoom = _context.Rooms.FirstOrDefault(r => r.Id == selectedRoomId);
             var selectedTime = comboBox2.Text;
             var selectedDate = monthCalendar1.SelectionStart.Date;
             var purpose = textBox11.Text.Trim();
             var professor = textBox13.Text.Trim();
-            int userId = 1; // Placeholder
+            int userId = 1;
 
             DateTime startTime, endTime;
-            switch (selectedTime)
+
+            try
             {
-                case "8:00am - 12:00pm":
-                    startTime = selectedDate.AddHours(8);
-                    endTime = selectedDate.AddHours(12);
-                    break;
-                case "1:00pm - 5:00pm":
-                    startTime = selectedDate.AddHours(13);
-                    endTime = selectedDate.AddHours(17);
-                    break;
-                case "5:00pm - 9:00pm":
-                    startTime = selectedDate.AddHours(17);
-                    endTime = selectedDate.AddHours(21);
-                    break;
-                default:
-                    MessageBox.Show("Invalid time slot selected.");
-                    return;
+                // Split the selected time string like "6:00am - 7:00am"
+                var parts = selectedTime.Split(" - ");
+                var start = DateTime.Parse(parts[0]);
+                var end = DateTime.Parse(parts[1]);
+
+                // Combine the selected date with the time part
+                startTime = selectedDate.Add(start.TimeOfDay);
+                endTime = selectedDate.Add(end.TimeOfDay);
             }
-
-            bool isAlreadyBooked = _context.Reservations.Any(r =>
-                r.RoomId == selectedRoomId &&
-                r.StartTime == startTime &&
-                r.EndTime == endTime
-            );
-
-            if (isAlreadyBooked)
+            catch
             {
-                MessageBox.Show("This room is already booked for the selected time and date.");
+                MessageBox.Show("Invalid time slot selected.");
                 return;
             }
 
-            var reservation = new Reservation
+
+            var pending = new PendingReservation
             {
-                RoomId = selectedRoomId,
-                UserId = userId,
+                RoomId = selectedRoom.Id,
+                RoomName = selectedRoom.Name,
                 Purpose = purpose,
                 StartTime = startTime,
                 EndTime = endTime,
-                Status = ReservationStatus.Pending
+                UserId = userId
             };
 
-            _context.Reservations.Add(reservation);
-            _context.SaveChanges();
-
-            MessageBox.Show("Reservation booked successfully!");
+            var confirmForm = new Form5(pending);
+            confirmForm.ShowDialog(); // Wait until user confirms or cancels
         }
 
-        // Placeholder buttons
+
+        // Nav buttons (can be modified later)
         private void button5_Click(object sender, EventArgs e) => MessageBox.Show("Home clicked");
         private void button6_Click(object sender, EventArgs e) => MessageBox.Show("Reserve clicked");
         private void button7_Click(object sender, EventArgs e) => MessageBox.Show("Rooms clicked");
-        private void button4_Click(object sender, EventArgs e) => Close(); // Exit or logout
+        private void button4_Click(object sender, EventArgs e) => Close(); // Exit
     }
 }

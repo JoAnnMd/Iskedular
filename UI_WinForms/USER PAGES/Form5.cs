@@ -1,87 +1,68 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+﻿using Iskedular.Data;
+using Iskedular.Models;
+using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace UI_WinForms
 {
     public partial class Form5 : Form
     {
-        public Form5()
+        private readonly PendingReservation _pending;
+        private readonly ApplicationDbContext _context;
+
+        public Form5(PendingReservation pending)
         {
             InitializeComponent();
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            // --- Placeholder for final database saving logic (Future Implementation) ---
-            // This is where you would take the confirmed data (which you'd likely pass
-            // from Form3 to Form5, or retrieve from Form5's displayed fields)
-            // and commit it to your database via your EF Core service.
-
-            // Example:
-            // bool saveSuccess = _reservationService.ConfirmAndSaveBooking(confirmedBookingData);
-            // if (saveSuccess)
-            // {
-            //     MessageBox.Show("Booking confirmed and saved!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            // }
-            // else
-            // {
-            //     MessageBox.Show("Failed to save booking. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //     // Maybe return to Form3 or show an error screen
-            //     return;
-            // }
-
-            // For now, we'll simulate successful saving.
-            MessageBox.Show("Information saved! (Simulated)", "Save Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            // --- Navigate back to Form1 (Dashboard) ---
-            Form1 dashboardForm = new Form1(); // Create an instance of Form1
-            dashboardForm.Show();              // Show Form1
-            this.Hide();                       // Hide Form5
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
+            _pending = pending;
+            _context = RuntimeDbContextFactory.Create(); // Use same factory as Form3
         }
 
         private void Form5_Load(object sender, EventArgs e)
         {
-
+            // Display formatted booking info in the center box
+            textBox10.Text =
+                $"Room: {_pending.RoomName}\r\n" +
+                $"Date: {_pending.StartTime:MMMM dd, yyyy}\r\n" +
+                $"Time: {_pending.StartTime:hh:mm tt} - {_pending.EndTime:hh:mm tt}\r\n" +
+                $"Purpose: {_pending.Purpose}";
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e) // ✅ Confirm Booking
         {
-            // --- Navigate back to Form3 (Reserve/Edit screen) ---
-            Form3 reserveForm = new Form3(); // Create an instance of Form3
-            reserveForm.Show();              // Show Form3
-            this.Hide();                     // Hide Form5
+            // Check if the room is already booked for the same time slot
+            bool isBooked = _context.Reservations.Any(r =>
+                r.RoomId == _pending.RoomId &&
+                r.StartTime == _pending.StartTime &&
+                r.EndTime == _pending.EndTime);
+
+            if (isBooked)
+            {
+                MessageBox.Show("The room is already booked for the selected time.");
+                this.Close();
+                return;
+            }
+
+            var reservation = new Reservation
+            {
+                RoomId = _pending.RoomId,
+                Purpose = _pending.Purpose,
+                UserId = _pending.UserId,
+                StartTime = _pending.StartTime,
+                EndTime = _pending.EndTime,
+                Status = ReservationStatus.Pending
+            };
+
+            _context.Reservations.Add(reservation);
+            _context.SaveChanges();
+            MessageBox.Show("Reservation confirmed successfully!");
+            this.Close();
+        }
+
+        private void button4_Click(object sender, EventArgs e) // ❎ Cancel
+        {
+            MessageBox.Show("Reservation was cancelled.");
+            this.Close();
         }
     }
 }

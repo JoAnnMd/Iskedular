@@ -14,7 +14,7 @@ namespace UI_WinForms
         private DataGridView dgvBookings;
         private ComboBox cmbStatus;
         private Button btnUpdateStatus;
-        private ApplicationDbContext db = new ApplicationDbContextFactory().CreateDbContext(null); // ✅
+        private ApplicationDbContext db = new ApplicationDbContextFactory().CreateDbContext(null); 
 
 
         public admin_bookings()
@@ -112,7 +112,6 @@ namespace UI_WinForms
             }
         }
 
-        // ✅ Add missing event handlers from the Designer
 
         private void button1_Click(object sender, EventArgs e)
         {

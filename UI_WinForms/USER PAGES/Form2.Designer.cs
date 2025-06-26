@@ -129,7 +129,7 @@
             textBox3.Size = new Size(76, 16);
             textBox3.TabIndex = 19;
             textBox3.Text = "LEGEND:";
-            textBox3.TextChanged += textBox3_TextChanged;
+          //  textBox3.TextChanged += textBox3_TextChanged;
             // 
             // panel1
             // 
@@ -149,7 +149,7 @@
             label1.Size = new Size(67, 19);
             label1.TabIndex = 21;
             label1.Text = "Available";
-            label1.Click += label1_Click_1;
+            // label1.Click += label1_Click_1;
             // 
             // panel2
             // 
@@ -178,7 +178,7 @@
             label2.Size = new Size(70, 19);
             label2.TabIndex = 23;
             label2.Text = "Occupied";
-            label2.Click += label2_Click;
+            //label2.Click += label2_Click;
             // 
             // label3
             // 
@@ -200,7 +200,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(478, 333);
             textBox1.TabIndex = 25;
-            textBox1.TextChanged += textBox1_TextChanged;
+            //textBox1.TextChanged += textBox1_TextChanged;
             // 
             // panel4
             // 
@@ -229,7 +229,7 @@
             panel5.Name = "panel5";
             panel5.Size = new Size(28, 24);
             panel5.TabIndex = 22;
-            panel5.Paint += panel5_Paint;
+           // panel5.Paint += panel5_Paint;
             // 
             // label5
             // 
@@ -240,7 +240,7 @@
             label5.Size = new Size(65, 15);
             label5.TabIndex = 28;
             label5.Text = "Gymnasium";
-            label5.Click += label5_Click;
+            // label5.Click += label5_Click;
             // 
             // panel6
             // 
@@ -418,6 +418,7 @@
             panel18.Name = "panel18";
             panel18.Size = new Size(28, 24);
             panel18.TabIndex = 29;
+            // panel18.Paint += panel18_Paint;
             // 
             // label12
             // 
@@ -563,7 +564,7 @@
             label21.Size = new Size(31, 15);
             label21.TabIndex = 44;
             label21.Text = "AVR";
-            label21.Click += label21_Click;
+            //label21.Click += label21_Click;
             // 
             // label23
             // 
@@ -574,7 +575,7 @@
             label23.Size = new Size(57, 15);
             label23.TabIndex = 46;
             label23.Text = "COMLAB";
-            label23.Click += label23_Click;
+            // label23.Click += label23_Click;
             // 
             // panel24
             // 
