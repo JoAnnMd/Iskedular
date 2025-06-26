@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "4t0y5H/Cl0U=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\Iskedular.Models\\Iskedular.Models.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ASUS\\.nuget\\packages\\bcrypt.net-core\\1.6.0\\bcrypt.net-core.1.6.0.nupkg.sha512",
+    "C:\\Users\\ASUS\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

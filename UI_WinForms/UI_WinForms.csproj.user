@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Update="ADMIN PAGES\admin bookings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ADMIN PAGES\AdminLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ADMIN PAGES\Available Rooms.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ADMIN PAGES\Form10.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ADMIN PAGES\Form11.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ADMIN PAGES\Form12.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ADMIN PAGES\Form13.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ADMIN PAGES\Form15.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ADMIN PAGES\Form16.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ADMIN PAGES\Form17.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ADMIN PAGES\Form18.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ADMIN PAGES\Form9.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ADMIN PAGES\FormAddEditRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="FIRST PROPMPT\Form19.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="USER PAGES\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="USER PAGES\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="USER PAGES\Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="USER PAGES\Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="USER PAGES\Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="USER PAGES\Form6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="USER PAGES\Form7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="USER PAGES\Form8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
