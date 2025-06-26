@@ -88,6 +88,11 @@ namespace UI_WinForms
             confirmationForm.Show();              // Show Form5
             this.Hide();                          // Hide Form3
         }
+
+        private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

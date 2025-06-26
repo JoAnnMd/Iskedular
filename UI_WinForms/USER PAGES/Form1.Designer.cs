@@ -29,250 +29,93 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            monthCalendar1 = new MonthCalendar();
-            pictureBox3 = new PictureBox();
-            textBox10 = new TextBox();
-            textBox7 = new TextBox();
-            textBox11 = new TextBox();
-            textBox12 = new TextBox();
-            button4 = new Button();
+            tableLayoutPanel1 = new TableLayoutPanel();
             textBox13 = new TextBox();
             button5 = new Button();
             button7 = new Button();
-            button6 = new Button();
-            textBox6 = new TextBox();
-            label1 = new Label();
-            label2 = new Label();
-            textBox8 = new TextBox();
             pictureBox4 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            button6 = new Button();
+            button4 = new Button();
+            sqlCommand1 = new Microsoft.Data.SqlClient.SqlCommand();
+            monthCalendar1 = new MonthCalendar();
+            tableLayoutPanel2 = new TableLayoutPanel();
+            tableLayoutPanel3 = new TableLayoutPanel();
+            label2 = new Label();
+            label1 = new Label();
+            textBox12 = new TextBox();
+            textBox11 = new TextBox();
+            textBox7 = new TextBox();
+            textBox10 = new TextBox();
+            tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            tableLayoutPanel2.SuspendLayout();
+            tableLayoutPanel3.SuspendLayout();
             SuspendLayout();
             // 
-            // pictureBox1
+            // tableLayoutPanel1
             // 
-            pictureBox1.BackColor = Color.FromArgb(192, 0, 0);
-            pictureBox1.BackgroundImageLayout = ImageLayout.None;
-            pictureBox1.Location = new Point(1, -2);
-            pictureBox1.Margin = new Padding(3, 4, 3, 4);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(800, 89);
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
-            pictureBox1.Click += pictureBox1_Click;
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.BackColor = Color.Maroon;
-            pictureBox2.Location = new Point(1, 89);
-            pictureBox2.Margin = new Padding(3, 4, 3, 4);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(263, 477);
-            pictureBox2.TabIndex = 2;
-            pictureBox2.TabStop = false;
-            // 
-            // monthCalendar1
-            // 
-            monthCalendar1.BackColor = Color.Maroon;
-            monthCalendar1.ForeColor = Color.FromArgb(255, 192, 192);
-            monthCalendar1.Location = new Point(2, 86);
-            monthCalendar1.Margin = new Padding(9, 11, 9, 11);
-            monthCalendar1.Name = "monthCalendar1";
-            monthCalendar1.TabIndex = 3;
-            monthCalendar1.TitleBackColor = Color.DarkRed;
-            monthCalendar1.TitleForeColor = Color.White;
-            monthCalendar1.TrailingForeColor = Color.LightGray;
-            monthCalendar1.DateChanged += monthCalendar1_DateChanged;
-            // 
-            // pictureBox3
-            // 
-            pictureBox3.BackColor = Color.Maroon;
-            pictureBox3.Location = new Point(357, 185);
-            pictureBox3.Margin = new Padding(3, 4, 3, 4);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(1, 1);
-            pictureBox3.TabIndex = 10;
-            pictureBox3.TabStop = false;
-            // 
-            // textBox10
-            // 
-            textBox10.BackColor = SystemColors.ScrollBar;
-            textBox10.BorderStyle = BorderStyle.FixedSingle;
-            textBox10.Location = new Point(339, 399);
-            textBox10.Margin = new Padding(3, 4, 3, 4);
-            textBox10.Multiline = true;
-            textBox10.Name = "textBox10";
-            textBox10.ReadOnly = true;
-            textBox10.Size = new Size(442, 148);
-            textBox10.TabIndex = 15;
-            // 
-            // textBox7
-            // 
-            textBox7.BackColor = Color.Maroon;
-            textBox7.BorderStyle = BorderStyle.None;
-            textBox7.Font = new Font("Segoe UI Emoji", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox7.ForeColor = Color.White;
-            textBox7.Location = new Point(370, 188);
-            textBox7.Margin = new Padding(3, 4, 3, 4);
-            textBox7.Name = "textBox7";
-            textBox7.ReadOnly = true;
-            textBox7.Size = new Size(53, 18);
-            textBox7.TabIndex = 85;
-            textBox7.Text = "Status: ";
-            textBox7.TextChanged += textBox7_TextChanged_1;
-            // 
-            // textBox11
-            // 
-            textBox11.BackColor = Color.Maroon;
-            textBox11.BorderStyle = BorderStyle.None;
-            textBox11.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox11.ForeColor = Color.White;
-            textBox11.Location = new Point(370, 234);
-            textBox11.Margin = new Padding(3, 4, 3, 4);
-            textBox11.Multiline = true;
-            textBox11.Name = "textBox11";
-            textBox11.ReadOnly = true;
-            textBox11.Size = new Size(156, 28);
-            textBox11.TabIndex = 87;
-            textBox11.Text = "Laboratory Room";
-            textBox11.TextChanged += textBox11_TextChanged;
-            // 
-            // textBox12
-            // 
-            textBox12.BackColor = Color.Maroon;
-            textBox12.BorderStyle = BorderStyle.None;
-            textBox12.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox12.ForeColor = Color.White;
-            textBox12.Location = new Point(370, 280);
-            textBox12.Margin = new Padding(3, 4, 3, 4);
-            textBox12.Multiline = true;
-            textBox12.Name = "textBox12";
-            textBox12.ReadOnly = true;
-            textBox12.Size = new Size(258, 42);
-            textBox12.TabIndex = 88;
-            textBox12.Text = "June 15, 8:00am - 12:00pm";
-            // 
-            // button4
-            // 
-            button4.Image = (Image)resources.GetObject("button4.Image");
-            button4.Location = new Point(733, 22);
-            button4.Margin = new Padding(3, 4, 3, 4);
-            button4.Name = "button4";
-            button4.Size = new Size(55, 51);
-            button4.TabIndex = 90;
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            tableLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel1.BackColor = Color.FromArgb(192, 0, 0);
+            tableLayoutPanel1.ColumnCount = 6;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 90F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 315F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 156F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 83F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 78F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 26F));
+            tableLayoutPanel1.Controls.Add(pictureBox4, 0, 0);
+            tableLayoutPanel1.Controls.Add(button5, 2, 0);
+            tableLayoutPanel1.Controls.Add(button4, 5, 0);
+            tableLayoutPanel1.Controls.Add(button7, 3, 0);
+            tableLayoutPanel1.Controls.Add(button6, 4, 0);
+            tableLayoutPanel1.Controls.Add(textBox13, 1, 0);
+            tableLayoutPanel1.Location = new Point(1, -1);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 1;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 87F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.Size = new Size(809, 95);
+            tableLayoutPanel1.TabIndex = 99;
             // 
             // textBox13
             // 
             textBox13.BackColor = Color.FromArgb(192, 0, 0);
             textBox13.BorderStyle = BorderStyle.None;
-            textBox13.Font = new Font("Elephant", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            textBox13.Font = new Font("Elephant", 16.1999989F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             textBox13.ForeColor = Color.White;
-            textBox13.Location = new Point(82, 29);
-            textBox13.Margin = new Padding(3, 4, 3, 4);
+            textBox13.Location = new Point(120, 30);
+            textBox13.Margin = new Padding(30, 30, 3, 4);
             textBox13.Multiline = true;
             textBox13.Name = "textBox13";
-            textBox13.Size = new Size(146, 40);
-            textBox13.TabIndex = 92;
+            textBox13.Size = new Size(282, 55);
+            textBox13.TabIndex = 103;
             textBox13.Text = "Iskedular";
-            textBox13.TextChanged += textBox13_TextChanged;
             // 
             // button5
             // 
             button5.BackColor = Color.FromArgb(192, 0, 0);
             button5.FlatStyle = FlatStyle.Flat;
             button5.ForeColor = Color.White;
-            button5.Location = new Point(440, 33);
-            button5.Margin = new Padding(3, 4, 3, 4);
+            button5.Location = new Point(475, 30);
+            button5.Margin = new Padding(70, 30, 3, 4);
             button5.Name = "button5";
-            button5.Size = new Size(86, 29);
-            button5.TabIndex = 94;
+            button5.Size = new Size(83, 33);
+            button5.TabIndex = 104;
             button5.Text = "Home";
             button5.UseVisualStyleBackColor = false;
-            button5.Click += button5_Click;
             // 
             // button7
             // 
             button7.BackColor = Color.FromArgb(192, 0, 0);
             button7.FlatStyle = FlatStyle.Flat;
             button7.ForeColor = Color.White;
-            button7.Location = new Point(532, 33);
-            button7.Margin = new Padding(3, 4, 3, 4);
+            button7.Location = new Point(564, 30);
+            button7.Margin = new Padding(3, 30, 3, 4);
             button7.Name = "button7";
-            button7.Size = new Size(86, 29);
-            button7.TabIndex = 95;
+            button7.Size = new Size(77, 33);
+            button7.TabIndex = 105;
             button7.Text = "Rooms";
             button7.UseVisualStyleBackColor = false;
-            button7.Click += button7_Click;
-            // 
-            // button6
-            // 
-            button6.BackColor = Color.FromArgb(192, 0, 0);
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.ForeColor = Color.White;
-            button6.Location = new Point(624, 33);
-            button6.Margin = new Padding(3, 4, 3, 4);
-            button6.Name = "button6";
-            button6.Size = new Size(86, 29);
-            button6.TabIndex = 96;
-            button6.Text = "Reserve";
-            button6.UseVisualStyleBackColor = false;
-            button6.Click += button6_Click;
-            // 
-            // textBox6
-            // 
-            textBox6.BackColor = Color.Maroon;
-            textBox6.BorderStyle = BorderStyle.FixedSingle;
-            textBox6.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox6.Location = new Point(339, 165);
-            textBox6.Margin = new Padding(3, 4, 3, 4);
-            textBox6.Multiline = true;
-            textBox6.Name = "textBox6";
-            textBox6.ReadOnly = true;
-            textBox6.Size = new Size(351, 176);
-            textBox6.TabIndex = 84;
-            textBox6.TextChanged += textBox6_TextChanged;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Elephant", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(354, 362);
-            label1.Name = "label1";
-            label1.Size = new Size(150, 22);
-            label1.TabIndex = 97;
-            label1.Text = "Announcement";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Elephant", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label2.Location = new Point(347, 116);
-            label2.Name = "label2";
-            label2.Size = new Size(156, 26);
-            label2.TabIndex = 98;
-            label2.Text = "Hi, Isko/Iska";
-            // 
-            // textBox8
-            // 
-            textBox8.BackColor = Color.Maroon;
-            textBox8.BorderStyle = BorderStyle.None;
-            textBox8.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox8.ForeColor = Color.FromArgb(255, 192, 128);
-            textBox8.Location = new Point(429, 188);
-            textBox8.Margin = new Padding(3, 4, 3, 4);
-            textBox8.Multiline = true;
-            textBox8.Name = "textBox8";
-            textBox8.ReadOnly = true;
-            textBox8.Size = new Size(74, 28);
-            textBox8.TabIndex = 86;
-            textBox8.Text = "Pending";
             // 
             // pictureBox4
             // 
@@ -280,72 +123,216 @@
             pictureBox4.BackgroundImageLayout = ImageLayout.Center;
             pictureBox4.Enabled = false;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(12, 9);
+            pictureBox4.Location = new Point(3, 4);
             pictureBox4.Margin = new Padding(3, 4, 3, 4);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(64, 68);
+            pictureBox4.Size = new Size(84, 87);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 99;
+            pictureBox4.TabIndex = 107;
             pictureBox4.TabStop = false;
-            pictureBox4.Click += pictureBox4_Click;
+            // 
+            // button6
+            // 
+            button6.BackColor = Color.FromArgb(192, 0, 0);
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.ForeColor = Color.White;
+            button6.Location = new Point(647, 30);
+            button6.Margin = new Padding(3, 30, 3, 4);
+            button6.Name = "button6";
+            button6.Size = new Size(72, 33);
+            button6.TabIndex = 106;
+            button6.Text = "Reserve";
+            button6.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            button4.Image = (Image)resources.GetObject("button4.Image");
+            button4.Location = new Point(725, 4);
+            button4.Margin = new Padding(3, 4, 3, 4);
+            button4.Name = "button4";
+            button4.Size = new Size(70, 87);
+            button4.TabIndex = 102;
+            button4.UseVisualStyleBackColor = true;
+            // 
+            // sqlCommand1
+            // 
+            sqlCommand1.CommandTimeout = 30;
+            sqlCommand1.EnableOptimizedParameterBinding = false;
+            // 
+            // monthCalendar1
+            // 
+            monthCalendar1.Location = new Point(9, 9);
+            monthCalendar1.Name = "monthCalendar1";
+            monthCalendar1.TabIndex = 0;
+            // 
+            // tableLayoutPanel2
+            // 
+            tableLayoutPanel2.BackColor = Color.Maroon;
+            tableLayoutPanel2.ColumnCount = 1;
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel2.Controls.Add(monthCalendar1, 0, 0);
+            tableLayoutPanel2.Location = new Point(-2, 96);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RowCount = 2;
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 240F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel2.Size = new Size(279, 470);
+            tableLayoutPanel2.TabIndex = 100;
+            // 
+            // tableLayoutPanel3
+            // 
+            tableLayoutPanel3.Anchor = AnchorStyles.None;
+            tableLayoutPanel3.ColumnCount = 1;
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel3.Controls.Add(textBox10, 0, 5);
+            tableLayoutPanel3.Controls.Add(textBox7, 0, 3);
+            tableLayoutPanel3.Controls.Add(textBox11, 0, 2);
+            tableLayoutPanel3.Controls.Add(textBox12, 0, 1);
+            tableLayoutPanel3.Controls.Add(label2, 0, 0);
+            tableLayoutPanel3.Controls.Add(label1, 0, 4);
+            tableLayoutPanel3.Location = new Point(323, 148);
+            tableLayoutPanel3.Name = "tableLayoutPanel3";
+            tableLayoutPanel3.RowCount = 3;
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 57F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 37F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 37F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 33F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 49F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 52F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel3.Size = new Size(450, 402);
+            tableLayoutPanel3.TabIndex = 101;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Elephant", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label2.Location = new Point(10, 10);
+            label2.Margin = new Padding(10, 10, 3, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(176, 30);
+            label2.TabIndex = 117;
+            label2.Text = "Hi, Isko/Iska";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Elephant", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(10, 189);
+            label1.Margin = new Padding(10, 25, 3, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(150, 22);
+            label1.TabIndex = 116;
+            label1.Text = "Announcement";
+            // 
+            // textBox12
+            // 
+            textBox12.BackColor = Color.Maroon;
+            textBox12.BorderStyle = BorderStyle.None;
+            textBox12.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox12.ForeColor = Color.White;
+            textBox12.Location = new Point(10, 67);
+            textBox12.Margin = new Padding(10, 10, 3, 4);
+            textBox12.Multiline = true;
+            textBox12.Name = "textBox12";
+            textBox12.ReadOnly = true;
+            textBox12.Size = new Size(208, 23);
+            textBox12.TabIndex = 115;
+            textBox12.Text = "June 15, 8:00am - 12:00pm";
+            // 
+            // textBox11
+            // 
+            textBox11.BackColor = Color.Maroon;
+            textBox11.BorderStyle = BorderStyle.None;
+            textBox11.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox11.ForeColor = Color.White;
+            textBox11.Location = new Point(10, 104);
+            textBox11.Margin = new Padding(10, 10, 3, 4);
+            textBox11.Multiline = true;
+            textBox11.Name = "textBox11";
+            textBox11.ReadOnly = true;
+            textBox11.Size = new Size(156, 23);
+            textBox11.TabIndex = 114;
+            textBox11.Text = "Laboratory Room";
+            // 
+            // textBox7
+            // 
+            textBox7.BackColor = Color.Maroon;
+            textBox7.BorderStyle = BorderStyle.None;
+            textBox7.Font = new Font("Segoe UI Emoji", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox7.ForeColor = Color.White;
+            textBox7.Location = new Point(10, 141);
+            textBox7.Margin = new Padding(10, 10, 3, 4);
+            textBox7.Multiline = true;
+            textBox7.Name = "textBox7";
+            textBox7.ReadOnly = true;
+            textBox7.Size = new Size(129, 17);
+            textBox7.TabIndex = 112;
+            textBox7.Text = "Status: Pending";
+            // 
+            // textBox10
+            // 
+            textBox10.BackColor = SystemColors.ScrollBar;
+            textBox10.BorderStyle = BorderStyle.FixedSingle;
+            textBox10.Location = new Point(3, 243);
+            textBox10.Margin = new Padding(3, 30, 3, 4);
+            textBox10.Multiline = true;
+            textBox10.Name = "textBox10";
+            textBox10.ReadOnly = true;
+            textBox10.Size = new Size(444, 155);
+            textBox10.TabIndex = 111;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(800, 562);
-            Controls.Add(pictureBox4);
-            Controls.Add(label2);
-            Controls.Add(label1);
-            Controls.Add(button6);
-            Controls.Add(button7);
-            Controls.Add(button5);
-            Controls.Add(textBox13);
-            Controls.Add(button4);
-            Controls.Add(textBox12);
-            Controls.Add(textBox11);
-            Controls.Add(textBox8);
-            Controls.Add(textBox7);
-            Controls.Add(textBox6);
-            Controls.Add(textBox10);
-            Controls.Add(pictureBox3);
-            Controls.Add(monthCalendar1);
-            Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
+            ClientSize = new Size(812, 562);
+            Controls.Add(tableLayoutPanel3);
+            Controls.Add(tableLayoutPanel2);
+            Controls.Add(tableLayoutPanel1);
             Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             StartPosition = FormStartPosition.Manual;
             Text = "Form1";
             Load += Form1_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            tableLayoutPanel2.ResumeLayout(false);
+            tableLayoutPanel3.ResumeLayout(false);
+            tableLayoutPanel3.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private TableLayoutPanel tableLayoutPanel1;
+        private Button button7;
+        private Button button5;
+        private TextBox textBox13;
+        private PictureBox pictureBox4;
+        private Button button6;
+        private Button button4;
+        private Microsoft.Data.SqlClient.SqlCommand sqlCommand1;
+        private MonthCalendar monthCalendar1;
+        private TableLayoutPanel tableLayoutPanel2;
+        private TableLayoutPanel tableLayoutPanel3;
+        private TextBox textBox10;
+        private TextBox textBox7;
+        private TextBox textBox11;
+        private TextBox textBox12;
+        private Label label1;
+        private Label label2;
     }
 }
 

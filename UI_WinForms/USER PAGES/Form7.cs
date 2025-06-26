@@ -113,5 +113,15 @@ namespace UI_WinForms // This namespace matched the form's actual namespace
                 MessageBox.Show($"An unexpected error occurred during login. Please try again later.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

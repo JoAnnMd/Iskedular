@@ -83,5 +83,15 @@ namespace UI_WinForms
             reserveForm.Show();              // Show Form3
             this.Hide();                     // Hide Form5
         }
+
+        private void textBox10_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

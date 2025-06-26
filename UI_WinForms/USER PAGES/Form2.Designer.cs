@@ -30,8 +30,6 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            pictureBox2 = new PictureBox();
-            monthCalendar1 = new MonthCalendar();
             textBox3 = new TextBox();
             panel1 = new Panel();
             label1 = new Label();
@@ -81,41 +79,29 @@
             label23 = new Label();
             panel24 = new Panel();
             bindingSource1 = new BindingSource(components);
-            button3 = new Button();
+            tableLayoutPanel1 = new TableLayoutPanel();
             pictureBox4 = new PictureBox();
-            button6 = new Button();
-            button7 = new Button();
             button5 = new Button();
-            textBox13 = new TextBox();
             button4 = new Button();
+            button7 = new Button();
+            button6 = new Button();
+            textBox13 = new TextBox();
+            tableLayoutPanel2 = new TableLayoutPanel();
+            monthCalendar1 = new MonthCalendar();
+            tableLayoutPanel3 = new TableLayoutPanel();
             pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            button1 = new Button();
+            button2 = new Button();
+            button3 = new Button();
+            button8 = new Button();
+            textBox2 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
+            tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            tableLayoutPanel2.SuspendLayout();
+            tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // pictureBox2
-            // 
-            pictureBox2.BackColor = Color.Maroon;
-            pictureBox2.Location = new Point(-1, 95);
-            pictureBox2.Margin = new Padding(3, 4, 3, 4);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(262, 471);
-            pictureBox2.TabIndex = 3;
-            pictureBox2.TabStop = false;
-            // 
-            // monthCalendar1
-            // 
-            monthCalendar1.BackColor = Color.Maroon;
-            monthCalendar1.ForeColor = Color.FromArgb(255, 192, 192);
-            monthCalendar1.Location = new Point(-1, 95);
-            monthCalendar1.Margin = new Padding(9, 11, 9, 11);
-            monthCalendar1.Name = "monthCalendar1";
-            monthCalendar1.TabIndex = 4;
-            monthCalendar1.TitleBackColor = Color.DarkRed;
-            monthCalendar1.TitleForeColor = Color.White;
-            monthCalendar1.TrailingForeColor = Color.LightGray;
             // 
             // textBox3
             // 
@@ -585,18 +571,30 @@
             panel24.Size = new Size(149, 26);
             panel24.TabIndex = 27;
             // 
-            // button3
+            // tableLayoutPanel1
             // 
-            button3.BackColor = Color.FromArgb(255, 255, 128);
-            button3.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.ForeColor = Color.FromArgb(192, 0, 0);
-            button3.Location = new Point(55, 343);
-            button3.Margin = new Padding(3, 4, 3, 4);
-            button3.Name = "button3";
-            button3.Size = new Size(142, 29);
-            button3.TabIndex = 80;
-            button3.Text = "Cancel Booking";
-            button3.UseVisualStyleBackColor = false;
+            tableLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel1.BackColor = Color.FromArgb(192, 0, 0);
+            tableLayoutPanel1.ColumnCount = 6;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 90F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 315F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 156F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 83F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 78F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 26F));
+            tableLayoutPanel1.Controls.Add(pictureBox4, 0, 0);
+            tableLayoutPanel1.Controls.Add(button5, 2, 0);
+            tableLayoutPanel1.Controls.Add(button4, 5, 0);
+            tableLayoutPanel1.Controls.Add(button7, 3, 0);
+            tableLayoutPanel1.Controls.Add(button6, 4, 0);
+            tableLayoutPanel1.Controls.Add(textBox13, 1, 0);
+            tableLayoutPanel1.Location = new Point(2, 1);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 1;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 87F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel1.Size = new Size(798, 93);
+            tableLayoutPanel1.TabIndex = 100;
             // 
             // pictureBox4
             // 
@@ -604,91 +602,209 @@
             pictureBox4.BackgroundImageLayout = ImageLayout.Center;
             pictureBox4.Enabled = false;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(10, 9);
+            pictureBox4.Location = new Point(3, 4);
             pictureBox4.Margin = new Padding(3, 4, 3, 4);
             pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(64, 68);
+            pictureBox4.Size = new Size(84, 85);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 106;
+            pictureBox4.TabIndex = 107;
             pictureBox4.TabStop = false;
-            // 
-            // button6
-            // 
-            button6.BackColor = Color.FromArgb(192, 0, 0);
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.ForeColor = Color.White;
-            button6.Location = new Point(622, 33);
-            button6.Margin = new Padding(3, 4, 3, 4);
-            button6.Name = "button6";
-            button6.Size = new Size(86, 29);
-            button6.TabIndex = 105;
-            button6.Text = "Reserve";
-            button6.UseVisualStyleBackColor = false;
-            button6.Click += button6_Click;
-            // 
-            // button7
-            // 
-            button7.BackColor = Color.FromArgb(192, 0, 0);
-            button7.FlatStyle = FlatStyle.Flat;
-            button7.ForeColor = Color.White;
-            button7.Location = new Point(530, 33);
-            button7.Margin = new Padding(3, 4, 3, 4);
-            button7.Name = "button7";
-            button7.Size = new Size(86, 29);
-            button7.TabIndex = 104;
-            button7.Text = "Rooms";
-            button7.UseVisualStyleBackColor = false;
-            button7.Click += button7_Click;
             // 
             // button5
             // 
             button5.BackColor = Color.FromArgb(192, 0, 0);
             button5.FlatStyle = FlatStyle.Flat;
             button5.ForeColor = Color.White;
-            button5.Location = new Point(438, 33);
-            button5.Margin = new Padding(3, 4, 3, 4);
+            button5.Location = new Point(475, 30);
+            button5.Margin = new Padding(70, 30, 3, 4);
             button5.Name = "button5";
-            button5.Size = new Size(86, 29);
-            button5.TabIndex = 103;
+            button5.Size = new Size(83, 33);
+            button5.TabIndex = 104;
             button5.Text = "Home";
             button5.UseVisualStyleBackColor = false;
-            button5.Click += button5_Click;
+            // 
+            // button4
+            // 
+            button4.Image = (Image)resources.GetObject("button4.Image");
+            button4.Location = new Point(725, 4);
+            button4.Margin = new Padding(3, 4, 3, 4);
+            button4.Name = "button4";
+            button4.Size = new Size(70, 85);
+            button4.TabIndex = 102;
+            button4.UseVisualStyleBackColor = true;
+            // 
+            // button7
+            // 
+            button7.BackColor = Color.FromArgb(192, 0, 0);
+            button7.FlatStyle = FlatStyle.Flat;
+            button7.ForeColor = Color.White;
+            button7.Location = new Point(564, 30);
+            button7.Margin = new Padding(3, 30, 3, 4);
+            button7.Name = "button7";
+            button7.Size = new Size(77, 33);
+            button7.TabIndex = 105;
+            button7.Text = "Rooms";
+            button7.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            button6.BackColor = Color.FromArgb(192, 0, 0);
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.ForeColor = Color.White;
+            button6.Location = new Point(647, 30);
+            button6.Margin = new Padding(3, 30, 3, 4);
+            button6.Name = "button6";
+            button6.Size = new Size(72, 33);
+            button6.TabIndex = 106;
+            button6.Text = "Reserve";
+            button6.UseVisualStyleBackColor = false;
             // 
             // textBox13
             // 
             textBox13.BackColor = Color.FromArgb(192, 0, 0);
             textBox13.BorderStyle = BorderStyle.None;
-            textBox13.Font = new Font("Elephant", 13.8F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            textBox13.Font = new Font("Elephant", 16.1999989F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             textBox13.ForeColor = Color.White;
-            textBox13.Location = new Point(80, 29);
-            textBox13.Margin = new Padding(3, 4, 3, 4);
+            textBox13.Location = new Point(120, 30);
+            textBox13.Margin = new Padding(30, 30, 3, 4);
             textBox13.Multiline = true;
             textBox13.Name = "textBox13";
-            textBox13.Size = new Size(146, 40);
-            textBox13.TabIndex = 102;
+            textBox13.Size = new Size(282, 55);
+            textBox13.TabIndex = 103;
             textBox13.Text = "Iskedular";
             // 
-            // button4
+            // tableLayoutPanel2
             // 
-            button4.Image = (Image)resources.GetObject("button4.Image");
-            button4.Location = new Point(731, 22);
-            button4.Margin = new Padding(3, 4, 3, 4);
-            button4.Name = "button4";
-            button4.Size = new Size(55, 51);
-            button4.TabIndex = 101;
-            button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            tableLayoutPanel2.BackColor = Color.Maroon;
+            tableLayoutPanel2.ColumnCount = 1;
+            tableLayoutPanel2.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+            tableLayoutPanel2.Controls.Add(monthCalendar1, 0, 0);
+            tableLayoutPanel2.Location = new Point(0, 95);
+            tableLayoutPanel2.Name = "tableLayoutPanel2";
+            tableLayoutPanel2.RowCount = 2;
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 240F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel2.Size = new Size(279, 470);
+            tableLayoutPanel2.TabIndex = 102;
+            // 
+            // monthCalendar1
+            // 
+            monthCalendar1.Location = new Point(9, 9);
+            monthCalendar1.Name = "monthCalendar1";
+            monthCalendar1.TabIndex = 0;
+            // 
+            // tableLayoutPanel3
+            // 
+            tableLayoutPanel3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel3.BackColor = Color.FromArgb(192, 0, 0);
+            tableLayoutPanel3.ColumnCount = 6;
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 90F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 315F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 156F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 83F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 78F));
+            tableLayoutPanel3.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute, 26F));
+            tableLayoutPanel3.Controls.Add(pictureBox1, 0, 0);
+            tableLayoutPanel3.Controls.Add(button1, 2, 0);
+            tableLayoutPanel3.Controls.Add(button2, 5, 0);
+            tableLayoutPanel3.Controls.Add(button3, 3, 0);
+            tableLayoutPanel3.Controls.Add(button8, 4, 0);
+            tableLayoutPanel3.Controls.Add(textBox2, 1, 0);
+            tableLayoutPanel3.Location = new Point(3, -2);
+            tableLayoutPanel3.Name = "tableLayoutPanel3";
+            tableLayoutPanel3.RowCount = 1;
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 87F));
+            tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
+            tableLayoutPanel3.Size = new Size(796, 95);
+            tableLayoutPanel3.TabIndex = 101;
             // 
             // pictureBox1
             // 
             pictureBox1.BackColor = Color.FromArgb(192, 0, 0);
-            pictureBox1.BackgroundImageLayout = ImageLayout.None;
-            pictureBox1.Location = new Point(-1, -2);
+            pictureBox1.BackgroundImageLayout = ImageLayout.Center;
+            pictureBox1.Enabled = false;
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(3, 4);
             pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(800, 89);
-            pictureBox1.TabIndex = 100;
+            pictureBox1.Size = new Size(84, 87);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 107;
             pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(192, 0, 0);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(475, 30);
+            button1.Margin = new Padding(70, 30, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(83, 33);
+            button1.TabIndex = 104;
+            button1.Text = "Home";
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.Location = new Point(725, 4);
+            button2.Margin = new Padding(3, 4, 3, 4);
+            button2.Name = "button2";
+            button2.Size = new Size(68, 87);
+            button2.TabIndex = 102;
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.BackColor = Color.FromArgb(192, 0, 0);
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.ForeColor = Color.White;
+            button3.Location = new Point(564, 30);
+            button3.Margin = new Padding(3, 30, 3, 4);
+            button3.Name = "button3";
+            button3.Size = new Size(77, 33);
+            button3.TabIndex = 105;
+            button3.Text = "Rooms";
+            button3.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            button8.BackColor = Color.FromArgb(192, 0, 0);
+            button8.FlatStyle = FlatStyle.Flat;
+            button8.ForeColor = Color.White;
+            button8.Location = new Point(647, 30);
+            button8.Margin = new Padding(3, 30, 3, 4);
+            button8.Name = "button8";
+            button8.Size = new Size(72, 33);
+            button8.TabIndex = 106;
+            button8.Text = "Reserve";
+            button8.UseVisualStyleBackColor = false;
+            // 
+            // textBox2
+            // 
+            textBox2.BackColor = Color.FromArgb(192, 0, 0);
+            textBox2.BorderStyle = BorderStyle.None;
+            textBox2.Font = new Font("Elephant", 16.1999989F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            textBox2.ForeColor = Color.White;
+            textBox2.Location = new Point(120, 30);
+            textBox2.Margin = new Padding(30, 30, 3, 4);
+            textBox2.Multiline = true;
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(282, 55);
+            textBox2.TabIndex = 103;
+            textBox2.Text = "Iskedular";
             // 
             // Form2
             // 
@@ -696,14 +812,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(800, 562);
-            Controls.Add(pictureBox4);
-            Controls.Add(button6);
-            Controls.Add(button7);
-            Controls.Add(button5);
-            Controls.Add(textBox13);
-            Controls.Add(button4);
-            Controls.Add(pictureBox1);
-            Controls.Add(button3);
+            Controls.Add(tableLayoutPanel2);
+            Controls.Add(tableLayoutPanel3);
+            Controls.Add(tableLayoutPanel1);
             Controls.Add(panel24);
             Controls.Add(panel22);
             Controls.Add(label23);
@@ -752,15 +863,17 @@
             Controls.Add(label1);
             Controls.Add(panel1);
             Controls.Add(textBox3);
-            Controls.Add(monthCalendar1);
-            Controls.Add(pictureBox2);
             Margin = new Padding(3, 4, 3, 4);
             Name = "Form2";
             Text = "x";
             Load += Form2_Load;
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).EndInit();
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            tableLayoutPanel2.ResumeLayout(false);
+            tableLayoutPanel3.ResumeLayout(false);
+            tableLayoutPanel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -768,8 +881,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.BindingSource bindingSource1;
         private System.Windows.Forms.Panel panel1;
@@ -819,13 +930,21 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Panel panel24;
-        private System.Windows.Forms.Button button3;
+        private TableLayoutPanel tableLayoutPanel1;
         private PictureBox pictureBox4;
-        private Button button6;
-        private Button button7;
         private Button button5;
-        private TextBox textBox13;
         private Button button4;
+        private Button button7;
+        private Button button6;
+        private TextBox textBox13;
+        private TableLayoutPanel tableLayoutPanel2;
+        private MonthCalendar monthCalendar1;
+        private TableLayoutPanel tableLayoutPanel3;
         private PictureBox pictureBox1;
+        private Button button1;
+        private Button button2;
+        private Button button3;
+        private Button button8;
+        private TextBox textBox2;
     }
 }

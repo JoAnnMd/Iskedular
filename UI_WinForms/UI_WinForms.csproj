@@ -11,6 +11,16 @@
       </PropertyGroup>
 
       <ItemGroup>
+        <None Remove="Resources\image.png" />
+      </ItemGroup>
+
+      <ItemGroup>
+        <Content Include="Resources\image.png">
+          <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+      </ItemGroup>
+
+      <ItemGroup>
         <!-- REMOVED: BCrypt.Net-Core as it is now in Iskedular.Models -->
         <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.6">
           <PrivateAssets>all</PrivateAssets>

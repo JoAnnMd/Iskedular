@@ -179,5 +179,10 @@ namespace UI_WinForms
         {
             this.Close(); // The form was closed, returning to the previous form (Form18 for admin).
         }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -54,5 +54,10 @@ namespace UI_WinForms
             // Similar to Form1's Home button, this keeps you on the current form.
             MessageBox.Show("You are already on the Profile screen.", "Navigation", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void textBox9_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

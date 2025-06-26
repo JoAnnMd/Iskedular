@@ -1,45 +1,86 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\",
+  "WorkspaceRootPath": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|c:\\users\\asus\\downloads\\updated_u.i (2)\\updated_u.i\\ui_winforms\\user pages\\form6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|solutionrelative:ui_winforms\\user pages\\form6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|c:\\users\\jo ann\\desktop\\new ui\\iskedular\\ui_winforms\\user pages\\form7.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|solutionrelative:ui_winforms\\user pages\\form7.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\ui_winforms\\user pages\\form6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|c:\\users\\jo ann\\desktop\\new ui\\iskedular\\ui_winforms\\user pages\\form7.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|solutionrelative:ui_winforms\\user pages\\form7.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|c:\\users\\jo ann\\desktop\\new ui\\iskedular\\ui_winforms\\properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|solutionrelative:ui_winforms\\properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|c:\\users\\jo ann\\desktop\\new ui\\iskedular\\ui_winforms\\user pages\\form8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|solutionrelative:ui_winforms\\user pages\\form8.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|c:\\users\\jo ann\\desktop\\new ui\\iskedular\\ui_winforms\\first propmpt\\form19.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|solutionrelative:ui_winforms\\first propmpt\\form19.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|c:\\users\\jo ann\\desktop\\new ui\\iskedular\\ui_winforms\\properties\\resources.resx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|solutionrelative:ui_winforms\\properties\\resources.resx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{804C39D9-9A22-4637-87F9-89622727F76E}|Iskedular.Data\\Iskedular.Data.csproj|c:\\users\\jo ann\\desktop\\new ui\\iskedular\\iskedular.data\\iskedular.data.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{804C39D9-9A22-4637-87F9-89622727F76E}|Iskedular.Data\\Iskedular.Data.csproj|solutionrelative:iskedular.data\\iskedular.data.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|c:\\users\\jo ann\\desktop\\new ui\\iskedular\\ui_winforms\\user pages\\form8.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|solutionrelative:ui_winforms\\user pages\\form8.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|c:\\users\\jo ann\\desktop\\new ui\\iskedular\\ui_winforms\\user pages\\form6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|solutionrelative:ui_winforms\\user pages\\form6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|c:\\users\\asus\\downloads\\updated_u.i (2)\\updated_u.i\\ui_winforms\\admin pages\\form18.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|solutionrelative:ui_winforms\\admin pages\\form18.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\ui_winforms\\user pages\\form5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|solutionrelative:ui_winforms\\user pages\\form5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\ui_winforms\\admin pages\\form18.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|solutionrelative:ui_winforms\\admin pages\\form18.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|c:\\users\\jo ann\\desktop\\new ui\\iskedular\\ui_winforms\\user pages\\form6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|solutionrelative:ui_winforms\\user pages\\form6.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|c:\\users\\asus\\downloads\\updated_u.i (2)\\updated_u.i\\ui_winforms\\admin pages\\adminlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|solutionrelative:ui_winforms\\admin pages\\adminlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|c:\\users\\jo ann\\desktop\\new ui\\iskedular\\ui_winforms\\user pages\\form5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|solutionrelative:ui_winforms\\user pages\\form5.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\ui_winforms\\admin pages\\adminlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|solutionrelative:ui_winforms\\admin pages\\adminlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\ui_winforms\\user pages\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|solutionrelative:ui_winforms\\user pages\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|c:\\users\\asus\\downloads\\updated_u.i (2)\\updated_u.i\\ui_winforms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|solutionrelative:ui_winforms\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\ui_winforms\\user pages\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|solutionrelative:ui_winforms\\user pages\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01DCE831-FE23-4805-AEBC-450ADAA09289}|Iskedular.Core\\Iskedular.Core.csproj|c:\\users\\asus\\downloads\\updated_u.i (2)\\updated_u.i\\iskedular.core\\services\\sessionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01DCE831-FE23-4805-AEBC-450ADAA09289}|Iskedular.Core\\Iskedular.Core.csproj|solutionrelative:iskedular.core\\services\\sessionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|c:\\users\\jo ann\\desktop\\new ui\\iskedular\\ui_winforms\\user pages\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|solutionrelative:ui_winforms\\user pages\\form3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/IskedularDb/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|c:\\users\\jo ann\\desktop\\new ui\\iskedular\\ui_winforms\\user pages\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|solutionrelative:ui_winforms\\user pages\\form4.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{804C39D9-9A22-4637-87F9-89622727F76E}|Iskedular.Data\\Iskedular.Data.csproj|c:\\users\\asus\\downloads\\updated_u.i (2)\\updated_u.i\\iskedular.data\\migrations\\20250625184940_initialcleansetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{804C39D9-9A22-4637-87F9-89622727F76E}|Iskedular.Data\\Iskedular.Data.csproj|solutionrelative:iskedular.data\\migrations\\20250625184940_initialcleansetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\ui_winforms\\user pages\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|solutionrelative:ui_winforms\\user pages\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\ui_winforms\\user pages\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|solutionrelative:ui_winforms\\user pages\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|c:\\users\\jo ann\\desktop\\new ui\\iskedular\\ui_winforms\\user pages\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|solutionrelative:ui_winforms\\user pages\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|c:\\users\\jo ann\\desktop\\new ui\\iskedular\\ui_winforms\\ui_winforms.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{B12EC5CC-46D9-4E10-921A-24094899BA04}|UI_WinForms\\UI_WinForms.csproj|solutionrelative:ui_winforms\\ui_winforms.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -49,7 +90,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -65,120 +106,249 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form18.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\UI_WinForms\\ADMIN PAGES\\Form18.cs",
-              "RelativeDocumentMoniker": "UI_WinForms\\ADMIN PAGES\\Form18.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\UI_WinForms\\ADMIN PAGES\\Form18.cs",
-              "RelativeToolTip": "UI_WinForms\\ADMIN PAGES\\Form18.cs",
-              "ViewState": "AgIAAHsAAAAAAAAAAAAzwH4AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Form19.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\FIRST PROPMPT\\Form19.cs",
+              "RelativeDocumentMoniker": "UI_WinForms\\FIRST PROPMPT\\Form19.cs",
+              "ToolTip": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\FIRST PROPMPT\\Form19.cs [Design]",
+              "RelativeToolTip": "UI_WinForms\\FIRST PROPMPT\\Form19.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T19:10:34.828Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-26T20:11:49.405Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Form18.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\UI_WinForms\\ADMIN PAGES\\Form18.cs",
-              "RelativeDocumentMoniker": "UI_WinForms\\ADMIN PAGES\\Form18.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\UI_WinForms\\ADMIN PAGES\\Form18.cs [Design]",
-              "RelativeToolTip": "UI_WinForms\\ADMIN PAGES\\Form18.cs [Design]",
+              "Title": "Form8.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\USER PAGES\\Form8.cs",
+              "RelativeDocumentMoniker": "UI_WinForms\\USER PAGES\\Form8.cs",
+              "ToolTip": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\USER PAGES\\Form8.cs [Design]",
+              "RelativeToolTip": "UI_WinForms\\USER PAGES\\Form8.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T19:10:31.231Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "AdminLogin.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\UI_WinForms\\ADMIN PAGES\\AdminLogin.cs",
-              "RelativeDocumentMoniker": "UI_WinForms\\ADMIN PAGES\\AdminLogin.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\UI_WinForms\\ADMIN PAGES\\AdminLogin.cs",
-              "RelativeToolTip": "UI_WinForms\\ADMIN PAGES\\AdminLogin.cs",
-              "ViewState": "AgIAAHYAAAAAAAAAAAA4wIcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T19:09:40.433Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "AdminLogin.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\UI_WinForms\\ADMIN PAGES\\AdminLogin.cs",
-              "RelativeDocumentMoniker": "UI_WinForms\\ADMIN PAGES\\AdminLogin.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\UI_WinForms\\ADMIN PAGES\\AdminLogin.cs [Design]",
-              "RelativeToolTip": "UI_WinForms\\ADMIN PAGES\\AdminLogin.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T19:09:35.846Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\UI_WinForms\\Program.cs",
-              "RelativeDocumentMoniker": "UI_WinForms\\Program.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\UI_WinForms\\Program.cs",
-              "RelativeToolTip": "UI_WinForms\\Program.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAA4wFQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T19:08:06.656Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "SessionService.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\Iskedular.Core\\Services\\SessionService.cs",
-              "RelativeDocumentMoniker": "Iskedular.Core\\Services\\SessionService.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\Iskedular.Core\\Services\\SessionService.cs",
-              "RelativeToolTip": "Iskedular.Core\\Services\\SessionService.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAiwBgAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T19:06:56.167Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form6.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\UI_WinForms\\USER PAGES\\Form6.cs",
-              "RelativeDocumentMoniker": "UI_WinForms\\USER PAGES\\Form6.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\UI_WinForms\\USER PAGES\\Form6.cs",
-              "RelativeToolTip": "UI_WinForms\\USER PAGES\\Form6.cs",
-              "ViewState": "AgIAAKkAAAAAAAAAAAA4wLcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T18:56:15.556Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-26T20:09:54.655Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Form6.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\UI_WinForms\\USER PAGES\\Form6.cs",
-              "RelativeDocumentMoniker": "UI_WinForms\\USER PAGES\\Form6.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\UI_WinForms\\USER PAGES\\Form6.cs [Design]",
-              "RelativeToolTip": "UI_WinForms\\USER PAGES\\Form6.cs [Design]",
+              "Title": "Form7.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\USER PAGES\\Form7.cs",
+              "RelativeDocumentMoniker": "UI_WinForms\\USER PAGES\\Form7.cs",
+              "ToolTip": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\USER PAGES\\Form7.cs [Design]",
+              "RelativeToolTip": "UI_WinForms\\USER PAGES\\Form7.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T18:55:58.952Z"
+              "WhenOpened": "2025-06-26T20:09:23.99Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Resources.resx",
+              "DocumentMoniker": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\Properties\\Resources.resx",
+              "RelativeDocumentMoniker": "UI_WinForms\\Properties\\Resources.resx",
+              "ToolTip": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\Properties\\Resources.resx",
+              "RelativeToolTip": "UI_WinForms\\Properties\\Resources.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-06-26T20:04:12.45Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form7.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\USER PAGES\\Form7.Designer.cs",
+              "RelativeDocumentMoniker": "UI_WinForms\\USER PAGES\\Form7.Designer.cs",
+              "ToolTip": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\USER PAGES\\Form7.Designer.cs",
+              "RelativeToolTip": "UI_WinForms\\USER PAGES\\Form7.Designer.cs",
+              "ViewState": "AgIAALYAAAAAAAAAAAAUwL8AAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T19:34:05.877Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 8,
-              "Title": "dbo.Users.sql",
-              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/IskedularDb/True/SqlTable/dbo.Users.sql",
-              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/IskedularDb/True/SqlTable/dbo.Users.sql",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
-              "WhenOpened": "2025-06-25T18:51:19.975Z"
+              "Title": "Form6.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\USER PAGES\\Form6.cs",
+              "RelativeDocumentMoniker": "UI_WinForms\\USER PAGES\\Form6.cs",
+              "ToolTip": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\USER PAGES\\Form6.cs [Design]",
+              "RelativeToolTip": "UI_WinForms\\USER PAGES\\Form6.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T18:16:16.386Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Resources.resx",
+              "DocumentMoniker": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\Properties\\Resources.resx",
+              "RelativeDocumentMoniker": "UI_WinForms\\Properties\\Resources.resx",
+              "ToolTip": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\Properties\\Resources.resx",
+              "RelativeToolTip": "UI_WinForms\\Properties\\Resources.resx",
+              "ViewState": "AgIAADAAAAAAAAAAAAAmwIcAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-06-26T19:38:00.454Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Iskedular.Data",
+              "DocumentMoniker": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\Iskedular.Data\\Iskedular.Data.csproj",
+              "RelativeDocumentMoniker": "Iskedular.Data\\Iskedular.Data.csproj",
+              "ToolTip": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\Iskedular.Data\\Iskedular.Data.csproj",
+              "RelativeToolTip": "Iskedular.Data\\Iskedular.Data.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-26T19:57:53.838Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 9,
-              "Title": "20250625184940_InitialCleanSetup.cs",
-              "DocumentMoniker": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\Iskedular.Data\\Migrations\\20250625184940_InitialCleanSetup.cs",
-              "RelativeDocumentMoniker": "Iskedular.Data\\Migrations\\20250625184940_InitialCleanSetup.cs",
-              "ToolTip": "C:\\Users\\ASUS\\Downloads\\updated_U.I (2)\\updated_U.I\\Iskedular.Data\\Migrations\\20250625184940_InitialCleanSetup.cs",
-              "RelativeToolTip": "Iskedular.Data\\Migrations\\20250625184940_InitialCleanSetup.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "Form5.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\USER PAGES\\Form5.cs",
+              "RelativeDocumentMoniker": "UI_WinForms\\USER PAGES\\Form5.cs",
+              "ToolTip": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\USER PAGES\\Form5.cs [Design]",
+              "RelativeToolTip": "UI_WinForms\\USER PAGES\\Form5.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-25T18:49:40.796Z"
+              "WhenOpened": "2025-06-26T18:15:49.717Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Form8.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\USER PAGES\\Form8.Designer.cs",
+              "RelativeDocumentMoniker": "UI_WinForms\\USER PAGES\\Form8.Designer.cs",
+              "ToolTip": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\USER PAGES\\Form8.Designer.cs",
+              "RelativeToolTip": "UI_WinForms\\USER PAGES\\Form8.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T19:34:36.649Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Form6.cs",
+              "DocumentMoniker": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\USER PAGES\\Form6.cs",
+              "RelativeDocumentMoniker": "UI_WinForms\\USER PAGES\\Form6.cs",
+              "ToolTip": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\USER PAGES\\Form6.cs",
+              "RelativeToolTip": "UI_WinForms\\USER PAGES\\Form6.cs",
+              "ViewState": "AgIAAKsAAAAAAAAAAIA0wLgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T19:20:22.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Form4.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\USER PAGES\\Form4.cs",
+              "RelativeDocumentMoniker": "UI_WinForms\\USER PAGES\\Form4.cs",
+              "ToolTip": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\USER PAGES\\Form4.cs [Design]",
+              "RelativeToolTip": "UI_WinForms\\USER PAGES\\Form4.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T18:15:19.157Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Form3.cs",
+              "DocumentMoniker": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\USER PAGES\\Form3.cs",
+              "RelativeDocumentMoniker": "UI_WinForms\\USER PAGES\\Form3.cs",
+              "ToolTip": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\USER PAGES\\Form3.cs",
+              "RelativeToolTip": "UI_WinForms\\USER PAGES\\Form3.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAnwF0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T18:53:12.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Form4.cs",
+              "DocumentMoniker": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\USER PAGES\\Form4.cs",
+              "RelativeDocumentMoniker": "UI_WinForms\\USER PAGES\\Form4.cs",
+              "ToolTip": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\USER PAGES\\Form4.cs",
+              "RelativeToolTip": "UI_WinForms\\USER PAGES\\Form4.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAIA6wDsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T19:04:45.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Form5.cs",
+              "DocumentMoniker": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\USER PAGES\\Form5.cs",
+              "RelativeDocumentMoniker": "UI_WinForms\\USER PAGES\\Form5.cs",
+              "ToolTip": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\USER PAGES\\Form5.cs",
+              "RelativeToolTip": "UI_WinForms\\USER PAGES\\Form5.cs",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAewF0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T19:10:36.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Form3.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\USER PAGES\\Form3.cs",
+              "RelativeDocumentMoniker": "UI_WinForms\\USER PAGES\\Form3.cs",
+              "ToolTip": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\USER PAGES\\Form3.cs [Design]",
+              "RelativeToolTip": "UI_WinForms\\USER PAGES\\Form3.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T18:13:59.672Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Form2.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\USER PAGES\\Form2.cs",
+              "RelativeDocumentMoniker": "UI_WinForms\\USER PAGES\\Form2.cs",
+              "ToolTip": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\USER PAGES\\Form2.cs [Design]",
+              "RelativeToolTip": "UI_WinForms\\USER PAGES\\Form2.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T18:11:53.896Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\USER PAGES\\Form1.cs",
+              "RelativeDocumentMoniker": "UI_WinForms\\USER PAGES\\Form1.cs",
+              "ToolTip": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\USER PAGES\\Form1.cs [Design]",
+              "RelativeToolTip": "UI_WinForms\\USER PAGES\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T17:45:10.638Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Form2.cs",
+              "DocumentMoniker": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\USER PAGES\\Form2.cs",
+              "RelativeDocumentMoniker": "UI_WinForms\\USER PAGES\\Form2.cs",
+              "ToolTip": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\USER PAGES\\Form2.cs",
+              "RelativeToolTip": "UI_WinForms\\USER PAGES\\Form2.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAnwFYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T18:13:20.492Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UI_WinForms.csproj",
+              "DocumentMoniker": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\UI_WinForms.csproj",
+              "RelativeDocumentMoniker": "UI_WinForms\\UI_WinForms.csproj",
+              "ToolTip": "C:\\Users\\Jo Ann\\Desktop\\NEW UI\\Iskedular\\UI_WinForms\\UI_WinForms.csproj",
+              "RelativeToolTip": "UI_WinForms\\UI_WinForms.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-26T17:43:37.073Z",
+              "EditorCaption": ""
             }
           ]
         }
