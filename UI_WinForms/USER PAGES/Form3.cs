@@ -1,93 +1,111 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+﻿using Iskedular.Data;
+using Iskedular.Models;
+using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace UI_WinForms
 {
     public partial class Form3 : Form
     {
+        private readonly ApplicationDbContext _context;
+
         public Form3()
         {
             InitializeComponent();
+            _context = RuntimeDbContextFactory.Create(); // ✅ fixed constructor usage
+
+            LoadRooms();
+            LoadTimeSlots();
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void LoadRooms()
         {
-            Form1 homeForm = new Form1(); // Create an instance of Form1 (User Dashboard/Home)
-            homeForm.Show();              // Show Form1
-            this.Hide();                  // Hide Form3
+            var rooms = _context.Rooms.ToList();
+            comboBox1.DataSource = rooms;
+            comboBox1.DisplayMember = "Name"; // Make sure Room model has a Name property
+            comboBox1.ValueMember = "Id";
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void LoadTimeSlots()
         {
-            Form2 roomsForm = new Form2(); // Create an instance of Form2
-            roomsForm.Show();              // Show Form2
-            this.Hide();                  // Hide Form3
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            // You are already on the Reserve screen (Form3).
-            // Similar to Form1's Home button, this keeps you on the current form.
-            MessageBox.Show("You are already on the Reserve screen.", "Navigation", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Form4 profileForm = new Form4(); // Create an instance of Form4
-            profileForm.Show();              // Show Form4
-            this.Hide();                     // Hide Form3
+            comboBox2.Items.Clear();
+            comboBox2.Items.AddRange(new string[]
+            {
+                "8:00am - 12:00pm",
+                "1:00pm - 5:00pm",
+                "5:00pm - 9:00pm"
+            });
+            comboBox2.SelectedIndex = 0;
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // --- Placeholder for collecting reservation data ---
-            // In the future, you would get values from your Form3 controls here, e.g.:
-            // string selectedRoom = yourRoomComboBox.SelectedItem.ToString();
-            // DateTime selectedDate = yourMonthCalendar.SelectionStart;
-            // string selectedTime = yourTimeComboBox.SelectedItem.ToString();
-            // string purpose = yourPurposeTextBox.Text.Trim();
-            // string professor = yourProfessorTextBox.Text.Trim(); // Based on your screenshot
+            if (comboBox1.SelectedValue is not int selectedRoomId)
+            {
+                MessageBox.Show("No room selected.");
+                return;
+            }
 
-            // --- Placeholder for input validation (before saving to database) ---
-            // You would add checks here to ensure all required fields are filled
-            // and data is in the correct format.
-            // Example:
-            // if (string.IsNullOrWhiteSpace(selectedRoom) || selectedDate == DateTime.MinValue || ...)
-            // {
-            //     MessageBox.Show("Please fill in all reservation details.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            //     return;
-            // }
+            var selectedRoom = _context.Rooms.FirstOrDefault(r => r.Id == selectedRoomId);
+            var selectedTime = comboBox2.Text;
+            var selectedDate = monthCalendar1.SelectionStart.Date;
+            var purpose = textBox11.Text.Trim();
+            var professor = textBox13.Text.Trim();
+            int userId = 1; // Placeholder
 
+            DateTime startTime, endTime;
+            switch (selectedTime)
+            {
+                case "8:00am - 12:00pm":
+                    startTime = selectedDate.AddHours(8);
+                    endTime = selectedDate.AddHours(12);
+                    break;
+                case "1:00pm - 5:00pm":
+                    startTime = selectedDate.AddHours(13);
+                    endTime = selectedDate.AddHours(17);
+                    break;
+                case "5:00pm - 9:00pm":
+                    startTime = selectedDate.AddHours(17);
+                    endTime = selectedDate.AddHours(21);
+                    break;
+                default:
+                    MessageBox.Show("Invalid time slot selected.");
+                    return;
+            }
 
-            // --- Placeholder for Database Saving Logic (Future Implementation with EF Core) ---
-            // This is where you would integrate with your data layer.
-            // For instance:
-            // var newReservation = new Reservation
-            // {
-            //     Room = selectedRoom,
-            //     Date = selectedDate,
-            //     Time = selectedTime,
-            //     Purpose = purpose,
-            //     Professor = professor
-            // };
-            // bool success = _reservationService.SaveReservation(newReservation); // Call a service to save
+            bool isAlreadyBooked = _context.Reservations.Any(r =>
+                r.RoomId == selectedRoomId &&
+                r.StartTime == startTime &&
+                r.EndTime == endTime
+            );
 
-            // For now, we'll simulate success.
-            MessageBox.Show("Reservation request submitted! (Simulated)", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (isAlreadyBooked)
+            {
+                MessageBox.Show("This room is already booked for the selected time and date.");
+                return;
+            }
 
+            var reservation = new Reservation
+            {
+                RoomId = selectedRoomId,
+                UserId = userId,
+                Purpose = purpose,
+                StartTime = startTime,
+                EndTime = endTime,
+                Status = ReservationStatus.Pending
+            };
 
-            // --- Navigate to Form5 after successful (simulated) booking ---
-            Form5 confirmationForm = new Form5(); // Create an instance of Form5
-            confirmationForm.Show();              // Show Form5
-            this.Hide();                          // Hide Form3
+            _context.Reservations.Add(reservation);
+            _context.SaveChanges();
+
+            MessageBox.Show("Reservation booked successfully!");
         }
+
+        // Placeholder buttons
+        private void button5_Click(object sender, EventArgs e) => MessageBox.Show("Home clicked");
+        private void button6_Click(object sender, EventArgs e) => MessageBox.Show("Reserve clicked");
+        private void button7_Click(object sender, EventArgs e) => MessageBox.Show("Rooms clicked");
+        private void button4_Click(object sender, EventArgs e) => Close(); // Exit or logout
     }
 }
-
