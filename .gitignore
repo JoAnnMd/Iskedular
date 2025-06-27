@@ -1,0 +1,44 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.sdf
+*.opendb
+*.VC.db
+*.VC.VC.opendb
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+ARM/
+ARM64/
+bin/
+obj/
+[Dd]ebugPublic/
+[Rr]eleasePublic/
+
+# Packages
+*.nupkg
+*.snupkg
+*.vsix
+*.vsixmanifest
+.paket/paket-files/
+paket-references/
+
+# Rider
+.idea/
+*.iml
+
+# Mac
+.DS_Store
+
+# Misc
+*.log
+*.pdb
+*.bak
+*.Designer.cs.original
+*~
