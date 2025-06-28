@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Extensions.DependencyInjection; // Added for IServiceProvider
 
 namespace UI_WinForms
 {
     public partial class Form2 : Form
     {
-        public Form2()
+        private readonly IServiceProvider _serviceProvider; // Added for dependency injection
+
+        public Form2(IServiceProvider serviceProvider) // Modified constructor
         {
             InitializeComponent();
+            _serviceProvider = serviceProvider; // Assign injected service provider
         }
 
         private void textBox5_TextChanged(object sender, EventArgs e)
@@ -89,30 +93,28 @@ namespace UI_WinForms
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Form1 homeForm = new Form1(); // Create an instance of Form1 (User Dashboard/Home)
-            homeForm.Show();              // Show Form1
-            this.Hide();                  // Hide Form2
+            Form1 homeForm = _serviceProvider.GetRequiredService<Form1>(); // Get Form1 from DI
+            homeForm.Show();
+            this.Hide();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            // You are already on the Rooms screen (Form2).
-            // Similar to Form1's Home button, this keeps you on the current form.
             MessageBox.Show("You are already on the Rooms screen.", "Navigation", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Form3 reserveForm = new Form3(); // Create an instance of Form3
-            reserveForm.Show();              // Show Form3
-            this.Hide();                     // Hide Form2
+            Form3 reserveForm = _serviceProvider.GetRequiredService<Form3>(); // Get Form3 from DI
+            reserveForm.Show();
+            this.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form4 profileForm = new Form4(); // Create an instance of Form4
-            profileForm.Show();              // Show Form4
-            this.Hide();                     // Hide Form2
+            Form4 profileForm = _serviceProvider.GetRequiredService<Form4>(); // Get Form4 from DI
+            profileForm.Show();
+            this.Hide();
         }
     }
 }

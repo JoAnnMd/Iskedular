@@ -11,12 +11,14 @@ namespace UI_WinForms
     {
         private readonly UserService _userService;
         private readonly IServiceProvider _serviceProvider;
+        private readonly SessionService _sessionService; // ADDED: Inject SessionService
 
-        public Form7(UserService userService, IServiceProvider serviceProvider)
+        public Form7(UserService userService, IServiceProvider serviceProvider, SessionService sessionService) // MODIFIED: Add SessionService to constructor
         {
             InitializeComponent();
             _userService = userService;
             _serviceProvider = serviceProvider;
+            _sessionService = sessionService; // Assign the injected SessionService
 
             textBox7.PasswordChar = '*';
 
@@ -101,24 +103,26 @@ namespace UI_WinForms
 
                 if (authenticatedUser != null)
                 {
+                    // ADDED: Set the authenticated user in the SessionService
+                    _sessionService.SetLoggedInUser(authenticatedUser);
+
                     // Check the user's role and redirect accordingly
                     if (authenticatedUser.Role == UserRole.Admin)
                     {
                         MessageBox.Show("Admin Login Successful!", "Welcome Admin", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Admin_Dashboard adminDashboard = _serviceProvider.GetRequiredService<Admin_Dashboard>(); // Assuming Form9 is the main admin dashboard
+                        Admin_Dashboard adminDashboard = _serviceProvider.GetRequiredService<Admin_Dashboard>();
                         adminDashboard.Show();
                         this.Hide();
                     }
                     else if (authenticatedUser.Role == UserRole.Student)
                     {
                         MessageBox.Show("Student Login Successful!", "Welcome Student", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        Form1 userDashboard = _serviceProvider.GetRequiredService<Form1>(); // Form1 is your student dashboard
+                        Form1 userDashboard = _serviceProvider.GetRequiredService<Form1>();
                         userDashboard.Show();
                         this.Hide();
                     }
                     else
                     {
-                        // Handle other roles or unexpected roles if necessary
                         MessageBox.Show("Login successful, but role not recognized. Access denied.", "Login Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         textBox7.Clear();
                         textBox2.Focus();

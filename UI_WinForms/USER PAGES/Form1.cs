@@ -7,14 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Extensions.DependencyInjection; // Added for IServiceProvider
 
 namespace UI_WinForms
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        private readonly IServiceProvider _serviceProvider; // Added for dependency injection
+
+        public Form1(IServiceProvider serviceProvider) // Modified constructor
         {
             InitializeComponent();
+            _serviceProvider = serviceProvider; // Assign injected service provider
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -89,35 +93,28 @@ namespace UI_WinForms
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Form2 roomsForm = new Form2(); // Create an instance of Form2
-            roomsForm.Show();              // Show Form2
-            this.Hide();                   // Hide Form1 (the current user dashboard)
+            Form2 roomsForm = _serviceProvider.GetRequiredService<Form2>(); // Get Form2 from DI
+            roomsForm.Show();
+            this.Hide();
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            // Since Home goes to Form1 itself, we don't need to create a new instance
-            // or hide the current form unless you want to refresh it.
-            // For now, this effectively does nothing, keeping you on Form1.
-            // If you wanted to, for example, refresh content on Form1, you might put:
-            // this.Invalidate();
-            // this.Refresh();
-            // or reload specific data.
             MessageBox.Show("You are already on the Home screen.", "Navigation", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Form3 reserveForm = new Form3(); // Create an instance of Form3
-            reserveForm.Show();              // Show Form3
-            this.Hide();                     // Hide Form1
+            Form3 reserveForm = _serviceProvider.GetRequiredService<Form3>(); // Get Form3 from DI
+            reserveForm.Show();
+            this.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form4 profileForm = new Form4(); // Create an instance of Form4
-            profileForm.Show();              // Show Form4
-            this.Hide();                     // Hide Form1
+            Form4 profileForm = _serviceProvider.GetRequiredService<Form4>(); // Get Form4 from DI
+            profileForm.Show();
+            this.Hide();
         }
     }
 }

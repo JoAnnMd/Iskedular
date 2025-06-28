@@ -14,12 +14,14 @@ namespace UI_WinForms
     {
         private readonly IServiceProvider _serviceProvider;
         private readonly RoomService _roomService;
+        private readonly ReservationService _reservationService;
 
-        public Available_Rooms(IServiceProvider serviceProvider, RoomService roomService)
+        public Available_Rooms(IServiceProvider serviceProvider, RoomService roomService, ReservationService reservationService)
         {
             InitializeComponent();
             _serviceProvider = serviceProvider;
             _roomService = roomService;
+            _reservationService = reservationService;
         }
 
         private async void Available_Rooms_Load(object sender, EventArgs e)
@@ -28,109 +30,128 @@ namespace UI_WinForms
             this.WindowState = FormWindowState.Normal;
             this.Bounds = Screen.PrimaryScreen!.Bounds;
 
+            comboBox1.Items.AddRange(new string[] { "AM", "PM" });
+            comboBox2.Items.AddRange(new string[] { "AM", "PM" });
+            comboBox1.SelectedIndex = 0;
+            comboBox2.SelectedIndex = 0;
+
             await LoadAvailableRooms();
         }
 
         private async Task LoadAvailableRooms()
         {
-            if (this.Controls.Find("flowLayoutPanelRooms", true).FirstOrDefault() is FlowLayoutPanel flowLayoutPanelRooms)
-            {
-                flowLayoutPanelRooms.Controls.Clear();
-                List<Room> allRooms = await _roomService.GetAllRoomsAsync();
+            if (flowLayoutPanelRooms == null) return;
 
-                foreach (Room room in allRooms)
+            flowLayoutPanelRooms.Controls.Clear();
+            List<Room> allRooms = await _roomService.GetAllRoomsAsync();
+            DateTime selectedDate = monthCalendar1.SelectionStart.Date;
+
+            bool validStart = DateTime.TryParse($"{textBox1.Text} {comboBox1.Text}", out DateTime parsedStart);
+            bool validEnd = DateTime.TryParse($"{textBox2.Text} {comboBox2.Text}", out DateTime parsedEnd);
+            if (!validStart || !validEnd) return;
+
+            DateTime startDateTime = selectedDate.Add(parsedStart.TimeOfDay);
+            DateTime endDateTime = selectedDate.Add(parsedEnd.TimeOfDay);
+            if (startDateTime >= endDateTime) return;
+
+            List<Reservation> approvedReservations = await _reservationService.GetReservationsAsync(null, selectedDate, ReservationStatus.Approved);
+
+            foreach (Room room in allRooms)
+            {
+                bool isAvailable = !approvedReservations.Any(r => r.RoomId == room.Id && startDateTime < r.EndTime && endDateTime > r.StartTime);
+
+                Panel roomPanel = new Panel();
+                roomPanel.Size = new Size(220, 180);
+                roomPanel.BorderStyle = BorderStyle.FixedSingle;
+                roomPanel.Margin = new Padding(10);
+                roomPanel.Tag = room;
+                roomPanel.BackColor = isAvailable ? Color.LightGreen : Color.LightCoral;
+
+                Label nameLabel = new Label();
+                nameLabel.Text = room.Name;
+                nameLabel.Font = new Font("Segoe UI", 12, FontStyle.Bold);
+                nameLabel.Location = new Point(10, 10);
+                nameLabel.AutoSize = true;
+
+                Label statusLabel = new Label();
+                statusLabel.Text = isAvailable ? "Status: Available" : "Status: Occupied";
+                statusLabel.Font = new Font("Segoe UI", 9, FontStyle.Italic);
+                statusLabel.Location = new Point(10, 35);
+                statusLabel.AutoSize = true;
+                statusLabel.ForeColor = isAvailable ? Color.DarkGreen : Color.DarkRed;
+
+                Label capacityLabel = new Label();
+                capacityLabel.Text = $"Capacity: {room.Capacity}";
+                capacityLabel.Font = new Font("Segoe UI", 9);
+                capacityLabel.Location = new Point(10, 55);
+                capacityLabel.AutoSize = true;
+
+                Label floorLabel = new Label();
+                floorLabel.Text = $"Floor: {room.Floor}";
+                floorLabel.Font = new Font("Segoe UI", 9);
+                floorLabel.Location = new Point(10, 75);
+                floorLabel.AutoSize = true;
+
+                string featuresText = "";
+                if (room.HasProjector) featuresText += "Projector, ";
+                if (room.HasWhiteboard) featuresText += "Whiteboard, ";
+                if (room.HasTV) featuresText += "TV, ";
+                if (room.HasAirConditioning) featuresText += "A/C, ";
+                if (room.HasSoundSystem) featuresText += "Sound System, ";
+                featuresText = featuresText.TrimEnd(',', ' ');
+                if (string.IsNullOrEmpty(featuresText)) featuresText = "None";
+
+                Label featuresLabel = new Label();
+                featuresLabel.Text = $"Features: {featuresText}";
+                featuresLabel.Font = new Font("Segoe UI", 9);
+                featuresLabel.Location = new Point(10, 95);
+                featuresLabel.AutoSize = true;
+                featuresLabel.MaximumSize = new Size(roomPanel.Width - 20, 0);
+
+                if (room.NumberOfComputers > 0)
                 {
-                    // INCREASED PANEL SIZE TO ACCOMMODATE MORE INFO
-                    Panel roomPanel = new Panel();
-                    roomPanel.Size = new Size(220, 180); // Increased height and width
-                    roomPanel.BorderStyle = BorderStyle.FixedSingle;
-                    roomPanel.Margin = new Padding(10);
-                    roomPanel.Tag = room;
-
-                    // Dummy logic for availability (replace with real reservation check later)
-                    bool isRoomActuallyAvailable = (room.Id % 2 == 0);
-                    roomPanel.BackColor = isRoomActuallyAvailable ? Color.LightGreen : Color.LightCoral;
-
-                    Label nameLabel = new Label();
-                    nameLabel.Text = room.Name;
-                    nameLabel.Font = new Font("Segoe UI", 12, FontStyle.Bold);
-                    nameLabel.Location = new Point(10, 10);
-                    nameLabel.AutoSize = true;
-
-                    Label statusLabel = new Label();
-                    statusLabel.Text = isRoomActuallyAvailable ? "Status: Available" : "Status: Occupied";
-                    statusLabel.Font = new Font("Segoe UI", 9, FontStyle.Italic);
-                    statusLabel.Location = new Point(10, 35); // Adjusted Y
-                    statusLabel.AutoSize = true;
-                    statusLabel.ForeColor = isRoomActuallyAvailable ? Color.DarkGreen : Color.DarkRed;
-
-                    Label capacityLabel = new Label();
-                    capacityLabel.Text = $"Capacity: {room.Capacity}";
-                    capacityLabel.Font = new Font("Segoe UI", 9);
-                    capacityLabel.Location = new Point(10, 55); // Adjusted Y
-                    capacityLabel.AutoSize = true;
-
-                    Label floorLabel = new Label(); // NEW: Floor Label
-                    floorLabel.Text = $"Floor: {room.Floor}";
-                    floorLabel.Font = new Font("Segoe UI", 9);
-                    floorLabel.Location = new Point(10, 75); // Adjusted Y
-                    floorLabel.AutoSize = true;
-
-                    string featuresText = "";
-                    if (room.HasProjector) featuresText += "Projector, ";
-                    if (room.HasWhiteboard) featuresText += "Whiteboard, ";
-                    if (room.HasTV) featuresText += "TV, "; // NEW: TV
-                    if (room.HasAirConditioning) featuresText += "A/C, "; // NEW: Air Conditioning
-                    if (room.HasSoundSystem) featuresText += "Sound System, "; // NEW: Sound System
-
-                    // Remove trailing comma and space
-                    featuresText = featuresText.TrimEnd(',', ' ');
-                    if (string.IsNullOrEmpty(featuresText)) featuresText = "None";
-
-                    Label featuresLabel = new Label();
-                    featuresLabel.Text = $"Features: {featuresText}";
-                    featuresLabel.Font = new Font("Segoe UI", 9);
-                    featuresLabel.Location = new Point(10, 95); // Adjusted Y
-                    featuresLabel.AutoSize = true;
-                    featuresLabel.MaximumSize = new Size(roomPanel.Width - 20, 0); // Allow text to wrap
-
-                    Label computersLabel = new Label(); // NEW: Computers Label
-                    if (room.NumberOfComputers > 0)
-                    {
-                        computersLabel.Text = $"Computers: {room.NumberOfComputers}";
-                        computersLabel.Font = new Font("Segoe UI", 9);
-                        computersLabel.Location = new Point(10, 145); // Adjusted Y
-                        computersLabel.AutoSize = true;
-                    }
-
-
-                    roomPanel.Controls.Add(nameLabel);
-                    roomPanel.Controls.Add(statusLabel);
-                    roomPanel.Controls.Add(capacityLabel);
-                    roomPanel.Controls.Add(floorLabel); // ADDED
-                    roomPanel.Controls.Add(featuresLabel);
-                    if (room.NumberOfComputers > 0)
-                    {
-                        roomPanel.Controls.Add(computersLabel); // ADDED if applicable
-                    }
-
-                    roomPanel.Click += (sender, e) => RoomPanel_Click(sender, e, room);
-
-                    flowLayoutPanelRooms.Controls.Add(roomPanel);
+                    Label computersLabel = new Label();
+                    computersLabel.Text = $"Computers: {room.NumberOfComputers}";
+                    computersLabel.Font = new Font("Segoe UI", 9);
+                    computersLabel.Location = new Point(10, 145);
+                    computersLabel.AutoSize = true;
+                    roomPanel.Controls.Add(computersLabel);
                 }
-            }
-            else
-            {
-                MessageBox.Show("Error: FlowLayoutPanel named 'flowLayoutPanelRooms' NOT FOUND in Available_Rooms. Please check its name in the designer.", "UI Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                roomPanel.Controls.Add(nameLabel);
+                roomPanel.Controls.Add(statusLabel);
+                roomPanel.Controls.Add(capacityLabel);
+                roomPanel.Controls.Add(floorLabel);
+                roomPanel.Controls.Add(featuresLabel);
+                flowLayoutPanelRooms.Controls.Add(roomPanel);
             }
         }
 
-        private void RoomPanel_Click(object sender, EventArgs e, Room clickedRoom)
+        private async void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
         {
-            MessageBox.Show($"Clicked on Room: {clickedRoom.Name}\nCapacity: {clickedRoom.Capacity}\nFloor: {clickedRoom.Floor}", "Room Details", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            await LoadAvailableRooms();
         }
 
-        // --- Existing navigation and other methods below ---
+        private async void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            await LoadAvailableRooms();
+        }
+
+        private async void textBox2_TextChanged(object sender, EventArgs e)
+        {
+            await LoadAvailableRooms();
+        }
+
+        private async void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            await LoadAvailableRooms();
+        }
+
+        private async void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            await LoadAvailableRooms();
+        }
+
         private void button6_Click(object sender, EventArgs e)
         {
             Total_Rooms form10 = _serviceProvider.GetRequiredService<Total_Rooms>();
@@ -173,7 +194,7 @@ namespace UI_WinForms
             this.Hide();
         }
 
-        private void textBox5_TextChanged(object sender, EventArgs e) { /* Logic here */ }
-        private void textBox15_TextChanged(object sender, EventArgs e) { /* Logic here */ }
+        private void textBox5_TextChanged(object sender, EventArgs e) { }
+        private void textBox15_TextChanged(object sender, EventArgs e) { }
     }
 }

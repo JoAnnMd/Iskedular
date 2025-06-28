@@ -2,15 +2,8 @@
 {
     partial class PendingRequest
     {
-        /// <summary>
-        /// Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        /// Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,255 +13,164 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
-
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PendingRequest));
-            this.panelTopNav = new System.Windows.Forms.Panel(); // Top navigation panel
-            this.button4 = new System.Windows.Forms.Button(); // Profile Icon button
-            this.button3 = new System.Windows.Forms.Button(); // Requests button
-            this.button5 = new System.Windows.Forms.Button(); // Dashboard button
-            this.button1 = new System.Windows.Forms.Button(); // Rooms button
-            this.button2 = new System.Windows.Forms.Button(); // Bookings button
-            this.pictureBox4 = new System.Windows.Forms.PictureBox(); // Iskedular Logo icon
-            this.textBox4 = new System.Windows.Forms.TextBox(); // Iskedular Text label
-            this.pictureBox1 = new System.Windows.Forms.PictureBox(); // Background for top navigation
-            this.panelMainContentWrapper = new System.Windows.Forms.Panel(); // Wrapper panel for main content, fills remaining space
-            this.panelContentToCenter = new System.Windows.Forms.Panel(); // This panel holds content to be centered
-            this.dataGridView1 = new System.Windows.Forms.DataGridView(); // DataGridView for pending requests
-            this.textBox5 = new System.Windows.Forms.TextBox(); // "Pending Request" label
+            panelTopNav = new Panel();
+            button4 = new Button();
+            button3 = new Button();
+            button5 = new Button();
+            button1 = new Button();
+            button2 = new Button();
+            pictureBox4 = new PictureBox();
+            textBox4 = new TextBox();
+            panelMainContentWrapper = new Panel();
+            panelContentToCenter = new Panel();
+            textBox5 = new TextBox();
+            pendingRequestsPanel = new FlowLayoutPanel();
 
-            this.panelTopNav.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panelMainContentWrapper.SuspendLayout();
-            this.panelContentToCenter.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.SuspendLayout();
-            //
-            // panelTopNav
-            //
-            this.panelTopNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.panelTopNav.Controls.Add(this.button4);
-            this.panelTopNav.Controls.Add(this.button3);
-            this.panelTopNav.Controls.Add(this.button5);
-            this.panelTopNav.Controls.Add(this.button1);
-            this.panelTopNav.Controls.Add(this.button2);
-            this.panelTopNav.Controls.Add(this.pictureBox4);
-            this.panelTopNav.Controls.Add(this.textBox4);
-            this.panelTopNav.Controls.Add(this.pictureBox1);
-            this.panelTopNav.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTopNav.Location = new System.Drawing.Point(0, 0);
-            this.panelTopNav.Name = "panelTopNav";
-            this.panelTopNav.Size = new System.Drawing.Size(800, 89);
-            this.panelTopNav.TabIndex = 0;
-            //
-            // button4 (Profile Icon)
-            //
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Image = (System.Drawing.Image)resources.GetObject("button4.Image");
-            this.button4.Location = new System.Drawing.Point(742, 9);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(48, 69);
-            this.button4.TabIndex = 229;
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            //
-            // button3 (Requests)
-            //
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(646, 27);
-            this.button3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(86, 29);
-            this.button3.TabIndex = 228;
-            this.button3.Text = "Requests";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            //
-            // button5 (Dashboard)
-            //
-            this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(550, 27);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(86, 29);
-            this.button5.TabIndex = 225;
-            this.button5.Text = "Dashboard";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            //
-            // button1 (Rooms)
-            //
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(454, 27);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 29);
-            this.button1.TabIndex = 226;
-            this.button1.Text = "Rooms";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            //
-            // button2 (Bookings)
-            //
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(358, 27);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 29);
-            this.button2.TabIndex = 227;
-            this.button2.Text = "Bookings";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            //
-            // pictureBox4 (Iskedular Logo icon)
-            //
-            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox4.Enabled = false;
-            this.pictureBox4.Image = (System.Drawing.Image)resources.GetObject("pictureBox4.Image");
-            this.pictureBox4.Location = new System.Drawing.Point(12, 13);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(72, 57);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 230;
-            this.pictureBox4.TabStop = false;
-            //
-            // textBox4 (Iskedular Text)
-            //
-            this.textBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Elephant", 13.8F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.textBox4.ForeColor = System.Drawing.Color.White;
-            this.textBox4.Location = new System.Drawing.Point(90, 27);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(153, 40);
-            this.textBox4.TabIndex = 224;
-            this.textBox4.Text = "Iskedular";
-            this.textBox4.ReadOnly = true; // Make read-only
-            this.textBox4.TabStop = false; // Remove from tab order
-            //
-            // pictureBox1 (Background for top nav)
-            //
-            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(800, 89);
-            this.pictureBox1.TabIndex = 223;
-            this.pictureBox1.TabStop = false;
-            //
-            // panelMainContentWrapper
-            //
-            this.panelMainContentWrapper.BackColor = System.Drawing.SystemColors.ControlLight; // Light background for content area
-            this.panelMainContentWrapper.Controls.Add(this.panelContentToCenter); // Add the content panel here
-            this.panelMainContentWrapper.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMainContentWrapper.Location = new System.Drawing.Point(0, 89); // Below the top navigation
-            this.panelMainContentWrapper.Name = "panelMainContentWrapper";
-            this.panelMainContentWrapper.Size = new System.Drawing.Size(800, 473);
-            this.panelMainContentWrapper.TabIndex = 1;
-            //
-            // panelContentToCenter
-            //
-            // This panel will contain the "Pending Request" label and the DataGridView, and will be centered dynamically.
-            this.panelContentToCenter.Controls.Add(this.dataGridView1);
-            this.panelContentToCenter.Controls.Add(this.textBox5);
-            this.panelContentToCenter.Location = new System.Drawing.Point(0, 0); // Temporary position, will be centered in code
-            this.panelContentToCenter.Name = "panelContentToCenter";
-            this.panelContentToCenter.Size = new System.Drawing.Size(770, 400); // Set a size for the content area
-            this.panelContentToCenter.TabIndex = 0;
-            this.panelContentToCenter.Anchor = System.Windows.Forms.AnchorStyles.None; // Set anchor to None for manual centering
-            this.panelContentToCenter.BackColor = System.Drawing.Color.Transparent; // Make background transparent to show parent's color
-            //
-            // dataGridView1
-            //
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 50); // Adjusted relative to panelContentToCenter
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(720, 340); // Adjusted size within the panel
-            this.dataGridView1.TabIndex = 241;
-            //
-            // textBox5 ("Pending Request" Label)
-            //
-            this.textBox5.BackColor = System.Drawing.SystemColors.Control; // This will now contrast with panelMainContentWrapper.BackColor
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Elephant", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.Black;
-            this.textBox5.Location = new System.Drawing.Point(23, 10); // Adjusted relative to panelContentToCenter
-            this.textBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(201, 26);
-            this.textBox5.TabIndex = 122;
-            this.textBox5.Text = "Pending Request";
-            this.textBox5.ReadOnly = true; // Make read-only
-            this.textBox5.TabStop = false; // Remove from tab order
-            //
-            // PendingRequest
-            //
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0))))); // Form background for areas not covered by panels
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 562);
-            this.Controls.Add(this.panelMainContentWrapper);
-            this.Controls.Add(this.panelTopNav); // Add the top nav panel
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "PendingRequest";
-            this.Text = "Form11"; // Keep this as it might be used internally by VS
-            this.Load += new System.EventHandler(this.PendingRequest_Load); // Renamed Load event
-            this.Resize += new System.EventHandler(this.PendingRequest_Resize); // Added Resize event for centering
-            this.panelTopNav.ResumeLayout(false);
-            this.panelTopNav.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panelMainContentWrapper.ResumeLayout(false);
-            this.panelContentToCenter.ResumeLayout(false);
-            this.panelContentToCenter.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ResumeLayout(false);
+            panelTopNav.BackColor = Color.FromArgb(192, 0, 0);
+            panelTopNav.Controls.Add(button4);
+            panelTopNav.Controls.Add(button3);
+            panelTopNav.Controls.Add(button5);
+            panelTopNav.Controls.Add(button1);
+            panelTopNav.Controls.Add(button2);
+            panelTopNav.Controls.Add(pictureBox4);
+            panelTopNav.Controls.Add(textBox4);
+            panelTopNav.Dock = DockStyle.Top;
+            panelTopNav.Location = new Point(0, 0);
+            panelTopNav.Name = "panelTopNav";
+            panelTopNav.Size = new Size(1024, 89);
+            panelTopNav.TabIndex = 0;
 
+            button4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button4.Image = (Image)resources.GetObject("button4.Image");
+            button4.Location = new Point(960, 10);
+            button4.Name = "button4";
+            button4.Size = new Size(48, 64);
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+
+            button3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button3.BackColor = Color.FromArgb(192, 0, 0);
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.ForeColor = Color.White;
+            button3.Location = new Point(870, 30);
+            button3.Name = "button3";
+            button3.Size = new Size(86, 29);
+            button3.Text = "Requests";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
+
+            button5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button5.BackColor = Color.FromArgb(192, 0, 0);
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.ForeColor = Color.White;
+            button5.Location = new Point(778, 30);
+            button5.Name = "button5";
+            button5.Size = new Size(86, 29);
+            button5.Text = "Dashboard";
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
+
+            button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button1.BackColor = Color.FromArgb(192, 0, 0);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(686, 30);
+            button1.Name = "button1";
+            button1.Size = new Size(86, 29);
+            button1.Text = "Rooms";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+
+            button2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button2.BackColor = Color.FromArgb(192, 0, 0);
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(594, 30);
+            button2.Name = "button2";
+            button2.Size = new Size(86, 29);
+            button2.Text = "Bookings";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+
+            pictureBox4.BackColor = Color.FromArgb(192, 0, 0);
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(12, 13);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(64, 64);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabStop = false;
+
+            textBox4.BackColor = Color.FromArgb(192, 0, 0);
+            textBox4.BorderStyle = BorderStyle.None;
+            textBox4.Font = new Font("Elephant", 13.8F, FontStyle.Bold | FontStyle.Italic);
+            textBox4.ForeColor = Color.White;
+            textBox4.Location = new Point(82, 28);
+            textBox4.Multiline = true;
+            textBox4.Name = "textBox4";
+            textBox4.ReadOnly = true;
+            textBox4.Size = new Size(160, 40);
+            textBox4.Text = "Iskedular";
+
+            panelMainContentWrapper.Dock = DockStyle.Fill;
+            panelMainContentWrapper.BackColor = SystemColors.ControlLight;
+            panelMainContentWrapper.Controls.Add(panelContentToCenter);
+            panelMainContentWrapper.Location = new Point(0, 89);
+            panelMainContentWrapper.Name = "panelMainContentWrapper";
+            panelMainContentWrapper.Size = new Size(1024, 639);
+            panelMainContentWrapper.TabIndex = 1;
+
+            panelContentToCenter.Dock = DockStyle.Fill;
+            panelContentToCenter.BackColor = Color.Transparent;
+            panelContentToCenter.Controls.Add(pendingRequestsPanel);
+            panelContentToCenter.Controls.Add(textBox5);
+            panelContentToCenter.Name = "panelContentToCenter";
+
+            textBox5.BackColor = SystemColors.Control;
+            textBox5.BorderStyle = BorderStyle.None;
+            textBox5.Font = new Font("Elephant", 12F, FontStyle.Bold);
+            textBox5.ForeColor = Color.Black;
+            textBox5.Location = new Point(20, 10);
+            textBox5.Name = "textBox5";
+            textBox5.ReadOnly = true;
+            textBox5.Size = new Size(300, 30);
+            textBox5.Text = "Pending Requests";
+
+            pendingRequestsPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            pendingRequestsPanel.AutoScroll = true;
+            pendingRequestsPanel.WrapContents = true;
+            pendingRequestsPanel.FlowDirection = FlowDirection.LeftToRight;
+            pendingRequestsPanel.Location = new Point(20, 50);
+            pendingRequestsPanel.Name = "pendingRequestsPanel";
+            pendingRequestsPanel.Size = new Size(980, 560);
+            pendingRequestsPanel.TabIndex = 123;
+
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
+            ClientSize = new Size(1024, 728);
+            Controls.Add(panelMainContentWrapper);
+            Controls.Add(panelTopNav);
+            Name = "PendingRequest";
+            Text = "PendingRequest";
+            Load += PendingRequest_Load;
+            Resize += PendingRequest_Resize;
         }
 
-        #endregion
-
-        private System.Windows.Forms.Panel panelTopNav; // New top navigation panel
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panelMainContentWrapper; // Wrapper for centering
-        private System.Windows.Forms.Panel panelContentToCenter; // Panel that contains main content to be centered
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private Panel panelTopNav;
+        private Button button4;
+        private Button button3;
+        private Button button5;
+        private Button button1;
+        private Button button2;
+        private PictureBox pictureBox4;
+        private TextBox textBox4;
+        private PictureBox pictureBox1;
+        private Panel panelMainContentWrapper;
+        private Panel panelContentToCenter;
+        private TextBox textBox5;
+        private FlowLayoutPanel pendingRequestsPanel;
     }
 }
