@@ -1,6 +1,6 @@
 ﻿namespace UI_WinForms
 {
-    partial class Bookings_Total
+    partial class admin_bookings
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -17,7 +17,6 @@
 
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Bookings_Total));
             panelTopNav = new Panel();
             button4 = new Button();
             button3 = new Button();
@@ -28,13 +27,22 @@
             textBox4 = new TextBox();
             pictureBox1 = new PictureBox();
             panelMainContent = new Panel();
-            textBox5 = new TextBox();
-            dataGridView1 = new DataGridView();
+            tabControl1 = new TabControl();
+            tabPage1 = new TabPage();
+            flowLayoutPanel1 = new FlowLayoutPanel();
+            tabPage2 = new TabPage();
+            flowLayoutPanel2 = new FlowLayoutPanel();
+            tabPage3 = new TabPage();
+            flowLayoutPanel3 = new FlowLayoutPanel();
+            label1 = new Label();
             panelTopNav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panelMainContent.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            tabControl1.SuspendLayout();
+            tabPage1.SuspendLayout();
+            tabPage2.SuspendLayout();
+            tabPage3.SuspendLayout();
             SuspendLayout();
             // 
             // panelTopNav
@@ -52,82 +60,76 @@
             panelTopNav.Location = new Point(0, 0);
             panelTopNav.Name = "panelTopNav";
             panelTopNav.Size = new Size(1000, 89);
-            panelTopNav.TabIndex = 1;
+            panelTopNav.TabIndex = 0;
             // 
             // button4
             // 
             button4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button4.Image = (Image)resources.GetObject("button4.Image");
             button4.Location = new Point(944, 10);
             button4.Name = "button4";
             button4.Size = new Size(48, 69);
-            button4.TabIndex = 0;
+            button4.TabIndex = 240;
+            button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
             // 
             // button3
             // 
-            button3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             button3.BackColor = Color.FromArgb(192, 0, 0);
             button3.FlatStyle = FlatStyle.Flat;
             button3.ForeColor = Color.White;
             button3.Location = new Point(850, 30);
             button3.Name = "button3";
             button3.Size = new Size(86, 29);
-            button3.TabIndex = 1;
+            button3.TabIndex = 241;
             button3.Text = "Requests";
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
             // 
             // button5
             // 
-            button5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             button5.BackColor = Color.FromArgb(192, 0, 0);
             button5.FlatStyle = FlatStyle.Flat;
             button5.ForeColor = Color.White;
             button5.Location = new Point(754, 30);
             button5.Name = "button5";
             button5.Size = new Size(86, 29);
-            button5.TabIndex = 2;
+            button5.TabIndex = 242;
             button5.Text = "Dashboard";
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
             // 
             // button1
             // 
-            button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             button1.BackColor = Color.FromArgb(192, 0, 0);
             button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = Color.White;
             button1.Location = new Point(658, 30);
             button1.Name = "button1";
             button1.Size = new Size(86, 29);
-            button1.TabIndex = 3;
+            button1.TabIndex = 243;
             button1.Text = "Rooms";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // button2
             // 
-            button2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             button2.BackColor = Color.FromArgb(192, 0, 0);
             button2.FlatStyle = FlatStyle.Flat;
             button2.ForeColor = Color.White;
             button2.Location = new Point(562, 30);
             button2.Name = "button2";
             button2.Size = new Size(86, 29);
-            button2.TabIndex = 4;
+            button2.TabIndex = 244;
             button2.Text = "Bookings";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
             // pictureBox4
             // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
             pictureBox4.Location = new Point(12, 13);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(72, 57);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 5;
+            pictureBox4.TabIndex = 245;
             pictureBox4.TabStop = false;
             // 
             // textBox4
@@ -139,55 +141,106 @@
             textBox4.Location = new Point(90, 27);
             textBox4.Multiline = true;
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(254, 27);
-            textBox4.TabIndex = 6;
+            textBox4.Size = new Size(100, 27);
+            textBox4.TabIndex = 246;
             textBox4.Text = "Iskedular";
             // 
             // pictureBox1
             // 
-            pictureBox1.BackColor = Color.FromArgb(192, 0, 0);
             pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(1000, 89);
-            pictureBox1.TabIndex = 7;
+            pictureBox1.TabIndex = 247;
             pictureBox1.TabStop = false;
             // 
             // panelMainContent
             // 
-            panelMainContent.BackColor = SystemColors.Control;
-            panelMainContent.Controls.Add(textBox5);
-            panelMainContent.Controls.Add(dataGridView1);
+            panelMainContent.Controls.Add(tabControl1);
+            panelMainContent.Controls.Add(label1);
             panelMainContent.Dock = DockStyle.Fill;
             panelMainContent.Location = new Point(0, 89);
             panelMainContent.Name = "panelMainContent";
             panelMainContent.Size = new Size(1000, 611);
-            panelMainContent.TabIndex = 0;
+            panelMainContent.TabIndex = 1;
             // 
-            // textBox5
+            // tabControl1
             // 
-            textBox5.BackColor = SystemColors.Control;
-            textBox5.BorderStyle = BorderStyle.None;
-            textBox5.Font = new Font("Elephant", 12F, FontStyle.Bold);
-            textBox5.ForeColor = Color.Black;
-            textBox5.Location = new Point(20, 30);
-            textBox5.Multiline = true;
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(261, 27);
-            textBox5.TabIndex = 0;
-            textBox5.Text = "Total Bookings";
+            tabControl1.Controls.Add(tabPage1);
+            tabControl1.Controls.Add(tabPage2);
+            tabControl1.Controls.Add(tabPage3);
+            tabControl1.Dock = DockStyle.Fill;
+            tabControl1.Location = new Point(0, 0);
+            tabControl1.Name = "tabControl1";
+            tabControl1.SelectedIndex = 0;
+            tabControl1.Size = new Size(1000, 611);
+            tabControl1.TabIndex = 2;
             // 
-            // dataGridView1
+            // tabPage1
             // 
-            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(20, 80);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(960, 500);
-            dataGridView1.TabIndex = 1;
+            tabPage1.Controls.Add(flowLayoutPanel1);
+            tabPage1.Location = new Point(4, 29);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Size = new Size(992, 578);
+            tabPage1.TabIndex = 0;
+            tabPage1.Text = "Today's Bookings";
             // 
-            // Bookings_Total
+            // flowLayoutPanel1
+            // 
+            flowLayoutPanel1.AutoScroll = true;
+            flowLayoutPanel1.Dock = DockStyle.Fill;
+            flowLayoutPanel1.Location = new Point(0, 0);
+            flowLayoutPanel1.Name = "flowLayoutPanel1";
+            flowLayoutPanel1.Size = new Size(992, 578);
+            flowLayoutPanel1.TabIndex = 0;
+            // 
+            // tabPage2
+            // 
+            tabPage2.Controls.Add(flowLayoutPanel2);
+            tabPage2.Location = new Point(4, 29);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Size = new Size(992, 578);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "Tomorrow's Bookings";
+            // 
+            // flowLayoutPanel2
+            // 
+            flowLayoutPanel2.AutoScroll = true;
+            flowLayoutPanel2.Dock = DockStyle.Fill;
+            flowLayoutPanel2.Location = new Point(0, 0);
+            flowLayoutPanel2.Name = "flowLayoutPanel2";
+            flowLayoutPanel2.Size = new Size(992, 578);
+            flowLayoutPanel2.TabIndex = 0;
+            // 
+            // tabPage3
+            // 
+            tabPage3.Controls.Add(flowLayoutPanel3);
+            tabPage3.Location = new Point(4, 29);
+            tabPage3.Name = "tabPage3";
+            tabPage3.Size = new Size(992, 578);
+            tabPage3.TabIndex = 2;
+            tabPage3.Text = "Upcoming Bookings";
+            // 
+            // flowLayoutPanel3
+            // 
+            flowLayoutPanel3.AutoScroll = true;
+            flowLayoutPanel3.Dock = DockStyle.Fill;
+            flowLayoutPanel3.Location = new Point(0, 0);
+            flowLayoutPanel3.Name = "flowLayoutPanel3";
+            flowLayoutPanel3.Size = new Size(992, 578);
+            flowLayoutPanel3.TabIndex = 0;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Elephant", 12F, FontStyle.Bold);
+            label1.Location = new Point(20, 30);
+            label1.Name = "label1";
+            label1.Size = new Size(202, 26);
+            label1.TabIndex = 3;
+            label1.Text = "Today's Bookings";
+            // 
+            // admin_bookings
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -195,8 +248,8 @@
             Controls.Add(panelMainContent);
             Controls.Add(panelTopNav);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "Bookings_Total";
-            Text = "Total Bookings";
+            Name = "admin_bookings";
+            Text = "Bookings Today";
             WindowState = FormWindowState.Maximized;
             panelTopNav.ResumeLayout(false);
             panelTopNav.PerformLayout();
@@ -204,7 +257,10 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panelMainContent.ResumeLayout(false);
             panelMainContent.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            tabControl1.ResumeLayout(false);
+            tabPage1.ResumeLayout(false);
+            tabPage2.ResumeLayout(false);
+            tabPage3.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -219,9 +275,14 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.PictureBox pictureBox1;
-
         private System.Windows.Forms.Panel panelMainContent;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
     }
 }
