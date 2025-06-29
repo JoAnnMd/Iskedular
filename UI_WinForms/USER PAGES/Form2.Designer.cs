@@ -45,40 +45,40 @@
             panel5 = new Panel();
             label5 = new Label();
             panel6 = new Panel();
-            label6 = new Label();
-            panel7 = new Panel();
-            panel8 = new Panel();
-            panel9 = new Panel();
-            panel10 = new Panel();
-            panel11 = new Panel();
-            panel12 = new Panel();
-            label7 = new Label();
-            label8 = new Label();
-            label9 = new Label();
-            label10 = new Label();
-            label11 = new Label();
-            panel13 = new Panel();
-            panel14 = new Panel();
-            panel15 = new Panel();
-            panel16 = new Panel();
-            panel17 = new Panel();
-            panel18 = new Panel();
-            label12 = new Label();
-            label13 = new Label();
-            label14 = new Label();
-            label15 = new Label();
-            label16 = new Label();
-            label17 = new Label();
-            panel19 = new Panel();
-            panel20 = new Panel();
+            R12 = new Label();
+            p11 = new Panel();
+            p12 = new Panel();
+            p10 = new Panel();
+            p9 = new Panel();
+            p8 = new Panel();
+            p7 = new Panel();
+            R11 = new Label();
+            R10 = new Label();
+            R9 = new Label();
+            R8 = new Label();
+            R7 = new Label();
+            p6 = new Panel();
+            p5 = new Panel();
+            p4 = new Panel();
+            p3 = new Panel();
+            p2 = new Panel();
+            p1 = new Panel();
+            R6 = new Label();
+            R5 = new Label();
+            R4 = new Label();
+            R3 = new Label();
+            R2 = new Label();
+            R1 = new Label();
+            PP1 = new Panel();
+            PP2 = new Panel();
             panel21 = new Panel();
-            panel22 = new Panel();
-            panel23 = new Panel();
-            label18 = new Label();
-            label19 = new Label();
+            PAVR = new Panel();
+            PCOMLAB = new Panel();
+            RR1 = new Label();
+            RR2 = new Label();
             label20 = new Label();
-            label21 = new Label();
-            label23 = new Label();
+            RAVR = new Label();
+            RCOMLAB = new Label();
             panel24 = new Panel();
             bindingSource1 = new BindingSource(components);
             button3 = new Button();
@@ -89,6 +89,36 @@
             textBox13 = new TextBox();
             button4 = new Button();
             pictureBox1 = new PictureBox();
+            comboBox1 = new ComboBox();
+            comboBoxTime = new ComboBox();
+            P1 = new Panel();
+            P2 = new Panel();
+            P3 = new Panel();
+            P4 = new Panel();
+            P5 = new Panel();
+            P6 = new Panel();
+            P7 = new Panel();
+            P8 = new Panel();
+            P9 = new Panel();
+            P10 = new Panel();
+            P11 = new Panel();
+            P12 = new Panel();
+            PRoth1 = new Panel();
+            PRoth2 = new Panel();
+            R1 = new Label();
+            R2 = new Label();
+            R3 = new Label();
+            R4 = new Label();
+            R5 = new Label();
+            R6 = new Label();
+            R7 = new Label();
+            R8 = new Label();
+            R9 = new Label();
+            R10 = new Label();
+            R11 = new Label();
+            R12 = new Label();
+            RRoth1 = new Label();
+            RRoth2 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -116,6 +146,7 @@
             monthCalendar1.TitleBackColor = Color.DarkRed;
             monthCalendar1.TitleForeColor = Color.White;
             monthCalendar1.TrailingForeColor = Color.LightGray;
+            monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
             // 
             // textBox3
             // 
@@ -251,251 +282,253 @@
             panel6.Size = new Size(22, 184);
             panel6.TabIndex = 23;
             // 
-            // label6
+            // R12
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Bell MT", 7.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(376, 320);
-            label6.Name = "label6";
-            label6.Size = new Size(37, 14);
-            label6.TabIndex = 29;
-            label6.Text = "A 206";
+            R12.AutoSize = true;
+            R12.Font = new Font("Bell MT", 7.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            R12.Location = new Point(376, 320);
+            R12.Name = "R12";
+            R12.Size = new Size(37, 14);
+            R12.TabIndex = 29;
+            R12.Text = "A 206";
             // 
-            // panel7
+            // p11
             // 
-            panel7.BackColor = Color.Lime;
-            panel7.Location = new Point(342, 349);
-            panel7.Margin = new Padding(3, 4, 3, 4);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(28, 24);
-            panel7.TabIndex = 23;
+            p11.BackColor = Color.Lime;
+            p11.Location = new Point(342, 349);
+            p11.Margin = new Padding(3, 4, 3, 4);
+            p11.Name = "p11";
+            p11.Size = new Size(28, 24);
+            p11.TabIndex = 23;
             // 
-            // panel8
+            // p12
             // 
-            panel8.BackColor = Color.Lime;
-            panel8.Location = new Point(342, 318);
-            panel8.Margin = new Padding(3, 4, 3, 4);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(28, 24);
-            panel8.TabIndex = 23;
+            p12.BackColor = Color.Lime;
+            p12.Location = new Point(342, 318);
+            p12.Margin = new Padding(3, 4, 3, 4);
+            p12.Name = "p12";
+            p12.Size = new Size(28, 24);
+            p12.TabIndex = 23;
             // 
-            // panel9
+            // p10
             // 
-            panel9.BackColor = Color.Lime;
-            panel9.Location = new Point(342, 380);
-            panel9.Margin = new Padding(3, 4, 3, 4);
-            panel9.Name = "panel9";
-            panel9.Size = new Size(28, 24);
-            panel9.TabIndex = 24;
+            p10.BackColor = Color.Lime;
+            p10.Location = new Point(342, 380);
+            p10.Margin = new Padding(3, 4, 3, 4);
+            p10.Name = "p10";
+            p10.Size = new Size(28, 24);
+            p10.TabIndex = 24;
             // 
-            // panel10
+            // p9
             // 
-            panel10.BackColor = Color.Lime;
-            panel10.Location = new Point(342, 411);
-            panel10.Margin = new Padding(3, 4, 3, 4);
-            panel10.Name = "panel10";
-            panel10.Size = new Size(28, 24);
-            panel10.TabIndex = 25;
+            p9.BackColor = Color.Lime;
+            p9.Location = new Point(342, 411);
+            p9.Margin = new Padding(3, 4, 3, 4);
+            p9.Name = "p9";
+            p9.Size = new Size(28, 24);
+            p9.TabIndex = 25;
             // 
-            // panel11
+            // p8
             // 
-            panel11.BackColor = Color.Lime;
-            panel11.Location = new Point(342, 442);
-            panel11.Margin = new Padding(3, 4, 3, 4);
-            panel11.Name = "panel11";
-            panel11.Size = new Size(28, 24);
-            panel11.TabIndex = 26;
+            p8.BackColor = Color.Lime;
+            p8.Location = new Point(342, 442);
+            p8.Margin = new Padding(3, 4, 3, 4);
+            p8.Name = "p8";
+            p8.Size = new Size(28, 24);
+            p8.TabIndex = 26;
             // 
-            // panel12
+            // p7
             // 
-            panel12.BackColor = Color.Lime;
-            panel12.Location = new Point(342, 476);
-            panel12.Margin = new Padding(3, 4, 3, 4);
-            panel12.Name = "panel12";
-            panel12.Size = new Size(28, 24);
-            panel12.TabIndex = 27;
+            p7.BackColor = Color.Lime;
+            p7.Location = new Point(342, 476);
+            p7.Margin = new Padding(3, 4, 3, 4);
+            p7.Name = "p7";
+            p7.Size = new Size(28, 24);
+            p7.TabIndex = 27;
             // 
-            // label7
+            // R11
             // 
-            label7.AutoSize = true;
-            label7.Font = new Font("Bell MT", 7.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(376, 354);
-            label7.Name = "label7";
-            label7.Size = new Size(37, 14);
-            label7.TabIndex = 30;
-            label7.Text = "A 205";
+            R11.AutoSize = true;
+            R11.Font = new Font("Bell MT", 7.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            R11.Location = new Point(376, 354);
+            R11.Name = "R11";
+            R11.Size = new Size(37, 14);
+            R11.TabIndex = 30;
+            R11.Text = "A 205";
             // 
-            // label8
+            // R10
             // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Bell MT", 7.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(376, 382);
-            label8.Name = "label8";
-            label8.Size = new Size(37, 14);
-            label8.TabIndex = 31;
-            label8.Text = "A 204";
+            R10.AutoSize = true;
+            R10.Font = new Font("Bell MT", 7.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            R10.Location = new Point(376, 382);
+            R10.Name = "R10";
+            R10.Size = new Size(37, 14);
+            R10.TabIndex = 31;
+            R10.Text = "A 204";
+            R10.Click += label8_Click;
             // 
-            // label9
+            // R9
             // 
-            label9.AutoSize = true;
-            label9.Font = new Font("Bell MT", 7.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(376, 414);
-            label9.Name = "label9";
-            label9.Size = new Size(37, 14);
-            label9.TabIndex = 32;
-            label9.Text = "A 203";
+            R9.AutoSize = true;
+            R9.Font = new Font("Bell MT", 7.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            R9.Location = new Point(376, 414);
+            R9.Name = "R9";
+            R9.Size = new Size(37, 14);
+            R9.TabIndex = 32;
+            R9.Text = "A 203";
             // 
-            // label10
+            // R8
             // 
-            label10.AutoSize = true;
-            label10.Font = new Font("Bell MT", 7.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.Location = new Point(376, 445);
-            label10.Name = "label10";
-            label10.Size = new Size(37, 14);
-            label10.TabIndex = 33;
-            label10.Text = "A 202";
+            R8.AutoSize = true;
+            R8.Font = new Font("Bell MT", 7.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            R8.Location = new Point(376, 445);
+            R8.Name = "R8";
+            R8.Size = new Size(37, 14);
+            R8.TabIndex = 33;
+            R8.Text = "A 202";
             // 
-            // label11
+            // R7
             // 
-            label11.AutoSize = true;
-            label11.Font = new Font("Bell MT", 7.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label11.Location = new Point(376, 476);
-            label11.Name = "label11";
-            label11.Size = new Size(37, 14);
-            label11.TabIndex = 34;
-            label11.Text = "A 201";
+            R7.AutoSize = true;
+            R7.Font = new Font("Bell MT", 7.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            R7.Location = new Point(376, 476);
+            R7.Name = "R7";
+            R7.Size = new Size(37, 14);
+            R7.TabIndex = 34;
+            R7.Text = "A 201";
             // 
-            // panel13
+            // p6
             // 
-            panel13.BackColor = Color.Lime;
-            panel13.Location = new Point(433, 318);
-            panel13.Margin = new Padding(3, 4, 3, 4);
-            panel13.Name = "panel13";
-            panel13.Size = new Size(28, 24);
-            panel13.TabIndex = 28;
+            p6.BackColor = Color.Lime;
+            p6.Location = new Point(433, 318);
+            p6.Margin = new Padding(3, 4, 3, 4);
+            p6.Name = "p6";
+            p6.Size = new Size(28, 24);
+            p6.TabIndex = 28;
             // 
-            // panel14
+            // p5
             // 
-            panel14.BackColor = Color.Lime;
-            panel14.Location = new Point(433, 351);
-            panel14.Margin = new Padding(3, 4, 3, 4);
-            panel14.Name = "panel14";
-            panel14.Size = new Size(28, 24);
-            panel14.TabIndex = 29;
+            p5.BackColor = Color.Lime;
+            p5.Location = new Point(433, 351);
+            p5.Margin = new Padding(3, 4, 3, 4);
+            p5.Name = "p5";
+            p5.Size = new Size(28, 24);
+            p5.TabIndex = 29;
             // 
-            // panel15
+            // p4
             // 
-            panel15.BackColor = Color.Lime;
-            panel15.Location = new Point(433, 382);
-            panel15.Margin = new Padding(3, 4, 3, 4);
-            panel15.Name = "panel15";
-            panel15.Size = new Size(28, 24);
-            panel15.TabIndex = 29;
+            p4.BackColor = Color.Lime;
+            p4.Location = new Point(433, 382);
+            p4.Margin = new Padding(3, 4, 3, 4);
+            p4.Name = "p4";
+            p4.Size = new Size(28, 24);
+            p4.TabIndex = 29;
             // 
-            // panel16
+            // p3
             // 
-            panel16.BackColor = Color.Lime;
-            panel16.Location = new Point(433, 414);
-            panel16.Margin = new Padding(3, 4, 3, 4);
-            panel16.Name = "panel16";
-            panel16.Size = new Size(28, 24);
-            panel16.TabIndex = 29;
+            p3.BackColor = Color.Lime;
+            p3.Location = new Point(433, 414);
+            p3.Margin = new Padding(3, 4, 3, 4);
+            p3.Name = "p3";
+            p3.Size = new Size(28, 24);
+            p3.TabIndex = 29;
             // 
-            // panel17
+            // p2
             // 
-            panel17.BackColor = Color.Lime;
-            panel17.Location = new Point(433, 445);
-            panel17.Margin = new Padding(3, 4, 3, 4);
-            panel17.Name = "panel17";
-            panel17.Size = new Size(28, 24);
-            panel17.TabIndex = 29;
+            p2.BackColor = Color.Lime;
+            p2.Location = new Point(433, 445);
+            p2.Margin = new Padding(3, 4, 3, 4);
+            p2.Name = "p2";
+            p2.Size = new Size(28, 24);
+            p2.TabIndex = 29;
+            p2.Paint += panel17_Paint;
             // 
-            // panel18
+            // p1
             // 
-            panel18.BackColor = Color.Lime;
-            panel18.Location = new Point(433, 476);
-            panel18.Margin = new Padding(3, 4, 3, 4);
-            panel18.Name = "panel18";
-            panel18.Size = new Size(28, 24);
-            panel18.TabIndex = 29;
+            p1.BackColor = Color.Lime;
+            p1.Location = new Point(433, 476);
+            p1.Margin = new Padding(3, 4, 3, 4);
+            p1.Name = "p1";
+            p1.Size = new Size(28, 24);
+            p1.TabIndex = 29;
             // 
-            // label12
+            // R6
             // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Bell MT", 7.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label12.Location = new Point(467, 318);
-            label12.Name = "label12";
-            label12.Size = new Size(37, 14);
-            label12.TabIndex = 35;
-            label12.Text = "A 106";
+            R6.AutoSize = true;
+            R6.Font = new Font("Bell MT", 7.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            R6.Location = new Point(467, 318);
+            R6.Name = "R6";
+            R6.Size = new Size(37, 14);
+            R6.TabIndex = 35;
+            R6.Text = "A 106";
             // 
-            // label13
+            // R5
             // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Bell MT", 7.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label13.Location = new Point(467, 351);
-            label13.Name = "label13";
-            label13.Size = new Size(37, 14);
-            label13.TabIndex = 36;
-            label13.Text = "A 105";
+            R5.AutoSize = true;
+            R5.Font = new Font("Bell MT", 7.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            R5.Location = new Point(467, 351);
+            R5.Name = "R5";
+            R5.Size = new Size(37, 14);
+            R5.TabIndex = 36;
+            R5.Text = "A 105";
             // 
-            // label14
+            // R4
             // 
-            label14.AutoSize = true;
-            label14.Font = new Font("Bell MT", 7.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label14.Location = new Point(467, 382);
-            label14.Name = "label14";
-            label14.Size = new Size(37, 14);
-            label14.TabIndex = 37;
-            label14.Text = "A 104";
+            R4.AutoSize = true;
+            R4.Font = new Font("Bell MT", 7.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            R4.Location = new Point(467, 382);
+            R4.Name = "R4";
+            R4.Size = new Size(37, 14);
+            R4.TabIndex = 37;
+            R4.Text = "A 104";
             // 
-            // label15
+            // R3
             // 
-            label15.AutoSize = true;
-            label15.Font = new Font("Bell MT", 7.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label15.Location = new Point(466, 414);
-            label15.Name = "label15";
-            label15.Size = new Size(37, 14);
-            label15.TabIndex = 38;
-            label15.Text = "A 103";
+            R3.AutoSize = true;
+            R3.Font = new Font("Bell MT", 7.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            R3.Location = new Point(466, 414);
+            R3.Name = "R3";
+            R3.Size = new Size(37, 14);
+            R3.TabIndex = 38;
+            R3.Text = "A 103";
             // 
-            // label16
+            // R2
             // 
-            label16.AutoSize = true;
-            label16.Font = new Font("Bell MT", 7.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label16.Location = new Point(467, 448);
-            label16.Name = "label16";
-            label16.Size = new Size(37, 14);
-            label16.TabIndex = 39;
-            label16.Text = "A 102";
+            R2.AutoSize = true;
+            R2.Font = new Font("Bell MT", 7.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            R2.Location = new Point(467, 448);
+            R2.Name = "R2";
+            R2.Size = new Size(37, 14);
+            R2.TabIndex = 39;
+            R2.Text = "A 102";
             // 
-            // label17
+            // R1
             // 
-            label17.AutoSize = true;
-            label17.Font = new Font("Bell MT", 7.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label17.Location = new Point(467, 479);
-            label17.Name = "label17";
-            label17.Size = new Size(37, 14);
-            label17.TabIndex = 40;
-            label17.Text = "A 101";
+            R1.AutoSize = true;
+            R1.Font = new Font("Bell MT", 7.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            R1.Location = new Point(467, 479);
+            R1.Name = "R1";
+            R1.Size = new Size(37, 14);
+            R1.TabIndex = 40;
+            R1.Text = "A 101";
             // 
-            // panel19
+            // PP1
             // 
-            panel19.BackColor = Color.Lime;
-            panel19.Location = new Point(722, 278);
-            panel19.Margin = new Padding(3, 4, 3, 4);
-            panel19.Name = "panel19";
-            panel19.Size = new Size(28, 24);
-            panel19.TabIndex = 24;
+            PP1.BackColor = Color.Lime;
+            PP1.Location = new Point(722, 278);
+            PP1.Margin = new Padding(3, 4, 3, 4);
+            PP1.Name = "PP1";
+            PP1.Size = new Size(28, 24);
+            PP1.TabIndex = 24;
             // 
-            // panel20
+            // PP2
             // 
-            panel20.BackColor = Color.Lime;
-            panel20.Location = new Point(722, 335);
-            panel20.Margin = new Padding(3, 4, 3, 4);
-            panel20.Name = "panel20";
-            panel20.Size = new Size(28, 24);
-            panel20.TabIndex = 25;
+            PP2.BackColor = Color.Lime;
+            PP2.Location = new Point(722, 335);
+            PP2.Margin = new Padding(3, 4, 3, 4);
+            PP2.Name = "PP2";
+            PP2.Size = new Size(28, 24);
+            PP2.TabIndex = 25;
             // 
             // panel21
             // 
@@ -506,43 +539,43 @@
             panel21.Size = new Size(58, 29);
             panel21.TabIndex = 23;
             // 
-            // panel22
+            // PAVR
             // 
-            panel22.BackColor = Color.Lime;
-            panel22.Location = new Point(580, 500);
-            panel22.Margin = new Padding(3, 4, 3, 4);
-            panel22.Name = "panel22";
-            panel22.Size = new Size(58, 30);
-            panel22.TabIndex = 25;
+            PAVR.BackColor = Color.Lime;
+            PAVR.Location = new Point(580, 500);
+            PAVR.Margin = new Padding(3, 4, 3, 4);
+            PAVR.Name = "PAVR";
+            PAVR.Size = new Size(58, 30);
+            PAVR.TabIndex = 25;
             // 
-            // panel23
+            // PCOMLAB
             // 
-            panel23.BackColor = Color.Lime;
-            panel23.Location = new Point(644, 500);
-            panel23.Margin = new Padding(3, 4, 3, 4);
-            panel23.Name = "panel23";
-            panel23.Size = new Size(58, 30);
-            panel23.TabIndex = 25;
+            PCOMLAB.BackColor = Color.Lime;
+            PCOMLAB.Location = new Point(644, 500);
+            PCOMLAB.Margin = new Padding(3, 4, 3, 4);
+            PCOMLAB.Name = "PCOMLAB";
+            PCOMLAB.Size = new Size(58, 30);
+            PCOMLAB.TabIndex = 25;
             // 
-            // label18
+            // RR1
             // 
-            label18.AutoSize = true;
-            label18.Font = new Font("Bell MT", 7.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label18.Location = new Point(641, 278);
-            label18.Name = "label18";
-            label18.Size = new Size(80, 15);
-            label18.TabIndex = 41;
-            label18.Text = "Roth Room #1";
+            RR1.AutoSize = true;
+            RR1.Font = new Font("Bell MT", 7.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            RR1.Location = new Point(641, 278);
+            RR1.Name = "RR1";
+            RR1.Size = new Size(80, 15);
+            RR1.TabIndex = 41;
+            RR1.Text = "Roth Room #1";
             // 
-            // label19
+            // RR2
             // 
-            label19.AutoSize = true;
-            label19.Font = new Font("Bell MT", 7.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label19.Location = new Point(641, 335);
-            label19.Name = "label19";
-            label19.Size = new Size(80, 15);
-            label19.TabIndex = 42;
-            label19.Text = "Roth Room #2";
+            RR2.AutoSize = true;
+            RR2.Font = new Font("Bell MT", 7.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            RR2.Location = new Point(641, 335);
+            RR2.Name = "RR2";
+            RR2.Size = new Size(80, 15);
+            RR2.TabIndex = 42;
+            RR2.Text = "Roth Room #2";
             // 
             // label20
             // 
@@ -554,32 +587,32 @@
             label20.TabIndex = 43;
             label20.Text = "Chapel";
             // 
-            // label21
+            // RAVR
             // 
-            label21.AutoSize = true;
-            label21.Font = new Font("Bell MT", 7.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label21.Location = new Point(591, 479);
-            label21.Name = "label21";
-            label21.Size = new Size(31, 15);
-            label21.TabIndex = 44;
-            label21.Text = "AVR";
-            label21.Click += label21_Click;
+            RAVR.AutoSize = true;
+            RAVR.Font = new Font("Bell MT", 7.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            RAVR.Location = new Point(591, 479);
+            RAVR.Name = "RAVR";
+            RAVR.Size = new Size(31, 15);
+            RAVR.TabIndex = 44;
+            RAVR.Text = "AVR";
+            RAVR.Click += label21_Click;
             // 
-            // label23
+            // RCOMLAB
             // 
-            label23.AutoSize = true;
-            label23.Font = new Font("Bell MT", 7.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label23.Location = new Point(641, 478);
-            label23.Name = "label23";
-            label23.Size = new Size(57, 15);
-            label23.TabIndex = 46;
-            label23.Text = "COMLAB";
-            label23.Click += label23_Click;
+            RCOMLAB.AutoSize = true;
+            RCOMLAB.Font = new Font("Bell MT", 7.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            RCOMLAB.Location = new Point(641, 478);
+            RCOMLAB.Name = "RCOMLAB";
+            RCOMLAB.Size = new Size(57, 15);
+            RCOMLAB.TabIndex = 46;
+            RCOMLAB.Text = "COMLAB";
+            RCOMLAB.Click += label23_Click;
             // 
             // panel24
             // 
             panel24.BackColor = SystemColors.ControlLight;
-            panel24.Location = new Point(342, 521);
+            panel24.Location = new Point(342, 507);
             panel24.Margin = new Padding(3, 4, 3, 4);
             panel24.Name = "panel24";
             panel24.Size = new Size(149, 26);
@@ -690,12 +723,30 @@
             pictureBox1.TabIndex = 100;
             pictureBox1.TabStop = false;
             // 
+            // comboBox1
+            // 
+            comboBox1.Location = new Point(0, 0);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(121, 28);
+            comboBox1.TabIndex = 0;
+            // 
+            // comboBoxTime
+            // 
+            comboBoxTime.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBoxTime.FormattingEnabled = true;
+            comboBoxTime.Location = new Point(641, 108);
+            comboBoxTime.Name = "comboBoxTime";
+            comboBoxTime.Size = new Size(150, 28);
+            comboBoxTime.TabIndex = 0;
+            comboBoxTime.SelectedIndexChanged += new System.EventHandler(this.comboBoxTime_SelectedIndexChanged);
+            // 
             // Form2
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(800, 562);
+            Controls.Add(comboBoxTime);
             Controls.Add(pictureBox4);
             Controls.Add(button6);
             Controls.Add(button7);
@@ -705,40 +756,40 @@
             Controls.Add(pictureBox1);
             Controls.Add(button3);
             Controls.Add(panel24);
-            Controls.Add(panel22);
-            Controls.Add(label23);
-            Controls.Add(panel23);
-            Controls.Add(label21);
+            Controls.Add(PAVR);
+            Controls.Add(RCOMLAB);
+            Controls.Add(PCOMLAB);
+            Controls.Add(RAVR);
             Controls.Add(label20);
-            Controls.Add(label19);
-            Controls.Add(label18);
+            Controls.Add(RR2);
+            Controls.Add(RR1);
             Controls.Add(panel21);
-            Controls.Add(panel20);
-            Controls.Add(panel19);
-            Controls.Add(label17);
-            Controls.Add(label16);
-            Controls.Add(label15);
-            Controls.Add(label14);
-            Controls.Add(label13);
-            Controls.Add(label12);
-            Controls.Add(panel18);
-            Controls.Add(panel17);
-            Controls.Add(panel16);
-            Controls.Add(panel15);
-            Controls.Add(panel14);
-            Controls.Add(panel13);
-            Controls.Add(label11);
-            Controls.Add(label10);
-            Controls.Add(label9);
-            Controls.Add(label8);
-            Controls.Add(label7);
-            Controls.Add(panel12);
-            Controls.Add(panel11);
-            Controls.Add(panel10);
-            Controls.Add(panel9);
-            Controls.Add(panel8);
-            Controls.Add(panel7);
-            Controls.Add(label6);
+            Controls.Add(PP2);
+            Controls.Add(PP1);
+            Controls.Add(R1);
+            Controls.Add(R2);
+            Controls.Add(R3);
+            Controls.Add(R4);
+            Controls.Add(R5);
+            Controls.Add(R6);
+            Controls.Add(p1);
+            Controls.Add(p2);
+            Controls.Add(p3);
+            Controls.Add(p4);
+            Controls.Add(p5);
+            Controls.Add(p6);
+            Controls.Add(R7);
+            Controls.Add(R8);
+            Controls.Add(R9);
+            Controls.Add(R10);
+            Controls.Add(R11);
+            Controls.Add(p7);
+            Controls.Add(p8);
+            Controls.Add(p9);
+            Controls.Add(p10);
+            Controls.Add(p12);
+            Controls.Add(p11);
+            Controls.Add(R12);
             Controls.Add(panel6);
             Controls.Add(label5);
             Controls.Add(panel5);
@@ -784,40 +835,40 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Panel panel11;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.Panel panel14;
-        private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.Panel panel16;
-        private System.Windows.Forms.Panel panel17;
-        private System.Windows.Forms.Panel panel18;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Panel panel19;
-        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.Panel p11;
+        private System.Windows.Forms.Label R12;
+        private System.Windows.Forms.Panel p12;
+        private System.Windows.Forms.Panel p10;
+        private System.Windows.Forms.Panel p9;
+        private System.Windows.Forms.Panel p8;
+        private System.Windows.Forms.Panel p7;
+        private System.Windows.Forms.Label R11;
+        private System.Windows.Forms.Label R10;
+        private System.Windows.Forms.Label R9;
+        private System.Windows.Forms.Label R8;
+        private System.Windows.Forms.Label R7;
+        private System.Windows.Forms.Panel p6;
+        private System.Windows.Forms.Panel p5;
+        private System.Windows.Forms.Panel p4;
+        private System.Windows.Forms.Panel p3;
+        private System.Windows.Forms.Panel p2;
+        private System.Windows.Forms.Panel p1;
+        private System.Windows.Forms.Label R6;
+        private System.Windows.Forms.Label R5;
+        private System.Windows.Forms.Label R4;
+        private System.Windows.Forms.Label R3;
+        private System.Windows.Forms.Label R2;
+        private System.Windows.Forms.Label R1;
+        private System.Windows.Forms.Panel PP1;
+        private System.Windows.Forms.Panel PP2;
         private System.Windows.Forms.Panel panel21;
-        private System.Windows.Forms.Panel panel22;
-        private System.Windows.Forms.Panel panel23;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Panel PAVR;
+        private System.Windows.Forms.Panel PCOMLAB;
+        private System.Windows.Forms.Label RR1;
+        private System.Windows.Forms.Label RR2;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label RAVR;
+        private System.Windows.Forms.Label RCOMLAB;
         private System.Windows.Forms.Panel panel24;
         private System.Windows.Forms.Button button3;
         private PictureBox pictureBox4;
@@ -827,5 +878,10 @@
         private TextBox textBox13;
         private Button button4;
         private PictureBox pictureBox1;
+        private ComboBox comboBox1;
+        private ComboBox comboBoxTime;
+        private System.Windows.Forms.Panel P1, P2, P3, P4, P5, P6, P7, P8, P9, P10, P11, P12;
+        private System.Windows.Forms.Panel PRoth1, PRoth2;
+        private System.Windows.Forms.Label RRoth1, RRoth2;
     }
 }

@@ -31,12 +31,6 @@ namespace UI_WinForms
                              $"Professor: {reservation.Professor}";
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Form1 dashboardForm = _serviceProvider.GetRequiredService<Form1>();
-            dashboardForm.Show();
-            this.Hide();
-        }
 
         private async void button4_Click(object sender, EventArgs e)
         {
@@ -70,5 +64,17 @@ namespace UI_WinForms
         private void pictureBox4_Click(object sender, EventArgs e) { }
         private void textBox1_TextChanged(object sender, EventArgs e) { }
         private void textBox6_TextChanged(object sender, EventArgs e) { }
+
+        public static void ShowConfirmationForm(IServiceProvider serviceProvider, Reservation newReservation, string selectedRoomName)
+        {
+            var confirmForm = serviceProvider.GetRequiredService<Form5>();
+            confirmForm.SetReservation(newReservation, selectedRoomName);
+            confirmForm.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

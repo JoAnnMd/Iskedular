@@ -75,6 +75,7 @@ namespace Iskedular.Core.Services
                 existingReservation.Status = reservationToUpdate.Status;
                 existingReservation.UserId = reservationToUpdate.UserId;
                 existingReservation.RoomId = reservationToUpdate.RoomId;
+                existingReservation.Program = reservationToUpdate.Program;
 
                 await context.SaveChangesAsync();
                 return true;
