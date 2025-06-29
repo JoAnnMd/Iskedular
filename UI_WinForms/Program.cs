@@ -63,13 +63,10 @@ namespace UI_WinForms
             services.AddTransient<Total_Rooms>();
             services.AddTransient<PendingRequest>();
 
-            
-            services.AddTransient<Rooms_Main>(provider => new Rooms_Main(
-                provider,
-                provider.GetRequiredService<RoomService>(),
-                provider.GetRequiredService<SessionService>()
-            ));
 
+
+
+            services.AddTransient<FormManageRooms>();
             services.AddTransient<FormAddEditRoom>();
 
             services.AddTransient<Bookings_Total>();
@@ -79,8 +76,11 @@ namespace UI_WinForms
             services.AddTransient<Available_Rooms>();
             services.AddTransient<admin_bookings>();
             services.AddTransient<Form6>();
+            services.AddTransient<Rooms_Main>();
 
-            
+
+
+
         }
     }
 }

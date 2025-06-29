@@ -99,6 +99,8 @@ namespace Iskedular.Core.Services
             using (var context = _dbContextFactory.CreateDbContext())
             {
                 return await context.Reservations
+                    .Include(r => r.Room)
+                    .Include(r => r.User)
                     .Where(r => r.Status == ReservationStatus.Approved)
                     .ToListAsync();
             }

@@ -1,4 +1,7 @@
-﻿namespace UI_WinForms
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace UI_WinForms
 {
     partial class PendingRequest
     {
@@ -7,9 +10,7 @@
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
-            {
                 components.Dispose();
-            }
             base.Dispose(disposing);
         }
 
@@ -26,9 +27,22 @@
             textBox4 = new TextBox();
             panelMainContentWrapper = new Panel();
             panelContentToCenter = new Panel();
-            textBox5 = new TextBox();
+            tabControlRequests = new TabControl();
+            tabPage1 = new TabPage();
+            tabPage2 = new TabPage();
             pendingRequestsPanel = new FlowLayoutPanel();
-
+            rejectedRequestsPanel = new FlowLayoutPanel();
+            panelTopNav.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            panelMainContentWrapper.SuspendLayout();
+            panelContentToCenter.SuspendLayout();
+            tabControlRequests.SuspendLayout();
+            tabPage1.SuspendLayout();
+            tabPage2.SuspendLayout();
+            SuspendLayout();
+            // 
+            // panelTopNav
+            // 
             panelTopNav.BackColor = Color.FromArgb(192, 0, 0);
             panelTopNav.Controls.Add(button4);
             panelTopNav.Controls.Add(button3);
@@ -41,68 +55,87 @@
             panelTopNav.Location = new Point(0, 0);
             panelTopNav.Name = "panelTopNav";
             panelTopNav.Size = new Size(1024, 89);
-            panelTopNav.TabIndex = 0;
-
+            panelTopNav.TabIndex = 1;
+            // 
+            // button4
+            // 
             button4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             button4.Image = (Image)resources.GetObject("button4.Image");
-            button4.Location = new Point(960, 10);
+            button4.Location = new Point(944, 10);
             button4.Name = "button4";
             button4.Size = new Size(48, 64);
+            button4.TabIndex = 0;
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
-
+            // 
+            // button3
+            // 
             button3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             button3.BackColor = Color.FromArgb(192, 0, 0);
             button3.FlatStyle = FlatStyle.Flat;
             button3.ForeColor = Color.White;
-            button3.Location = new Point(870, 30);
+            button3.Location = new Point(854, 30);
             button3.Name = "button3";
             button3.Size = new Size(86, 29);
+            button3.TabIndex = 1;
             button3.Text = "Requests";
             button3.UseVisualStyleBackColor = false;
             button3.Click += button3_Click;
-
+            // 
+            // button5
+            // 
             button5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             button5.BackColor = Color.FromArgb(192, 0, 0);
             button5.FlatStyle = FlatStyle.Flat;
             button5.ForeColor = Color.White;
-            button5.Location = new Point(778, 30);
+            button5.Location = new Point(762, 30);
             button5.Name = "button5";
             button5.Size = new Size(86, 29);
+            button5.TabIndex = 2;
             button5.Text = "Dashboard";
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
-
+            // 
+            // button1
+            // 
             button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             button1.BackColor = Color.FromArgb(192, 0, 0);
             button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = Color.White;
-            button1.Location = new Point(686, 30);
+            button1.Location = new Point(670, 30);
             button1.Name = "button1";
             button1.Size = new Size(86, 29);
+            button1.TabIndex = 3;
             button1.Text = "Rooms";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
-
+            // 
+            // button2
+            // 
             button2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             button2.BackColor = Color.FromArgb(192, 0, 0);
             button2.FlatStyle = FlatStyle.Flat;
             button2.ForeColor = Color.White;
-            button2.Location = new Point(594, 30);
+            button2.Location = new Point(578, 30);
             button2.Name = "button2";
             button2.Size = new Size(86, 29);
+            button2.TabIndex = 4;
             button2.Text = "Bookings";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
-
-            pictureBox4.BackColor = Color.FromArgb(192, 0, 0);
+            // 
+            // pictureBox4
+            // 
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
             pictureBox4.Location = new Point(12, 13);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(64, 64);
             pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 5;
             pictureBox4.TabStop = false;
-
+            // 
+            // textBox4
+            // 
             textBox4.BackColor = Color.FromArgb(192, 0, 0);
             textBox4.BorderStyle = BorderStyle.None;
             textBox4.Font = new Font("Elephant", 13.8F, FontStyle.Bold | FontStyle.Italic);
@@ -112,41 +145,79 @@
             textBox4.Name = "textBox4";
             textBox4.ReadOnly = true;
             textBox4.Size = new Size(160, 40);
+            textBox4.TabIndex = 6;
             textBox4.Text = "Iskedular";
-
-            panelMainContentWrapper.Dock = DockStyle.Fill;
+            // 
+            // panelMainContentWrapper
+            // 
             panelMainContentWrapper.BackColor = SystemColors.ControlLight;
             panelMainContentWrapper.Controls.Add(panelContentToCenter);
+            panelMainContentWrapper.Dock = DockStyle.Fill;
             panelMainContentWrapper.Location = new Point(0, 89);
             panelMainContentWrapper.Name = "panelMainContentWrapper";
             panelMainContentWrapper.Size = new Size(1024, 639);
-            panelMainContentWrapper.TabIndex = 1;
-
+            panelMainContentWrapper.TabIndex = 0;
+            // 
+            // panelContentToCenter
+            // 
+            panelContentToCenter.Controls.Add(tabControlRequests);
             panelContentToCenter.Dock = DockStyle.Fill;
-            panelContentToCenter.BackColor = Color.Transparent;
-            panelContentToCenter.Controls.Add(pendingRequestsPanel);
-            panelContentToCenter.Controls.Add(textBox5);
+            panelContentToCenter.Location = new Point(0, 0);
             panelContentToCenter.Name = "panelContentToCenter";
-
-            textBox5.BackColor = SystemColors.Control;
-            textBox5.BorderStyle = BorderStyle.None;
-            textBox5.Font = new Font("Elephant", 12F, FontStyle.Bold);
-            textBox5.ForeColor = Color.Black;
-            textBox5.Location = new Point(20, 10);
-            textBox5.Name = "textBox5";
-            textBox5.ReadOnly = true;
-            textBox5.Size = new Size(300, 30);
-            textBox5.Text = "Pending Requests";
-
-            pendingRequestsPanel.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panelContentToCenter.Size = new Size(1024, 639);
+            panelContentToCenter.TabIndex = 0;
+            // 
+            // tabControlRequests
+            // 
+            tabControlRequests.Controls.Add(tabPage1);
+            tabControlRequests.Controls.Add(tabPage2);
+            tabControlRequests.Location = new Point(12, 6);
+            tabControlRequests.Name = "tabControlRequests";
+            tabControlRequests.SelectedIndex = 0;
+            tabControlRequests.Size = new Size(1000, 630);
+            tabControlRequests.TabIndex = 0;
+            // 
+            // tabPage1
+            // 
+            tabPage1.Controls.Add(pendingRequestsPanel);
+            tabPage1.Location = new Point(4, 29);
+            tabPage1.Name = "tabPage1";
+            tabPage1.Padding = new Padding(3);
+            tabPage1.Size = new Size(882, 555);
+            tabPage1.TabIndex = 0;
+            tabPage1.Text = "tabPagePending";
+            tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // tabPage2
+            // 
+            tabPage2.Controls.Add(rejectedRequestsPanel);
+            tabPage2.Location = new Point(4, 29);
+            tabPage2.Name = "tabPage2";
+            tabPage2.Padding = new Padding(3);
+            tabPage2.Size = new Size(992, 597);
+            tabPage2.TabIndex = 1;
+            tabPage2.Text = "tabPageRejected";
+            tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // pendingRequestsPanel
+            // 
             pendingRequestsPanel.AutoScroll = true;
-            pendingRequestsPanel.WrapContents = true;
-            pendingRequestsPanel.FlowDirection = FlowDirection.LeftToRight;
-            pendingRequestsPanel.Location = new Point(20, 50);
+            pendingRequestsPanel.Dock = DockStyle.Fill;
+            pendingRequestsPanel.Location = new Point(3, 3);
             pendingRequestsPanel.Name = "pendingRequestsPanel";
-            pendingRequestsPanel.Size = new Size(980, 560);
-            pendingRequestsPanel.TabIndex = 123;
-
+            pendingRequestsPanel.Size = new Size(876, 549);
+            pendingRequestsPanel.TabIndex = 1;
+            // 
+            // rejectedRequestsPanel
+            // 
+            rejectedRequestsPanel.Dock = DockStyle.Fill;
+            rejectedRequestsPanel.Location = new Point(3, 3);
+            rejectedRequestsPanel.Name = "rejectedRequestsPanel";
+            rejectedRequestsPanel.Size = new Size(986, 591);
+            rejectedRequestsPanel.TabIndex = 0;
+            // 
+            // PendingRequest
+            // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
@@ -157,6 +228,15 @@
             Text = "PendingRequest";
             Load += PendingRequest_Load;
             Resize += PendingRequest_Resize;
+            panelTopNav.ResumeLayout(false);
+            panelTopNav.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            panelMainContentWrapper.ResumeLayout(false);
+            panelContentToCenter.ResumeLayout(false);
+            tabControlRequests.ResumeLayout(false);
+            tabPage1.ResumeLayout(false);
+            tabPage2.ResumeLayout(false);
+            ResumeLayout(false);
         }
 
         private Panel panelTopNav;
@@ -167,10 +247,12 @@
         private Button button2;
         private PictureBox pictureBox4;
         private TextBox textBox4;
-        private PictureBox pictureBox1;
         private Panel panelMainContentWrapper;
         private Panel panelContentToCenter;
-        private TextBox textBox5;
+        private TabControl tabControlRequests;
+        private TabPage tabPage1;
         private FlowLayoutPanel pendingRequestsPanel;
+        private TabPage tabPage2;
+        private FlowLayoutPanel rejectedRequestsPanel;
     }
 }
