@@ -8,17 +8,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Extensions.DependencyInjection; // Added for IServiceProvider
+using Iskedular.Core.Services; // Added for SessionService
 
 namespace UI_WinForms
 {
     public partial class Form1 : Form
     {
         private readonly IServiceProvider _serviceProvider; // Added for dependency injection
+        private readonly SessionService _sessionService; // Added for session management
 
-        public Form1(IServiceProvider serviceProvider) // Modified constructor
+        public Form1(IServiceProvider serviceProvider, SessionService sessionService) // Modified constructor
         {
             InitializeComponent();
             _serviceProvider = serviceProvider; // Assign injected service provider
+            _sessionService = sessionService; // Assign injected session service
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -112,9 +115,19 @@ namespace UI_WinForms
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form4 profileForm = _serviceProvider.GetRequiredService<Form4>(); // Get Form4 from DI
-            profileForm.Show();
-            this.Hide();
+            // Get current user from session service
+            var currentUser = _sessionService.LoggedInUser;
+            if (currentUser != null)
+            {
+                // Create Form4 with user information
+                Form4 profileForm = new Form4(_serviceProvider, currentUser);
+                profileForm.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("User not logged in. Please log in first.", "Authentication Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

@@ -72,6 +72,7 @@
             textBox13.Margin = new Padding(27, 4, 3, 4);
             textBox13.Multiline = true;
             textBox13.Name = "textBox13";
+            textBox13.ReadOnly = true;
             textBox13.Size = new Size(199, 40);
             textBox13.TabIndex = 100;
             textBox13.Text = "Iskedular";
@@ -84,6 +85,7 @@
             textBox2.Location = new Point(138, 195);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
+            textBox2.ReadOnly = true;
             textBox2.Size = new Size(222, 16);
             textBox2.TabIndex = 101;
             textBox2.Text = " A real-time room reservation of PUPQC";

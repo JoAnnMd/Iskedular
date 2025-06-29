@@ -48,13 +48,26 @@ namespace UI_WinForms
 
             
             services.AddTransient<Form19>();
-            services.AddTransient<Form1>();
-            services.AddTransient<Form2>();
+            services.AddTransient<Form1>(provider => new Form1(
+                provider.GetRequiredService<IServiceProvider>(),
+                provider.GetRequiredService<SessionService>()
+            ));
+            services.AddTransient<Form2>(provider => new Form2(
+                provider.GetRequiredService<IServiceProvider>(),
+                provider.GetRequiredService<SessionService>()
+            ));
             services.AddTransient<Form3>();
-            services.AddTransient<Form4>();
             services.AddTransient<Form5>();
-            services.AddTransient<Form7>();
-            services.AddTransient<Form8>(); 
+            services.AddTransient<Form7>(provider => new Form7(
+                provider.GetRequiredService<UserService>(),
+                provider.GetRequiredService<IServiceProvider>(),
+                provider.GetRequiredService<SessionService>()
+            ));
+            services.AddTransient<Form8>(provider => new Form8(
+                provider.GetRequiredService<UserService>(),
+                provider.GetRequiredService<IServiceProvider>(),
+                provider.GetRequiredService<SessionService>()
+            ));
 
             services.AddTransient<AdminLogin>();
 
