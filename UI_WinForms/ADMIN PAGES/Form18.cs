@@ -89,24 +89,11 @@ namespace UI_WinForms
 
             button2.Location = new Point(currentRightPosition - button2.Width, (pictureBox1.Height - button2.Height) / 2);
 
-            // 3. Position "Accounts" title (textBox5)
-            textBox5.Location = new Point(50, pictureBox1.Bottom + 20);
-
-            // 4. Position "Users" title (textBox1)
-            textBox1.Location = new Point(textBox5.Left, textBox5.Bottom + 30);
-
-            // 5. Center and position the TableLayoutPanel (the table with Name/Email)
-            int tablePanelWidth = tableLayoutPanel1.Width;
-            int tablePanelHeight = tableLayoutPanel1.Height;
-
-            int startXTablePanel = (screenWidth - tablePanelWidth) / 2;
-            int tablePanelY = textBox1.Bottom + 20;
-
-            tableLayoutPanel1.Location = new Point(startXTablePanel, tablePanelY);
+            
 
             // 6. Position the Admin profile picture and text (right side)
             int adminAreaRightMargin = 50;
-            pictureBox2.Location = new Point(screenWidth - pictureBox2.Width - adminAreaRightMargin, textBox5.Top);
+            pictureBox2.Location = new Point(screenWidth - pictureBox2.Width - adminAreaRightMargin);
             textBox3.Location = new Point(pictureBox2.Left + (pictureBox2.Width - textBox3.Width) / 2, pictureBox2.Bottom + 10);
 
             // 7. Position Logout and Change Password buttons

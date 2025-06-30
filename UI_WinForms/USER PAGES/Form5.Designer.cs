@@ -65,11 +65,11 @@
             textBox10.BackColor = Color.WhiteSmoke;
             textBox10.BorderStyle = BorderStyle.FixedSingle;
             textBox10.Font = new Font("Segoe UI", 11F);
-            textBox10.Location = new Point(200, 70);
+            textBox10.Location = new Point(189, 71);
             textBox10.Multiline = true;
             textBox10.Name = "textBox10";
             textBox10.ScrollBars = ScrollBars.Horizontal;
-            textBox10.Size = new Size(620, 360);
+            textBox10.Size = new Size(680, 407);
             textBox10.TabIndex = 1;
             textBox10.Text = "Your Reservation Info";
             // 
@@ -79,7 +79,7 @@
             button2.FlatStyle = FlatStyle.Flat;
             button2.Font = new Font("Segoe UI", 30F, FontStyle.Bold);
             button2.ForeColor = Color.LimeGreen;
-            button2.Location = new Point(552, 450);
+            button2.Location = new Point(548, 499);
             button2.Name = "button2";
             button2.Size = new Size(100, 80);
             button2.TabIndex = 2;
@@ -93,7 +93,7 @@
             button4.FlatStyle = FlatStyle.Flat;
             button4.Font = new Font("Segoe UI", 30F, FontStyle.Bold);
             button4.ForeColor = Color.Red;
-            button4.Location = new Point(372, 450);
+            button4.Location = new Point(362, 499);
             button4.Name = "button4";
             button4.Size = new Size(100, 80);
             button4.TabIndex = 3;

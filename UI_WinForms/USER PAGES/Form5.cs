@@ -26,8 +26,6 @@ namespace UI_WinForms
                              $"Date: {reservation.StartTime:MMMM dd, yyyy}\r\n" +
                              $"Time: {reservation.StartTime:hh\\:mm tt} - {reservation.EndTime:hh\\:mm tt}\r\n\r\n" +
                              $"Purpose:\r\n{reservation.Purpose}\r\n\r\n" +
-                             $"Program:\r\n{reservation.Program}\r\n\r\n" +
-                             $"Year & Section: {reservation.YearSection}\r\n" +
                              $"Professor: {reservation.Professor}";
         }
 

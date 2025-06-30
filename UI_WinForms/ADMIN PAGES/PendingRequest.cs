@@ -110,6 +110,7 @@ namespace UI_WinForms
                     {
                         Text = $"Room: {reservation.Room?.Name}" +
                                $"\nRequested by: {reservation.User?.FirstName} {reservation.User?.LastName}" +
+                               $"\nProgram & Section: {reservation.User?.ProgramSection}" +
                                $"\nDate: {reservation.StartTime:MMM dd, yyyy}" +
                                $"\nTime: {reservation.StartTime:hh\\:mm tt} - {reservation.EndTime:hh\\:mm tt}" +
                                $"\nPurpose: {reservation.Purpose}",

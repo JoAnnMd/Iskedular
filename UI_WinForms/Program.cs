@@ -45,8 +45,9 @@ namespace UI_WinForms
             services.AddScoped<ReservationService>();
             services.AddScoped<SessionService>();
             services.AddScoped<UserService>();
-
             
+
+
             services.AddTransient<Form19>();
             services.AddTransient<Form1>();
             services.AddTransient<Form2>();

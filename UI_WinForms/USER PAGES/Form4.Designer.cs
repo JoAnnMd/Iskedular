@@ -139,7 +139,6 @@
             textBox9.Margin = new Padding(3, 4, 3, 4);
             textBox9.Multiline = true;
             textBox9.Name = "textBox9";
-            textBox9.ReadOnly = true;
             textBox9.Size = new Size(252, 37);
             textBox9.TabIndex = 77;
             textBox9.TextChanged += textBox9_TextChanged;
@@ -272,7 +271,6 @@
             textBox3.Margin = new Padding(3, 4, 3, 4);
             textBox3.Multiline = true;
             textBox3.Name = "textBox3";
-            textBox3.ReadOnly = true;
             textBox3.Size = new Size(252, 37);
             textBox3.TabIndex = 108;
             textBox3.TextChanged += textBox3_TextChanged;
@@ -283,7 +281,6 @@
             textBox11.Enabled = false;
             textBox11.Location = new Point(387, 432);
             textBox11.Name = "textBox11";
-            textBox11.ReadOnly = true;
             textBox11.Size = new Size(252, 27);
             textBox11.TabIndex = 1;
             textBox11.TextChanged += textBox11_TextChanged;

@@ -101,9 +101,7 @@ namespace UI_WinForms
             // Load rooms into comboBox1
             await LoadRoomsIntoComboBox();
 
-            // Populate Program (comboBox2) and Year/Section (comboBox3)
-            PopulateProgramAndYearSectionComboBoxes();
-            PopulateAmPmComboBoxes();
+            
         }
 
         // Fixed CS8622: Made 'sender' parameter nullable.
@@ -141,32 +139,7 @@ namespace UI_WinForms
         }
 
         // Populate Program and Year/Section ComboBoxes with hardcoded values
-        private void PopulateProgramAndYearSectionComboBoxes()
-        {
-            // Program (comboBox2)
-            comboBox2.Items.Clear();
-            comboBox2.Items.Add("Bachelor of Science in Information Technology (BSIT)");
-            comboBox2.Items.Add("Bachelor of Business Technology and Livelihood Education major in Home Economics(BBTLEDHE)");
-            comboBox2.Items.Add("Bachelor of Business Technology and Livelihood Education major in Information Communication and Technology (BTLEDICT)");
-            comboBox2.Items.Add("Bachelor of Science in Business Administration major in Human Resource Management (BSBAHRM)");
-            comboBox2.Items.Add("Bachelor of Science in Business Administration major in Marketing Management (BSBA-MM)");
-            comboBox2.Items.Add("Bachelor of Science in Entrepreneurship (BSENTREP)");
-            comboBox2.Items.Add("Bachelor of Public Administration with specialization in Fiscal Administration (BPAFA)");
-            comboBox2.Items.Add("Diploma in Office Management Technology Medical Office Management (DOMTMOM)");
-            comboBox2.SelectedIndex = -1;
-
-            // Year and Section (comboBox3)
-            comboBox3.Items.Clear();
-            comboBox3.Items.Add("1-1");
-            comboBox3.Items.Add("1-2");
-            comboBox3.Items.Add("2-1");
-            comboBox3.Items.Add("2-2");
-            comboBox3.Items.Add("3-1");
-            comboBox3.Items.Add("3-2");
-            comboBox3.Items.Add("4-1");
-            comboBox3.Items.Add("4-2");
-            comboBox3.SelectedIndex = -1; // No section selected by default
-        }
+        
 
         // Event handler for monthCalendar1 date selection
         // Fixed CS8622: Made 'sender' parameter nullable.
@@ -202,8 +175,9 @@ namespace UI_WinForms
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form4 profileForm = _serviceProvider.GetRequiredService<Form4>(); // Use DI
-            profileForm.Show();
+            var user = _sessionService.LoggedInUser;
+            var form = new Form4(_serviceProvider, user);
+            form.Show();
             this.Hide();
         }
 
@@ -277,17 +251,7 @@ namespace UI_WinForms
                 return;
             }
 
-            if (comboBox2.SelectedItem == null)
-            {
-                MessageBox.Show("Please select a program.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (comboBox3.SelectedItem == null)
-            {
-                MessageBox.Show("Please select a year and section.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
+            
 
             // Get selected Room ID
             int selectedRoomId = (int)comboBox1.SelectedValue!; // Null-forgiving operator as we've checked for null above
@@ -323,8 +287,6 @@ namespace UI_WinForms
                     StartTime = startDateTime,
                     EndTime = endDateTime,
                     Purpose = textBox11.Text.Trim(),
-                    Program = comboBox2.Text,
-                    YearSection = comboBox3.Text,
                     Professor = textBox13.Text.Trim(),
                     Status = ReservationStatus.Pending
                 };
@@ -356,6 +318,16 @@ namespace UI_WinForms
         }
 
         private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
+        {
+
+        }
+
+        private void textBox10_TextChanged(object sender, EventArgs e)
         {
 
         }

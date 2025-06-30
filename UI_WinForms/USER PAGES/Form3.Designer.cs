@@ -17,6 +17,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             panelTopNav = new Panel();
+            button4 = new Button();
             button6 = new Button();
             button7 = new Button();
             button5 = new Button();
@@ -27,10 +28,6 @@
             panelContentToCenter = new Panel();
             comboBoxEndAmPm = new ComboBox();
             comboBoxStartAmPm = new ComboBox();
-            comboBox3 = new ComboBox();
-            textBox14 = new TextBox();
-            textBox8 = new TextBox();
-            comboBox2 = new ComboBox();
             textBox7 = new TextBox();
             textBox6 = new TextBox();
             textBox4 = new TextBox();
@@ -45,7 +42,7 @@
             textBox3 = new TextBox();
             textBox5 = new TextBox();
             monthCalendar1 = new MonthCalendar();
-            button4 = new Button();
+            labelHint = new Label();
             panelTopNav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -68,6 +65,17 @@
             panelTopNav.Name = "panelTopNav";
             panelTopNav.Size = new Size(1024, 89);
             panelTopNav.TabIndex = 0;
+            // 
+            // button4
+            // 
+            button4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button4.Image = (Image)resources.GetObject("button4.Image");
+            button4.Location = new Point(952, 18);
+            button4.Name = "button4";
+            button4.Size = new Size(51, 52);
+            button4.TabIndex = 110;
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button6
             // 
@@ -159,12 +167,9 @@
             // 
             panelContentToCenter.Anchor = AnchorStyles.None;
             panelContentToCenter.BackColor = Color.WhiteSmoke;
+            panelContentToCenter.Controls.Add(labelHint);
             panelContentToCenter.Controls.Add(comboBoxEndAmPm);
             panelContentToCenter.Controls.Add(comboBoxStartAmPm);
-            panelContentToCenter.Controls.Add(comboBox3);
-            panelContentToCenter.Controls.Add(textBox14);
-            panelContentToCenter.Controls.Add(textBox8);
-            panelContentToCenter.Controls.Add(comboBox2);
             panelContentToCenter.Controls.Add(textBox7);
             panelContentToCenter.Controls.Add(textBox6);
             panelContentToCenter.Controls.Add(textBox4);
@@ -188,7 +193,7 @@
             // 
             comboBoxEndAmPm.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxEndAmPm.Items.AddRange(new object[] { "AM", "PM" });
-            comboBoxEndAmPm.Location = new Point(650, 70);
+            comboBoxEndAmPm.Location = new Point(649, 185);
             comboBoxEndAmPm.Name = "comboBoxEndAmPm";
             comboBoxEndAmPm.Size = new Size(60, 28);
             comboBoxEndAmPm.TabIndex = 0;
@@ -197,53 +202,21 @@
             // 
             comboBoxStartAmPm.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxStartAmPm.Items.AddRange(new object[] { "AM", "PM" });
-            comboBoxStartAmPm.Location = new Point(650, 30);
+            comboBoxStartAmPm.Location = new Point(649, 133);
             comboBoxStartAmPm.Name = "comboBoxStartAmPm";
             comboBoxStartAmPm.Size = new Size(60, 28);
             comboBoxStartAmPm.TabIndex = 1;
             // 
-            // comboBox3
-            // 
-            comboBox3.Location = new Point(540, 150);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(200, 28);
-            comboBox3.TabIndex = 2;
-            // 
-            // textBox14
-            // 
-            textBox14.BorderStyle = BorderStyle.None;
-            textBox14.Location = new Point(430, 150);
-            textBox14.Name = "textBox14";
-            textBox14.Size = new Size(100, 20);
-            textBox14.TabIndex = 3;
-            textBox14.Text = "Year and Section";
-            // 
-            // textBox8
-            // 
-            textBox8.BorderStyle = BorderStyle.None;
-            textBox8.Location = new Point(430, 110);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(100, 20);
-            textBox8.TabIndex = 4;
-            textBox8.Text = "Program";
-            // 
-            // comboBox2
-            // 
-            comboBox2.Location = new Point(540, 110);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(280, 28);
-            comboBox2.TabIndex = 5;
-            // 
             // textBox7
             // 
-            textBox7.Location = new Point(540, 70);
+            textBox7.Location = new Point(539, 185);
             textBox7.Name = "textBox7";
             textBox7.Size = new Size(100, 27);
             textBox7.TabIndex = 6;
             // 
             // textBox6
             // 
-            textBox6.Location = new Point(540, 30);
+            textBox6.Location = new Point(539, 133);
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(100, 27);
             textBox6.TabIndex = 7;
@@ -251,7 +224,7 @@
             // textBox4
             // 
             textBox4.BorderStyle = BorderStyle.None;
-            textBox4.Location = new Point(430, 70);
+            textBox4.Location = new Point(429, 185);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(100, 20);
             textBox4.TabIndex = 8;
@@ -262,7 +235,7 @@
             button2.BackColor = Color.FromArgb(192, 0, 0);
             button2.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
             button2.ForeColor = Color.White;
-            button2.Location = new Point(430, 410);
+            button2.Location = new Point(353, 446);
             button2.Name = "button2";
             button2.Size = new Size(120, 40);
             button2.TabIndex = 9;
@@ -272,7 +245,7 @@
             // 
             // textBox13
             // 
-            textBox13.Location = new Point(430, 340);
+            textBox13.Location = new Point(429, 381);
             textBox13.Name = "textBox13";
             textBox13.Size = new Size(390, 27);
             textBox13.TabIndex = 10;
@@ -280,7 +253,7 @@
             // textBox12
             // 
             textBox12.BorderStyle = BorderStyle.None;
-            textBox12.Location = new Point(430, 310);
+            textBox12.Location = new Point(429, 351);
             textBox12.Name = "textBox12";
             textBox12.Size = new Size(100, 20);
             textBox12.TabIndex = 11;
@@ -288,7 +261,7 @@
             // 
             // textBox11
             // 
-            textBox11.Location = new Point(430, 230);
+            textBox11.Location = new Point(429, 299);
             textBox11.Name = "textBox11";
             textBox11.Size = new Size(390, 27);
             textBox11.TabIndex = 12;
@@ -296,16 +269,17 @@
             // textBox10
             // 
             textBox10.BorderStyle = BorderStyle.None;
-            textBox10.Location = new Point(430, 200);
+            textBox10.Location = new Point(429, 261);
             textBox10.Name = "textBox10";
             textBox10.Size = new Size(100, 20);
             textBox10.TabIndex = 13;
             textBox10.Text = "Purpose";
+            textBox10.TextChanged += textBox10_TextChanged;
             // 
             // textBox9
             // 
             textBox9.BorderStyle = BorderStyle.None;
-            textBox9.Location = new Point(430, 30);
+            textBox9.Location = new Point(429, 133);
             textBox9.Name = "textBox9";
             textBox9.Size = new Size(100, 20);
             textBox9.TabIndex = 14;
@@ -315,7 +289,7 @@
             // 
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Font = new Font("Arial", 10F, FontStyle.Bold);
-            textBox1.Location = new Point(30, 120);
+            textBox1.Location = new Point(38, 163);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(130, 20);
             textBox1.TabIndex = 15;
@@ -324,7 +298,7 @@
             // comboBox1
             // 
             comboBox1.Font = new Font("Segoe UI", 10F);
-            comboBox1.Location = new Point(170, 70);
+            comboBox1.Location = new Point(178, 113);
             comboBox1.Name = "comboBox1";
             comboBox1.Size = new Size(200, 31);
             comboBox1.TabIndex = 16;
@@ -333,7 +307,7 @@
             // 
             textBox3.BorderStyle = BorderStyle.None;
             textBox3.Font = new Font("Arial", 10F, FontStyle.Bold);
-            textBox3.Location = new Point(30, 70);
+            textBox3.Location = new Point(38, 113);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(130, 20);
             textBox3.TabIndex = 17;
@@ -343,7 +317,7 @@
             // 
             textBox5.BorderStyle = BorderStyle.None;
             textBox5.Font = new Font("Elephant", 12F, FontStyle.Bold);
-            textBox5.Location = new Point(20, 20);
+            textBox5.Location = new Point(251, 21);
             textBox5.Name = "textBox5";
             textBox5.ReadOnly = true;
             textBox5.Size = new Size(400, 26);
@@ -352,20 +326,22 @@
             // 
             // monthCalendar1
             // 
-            monthCalendar1.Location = new Point(30, 160);
+            monthCalendar1.Location = new Point(38, 203);
             monthCalendar1.MaxSelectionCount = 1;
             monthCalendar1.Name = "monthCalendar1";
             monthCalendar1.TabIndex = 19;
+            monthCalendar1.DateChanged += monthCalendar1_DateChanged;
             // 
-            // button4
+            // labelHint
             // 
-            button4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button4.Image = (Image)resources.GetObject("button4.Image");
-            button4.Location = new Point(952, 18);
-            button4.Name = "button4";
-            button4.Size = new Size(51, 52);
-            button4.TabIndex = 110;
-            button4.UseVisualStyleBackColor = true;
+            labelHint.AutoSize = true;
+            labelHint.Font = new Font("Segoe UI", 8F, FontStyle.Italic);
+            labelHint.ForeColor = Color.Gray;
+            labelHint.Location = new Point(429, 216);
+            labelHint.Name = "labelHint";
+            labelHint.Size = new Size(282, 19);
+            labelHint.TabIndex = 20;
+            labelHint.Text = "Format: hh:mm (e.g., 6 or 6:30). Use AM/PM.";
             // 
             // Form3
             // 
@@ -412,12 +388,9 @@
         private TextBox textBox4;
         private TextBox textBox6;
         private TextBox textBox7;
-        private TextBox textBox8;
-        private TextBox textBox14;
-        private ComboBox comboBox2;
-        private ComboBox comboBox3;
         private ComboBox comboBoxEndAmPm;
         private ComboBox comboBoxStartAmPm;
         private Button button4;
+        private Label labelHint;
     }
 }

@@ -53,6 +53,7 @@
             button4.Size = new Size(51, 52);
             button4.TabIndex = 109;
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // pictureBox4
             // 

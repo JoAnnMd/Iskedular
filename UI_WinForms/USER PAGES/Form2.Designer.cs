@@ -3,6 +3,13 @@
     partial class Form2
     {
         private System.ComponentModel.IContainer components = null;
+        private System.Windows.Forms.Panel panelTop;
+        private System.Windows.Forms.PictureBox logo;
+        private System.Windows.Forms.Label labelAppName;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.TextBox textBoxStartTime;
         private System.Windows.Forms.ComboBox comboBoxStartAmPm;
@@ -11,6 +18,7 @@
         private System.Windows.Forms.Label labelStart;
         private System.Windows.Forms.Label labelEnd;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelRooms;
+        private System.Windows.Forms.Label labelHint;
 
         protected override void Dispose(bool disposing)
         {
@@ -21,216 +29,159 @@
 
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
-            monthCalendar1 = new MonthCalendar();
-            textBoxStartTime = new TextBox();
-            comboBoxStartAmPm = new ComboBox();
-            textBoxEndTime = new TextBox();
-            comboBoxEndAmPm = new ComboBox();
-            labelStart = new Label();
-            labelEnd = new Label();
-            flowLayoutPanelRooms = new FlowLayoutPanel();
-            button7 = new Button();
-            button5 = new Button();
-            button6 = new Button();
-            panelTop = new Panel();
-            button4 = new Button();
-            textBox2 = new TextBox();
-            pictureBox4 = new PictureBox();
-            panelTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            SuspendLayout();
-            // 
-            // monthCalendar1
-            // 
-            monthCalendar1.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            monthCalendar1.Location = new Point(25, 100);
-            monthCalendar1.Name = "monthCalendar1";
-            monthCalendar1.TabIndex = 2;
-            monthCalendar1.DateChanged += monthCalendar1_DateChanged;
-            // 
-            // textBoxStartTime
-            // 
-            textBoxStartTime.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            textBoxStartTime.BorderStyle = BorderStyle.FixedSingle;
-            textBoxStartTime.Location = new Point(32, 358);
-            textBoxStartTime.Name = "textBoxStartTime";
-            textBoxStartTime.Size = new Size(95, 27);
-            textBoxStartTime.TabIndex = 4;
-            textBoxStartTime.TextChanged += textBoxStartTime_TextChanged;
-            // 
-            // comboBoxStartAmPm
-            // 
-            comboBoxStartAmPm.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            comboBoxStartAmPm.Location = new Point(162, 358);
-            comboBoxStartAmPm.Name = "comboBoxStartAmPm";
-            comboBoxStartAmPm.Size = new Size(96, 28);
-            comboBoxStartAmPm.TabIndex = 5;
-            comboBoxStartAmPm.SelectedIndexChanged += comboBoxStartAmPm_SelectedIndexChanged;
-            // 
-            // textBoxEndTime
-            // 
-            textBoxEndTime.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            textBoxEndTime.Location = new Point(32, 418);
-            textBoxEndTime.Name = "textBoxEndTime";
-            textBoxEndTime.Size = new Size(95, 27);
-            textBoxEndTime.TabIndex = 7;
-            textBoxEndTime.TextChanged += textBoxEndTime_TextChanged;
-            // 
-            // comboBoxEndAmPm
-            // 
-            comboBoxEndAmPm.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            comboBoxEndAmPm.Location = new Point(162, 418);
-            comboBoxEndAmPm.Name = "comboBoxEndAmPm";
-            comboBoxEndAmPm.Size = new Size(96, 28);
-            comboBoxEndAmPm.TabIndex = 8;
-            comboBoxEndAmPm.SelectedIndexChanged += comboBoxEndAmPm_SelectedIndexChanged;
-            // 
-            // labelStart
-            // 
-            labelStart.Location = new Point(32, 338);
-            labelStart.Name = "labelStart";
-            labelStart.Size = new Size(100, 23);
-            labelStart.TabIndex = 3;
-            labelStart.Text = "Start Time:";
-            // 
-            // labelEnd
-            // 
-            labelEnd.Location = new Point(32, 398);
-            labelEnd.Name = "labelEnd";
-            labelEnd.Size = new Size(100, 23);
-            labelEnd.TabIndex = 6;
-            labelEnd.Text = "End Time:";
-            // 
-            // flowLayoutPanelRooms
-            // 
-            flowLayoutPanelRooms.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            flowLayoutPanelRooms.AutoScroll = true;
-            flowLayoutPanelRooms.Location = new Point(318, 100);
-            flowLayoutPanelRooms.Name = "flowLayoutPanelRooms";
-            flowLayoutPanelRooms.Size = new Size(830, 600);
-            flowLayoutPanelRooms.TabIndex = 9;
-            // 
-            // button7
-            // 
-            button7.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button7.BackColor = Color.FromArgb(192, 0, 0);
-            button7.FlatStyle = FlatStyle.Flat;
-            button7.ForeColor = Color.White;
-            button7.Location = new Point(856, 23);
-            button7.Name = "button7";
-            button7.Size = new Size(100, 35);
-            button7.TabIndex = 4;
-            button7.Text = "Rooms";
-            button7.UseVisualStyleBackColor = false;
-            button7.Click += button7_Click;
-            // 
-            // button5
-            // 
-            button5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button5.BackColor = Color.FromArgb(192, 0, 0);
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.ForeColor = Color.White;
-            button5.Location = new Point(750, 22);
-            button5.Name = "button5";
-            button5.Size = new Size(100, 36);
-            button5.TabIndex = 2;
-            button5.Text = "Home";
-            button5.UseVisualStyleBackColor = false;
-            button5.Click += button5_Click;
-            // 
-            // button6
-            // 
-            button6.Anchor = AnchorStyles.Right;
-            button6.BackColor = Color.FromArgb(192, 0, 0);
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.ForeColor = Color.White;
-            button6.Location = new Point(962, 23);
-            button6.Name = "button6";
-            button6.Size = new Size(92, 35);
-            button6.TabIndex = 3;
-            button6.Text = "Reserve";
-            button6.UseVisualStyleBackColor = false;
-            button6.Click += button6_Click;
+            this.panelTop = new System.Windows.Forms.Panel();
+            this.logo = new System.Windows.Forms.PictureBox();
+            this.labelAppName = new System.Windows.Forms.Label();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.textBoxStartTime = new System.Windows.Forms.TextBox();
+            this.comboBoxStartAmPm = new System.Windows.Forms.ComboBox();
+            this.textBoxEndTime = new System.Windows.Forms.TextBox();
+            this.comboBoxEndAmPm = new System.Windows.Forms.ComboBox();
+            this.labelStart = new System.Windows.Forms.Label();
+            this.labelEnd = new System.Windows.Forms.Label();
+            this.flowLayoutPanelRooms = new System.Windows.Forms.FlowLayoutPanel();
+            this.labelHint = new System.Windows.Forms.Label();
+            this.panelTop.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).BeginInit();
+            this.SuspendLayout();
             // 
             // panelTop
             // 
-            panelTop.BackColor = Color.FromArgb(192, 0, 0);
-            panelTop.Controls.Add(button4);
-            panelTop.Controls.Add(textBox2);
-            panelTop.Controls.Add(pictureBox4);
-            panelTop.Controls.Add(button6);
-            panelTop.Controls.Add(button5);
-            panelTop.Controls.Add(button7);
-            panelTop.Dock = DockStyle.Top;
-            panelTop.Location = new Point(0, 0);
-            panelTop.Name = "panelTop";
-            panelTop.Size = new Size(1166, 77);
-            panelTop.TabIndex = 1;
-            panelTop.Paint += panelTop_Paint;
+            this.panelTop.BackColor = System.Drawing.Color.DarkRed;
+            this.panelTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelTop.Height = 70;
+            this.panelTop.Controls.Add(this.logo);
+            this.panelTop.Controls.Add(this.labelAppName);
+            this.panelTop.Controls.Add(this.button5);
+            this.panelTop.Controls.Add(this.button6);
+            this.panelTop.Controls.Add(this.button7);
+            this.panelTop.Controls.Add(this.button4);
+            this.panelTop.Name = "panelTop";
+            this.panelTop.TabIndex = 0;
             // 
-            // button4
+            // logo
             // 
-            button4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button4.Image = (Image)resources.GetObject("button4.Image");
-            button4.Location = new Point(1103, 10);
-            button4.Name = "button4";
-            button4.Size = new Size(51, 52);
-            button4.TabIndex = 110;
-            button4.UseVisualStyleBackColor = true;
+            this.logo.Size = new System.Drawing.Size(48, 48);
+            this.logo.Location = new System.Drawing.Point(20, 10);
+            this.logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             // 
-            // textBox2
+            // labelAppName
             // 
-            textBox2.BackColor = Color.FromArgb(192, 0, 0);
-            textBox2.BorderStyle = BorderStyle.None;
-            textBox2.Font = new Font("Elephant", 18F, FontStyle.Bold | FontStyle.Italic);
-            textBox2.ForeColor = Color.White;
-            textBox2.Location = new Point(105, 18);
-            textBox2.Multiline = true;
-            textBox2.Name = "textBox2";
-            textBox2.ReadOnly = true;
-            textBox2.Size = new Size(200, 40);
-            textBox2.TabIndex = 108;
-            textBox2.TabStop = false;
-            textBox2.Text = "Iskedular";
+            this.labelAppName.Text = "Iskedular";
+            this.labelAppName.Font = new System.Drawing.Font("Segoe UI", 16, System.Drawing.FontStyle.Bold);
+            this.labelAppName.ForeColor = System.Drawing.Color.White;
+            this.labelAppName.Location = new System.Drawing.Point(75, 18);
+            this.labelAppName.AutoSize = true;
             // 
-            // pictureBox4
+            // button5 (Home)
             // 
-            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(12, 10);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(72, 57);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 107;
-            pictureBox4.TabStop = false;
+            this.button5.Text = "Home";
+            this.button5.Size = new System.Drawing.Size(100, 35);
+            this.button5.Location = new System.Drawing.Point(750, 20);
+            this.button5.BackColor = System.Drawing.Color.DarkRed;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.ForeColor = System.Drawing.Color.White;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
+            // button6 (Reserve)
+            // 
+            this.button6.Text = "Reserve";
+            this.button6.Size = new System.Drawing.Size(100, 35);
+            this.button6.Location = new System.Drawing.Point(860, 20);
+            this.button6.BackColor = System.Drawing.Color.DarkRed;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button6.ForeColor = System.Drawing.Color.White;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7 (Rooms)
+            // 
+            this.button7.Text = "Rooms";
+            this.button7.Size = new System.Drawing.Size(100, 35);
+            this.button7.Location = new System.Drawing.Point(970, 20);
+            this.button7.BackColor = System.Drawing.Color.DarkRed;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // button4 (Profile)
+            // 
+            this.button4.Size = new System.Drawing.Size(48, 48);
+            this.button4.Location = new System.Drawing.Point(1080, 10);
+            this.button4.BackColor = System.Drawing.Color.DarkRed;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            //
+            // monthCalendar1
+            //
+            this.monthCalendar1.Location = new System.Drawing.Point(30, 100);
+            this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
+            //
+            // Start Time
+            //
+            this.labelStart.Text = "Start Time:";
+            this.labelStart.Location = new System.Drawing.Point(30, 280);
+            this.labelStart.AutoSize = true;
+
+            this.textBoxStartTime.Location = new System.Drawing.Point(30, 300);
+            this.textBoxStartTime.Width = 100;
+            this.textBoxStartTime.TextChanged += new System.EventHandler(this.textBoxStartTime_TextChanged);
+
+            this.comboBoxStartAmPm.Location = new System.Drawing.Point(140, 300);
+            this.comboBoxStartAmPm.Width = 60;
+            this.comboBoxStartAmPm.SelectedIndexChanged += new System.EventHandler(this.comboBoxStartAmPm_SelectedIndexChanged);
+            //
+            // End Time
+            //
+            this.labelEnd.Text = "End Time:";
+            this.labelEnd.Location = new System.Drawing.Point(30, 340);
+            this.labelEnd.AutoSize = true;
+
+            this.textBoxEndTime.Location = new System.Drawing.Point(30, 360);
+            this.textBoxEndTime.Width = 100;
+            this.textBoxEndTime.TextChanged += new System.EventHandler(this.textBoxEndTime_TextChanged);
+
+            this.comboBoxEndAmPm.Location = new System.Drawing.Point(140, 360);
+            this.comboBoxEndAmPm.Width = 60;
+            this.comboBoxEndAmPm.SelectedIndexChanged += new System.EventHandler(this.comboBoxEndAmPm_SelectedIndexChanged);
+            //
+            // labelHint
+            //
+            this.labelHint.Text = "Format: hh:mm (e.g., 6 or 6:30). Use AM/PM.";
+            this.labelHint.Font = new System.Drawing.Font("Segoe UI", 8, System.Drawing.FontStyle.Italic);
+            this.labelHint.ForeColor = System.Drawing.Color.Gray;
+            this.labelHint.AutoSize = true;
+            this.labelHint.Location = new System.Drawing.Point(30, 395);
+            //
+            // flowLayoutPanelRooms
+            //
+            this.flowLayoutPanelRooms.AutoScroll = true;
+            this.flowLayoutPanelRooms.Location = new System.Drawing.Point(250, 100);
+            this.flowLayoutPanelRooms.Size = new System.Drawing.Size(1100, 600);
+            //
             // Form2
-            // 
-            ClientSize = new Size(1166, 693);
-            Controls.Add(panelTop);
-            Controls.Add(monthCalendar1);
-            Controls.Add(labelStart);
-            Controls.Add(textBoxStartTime);
-            Controls.Add(comboBoxStartAmPm);
-            Controls.Add(labelEnd);
-            Controls.Add(textBoxEndTime);
-            Controls.Add(comboBoxEndAmPm);
-            Controls.Add(flowLayoutPanelRooms);
-            Name = "Form2";
-            Text = "Available Rooms";
-            Load += Form2_Load;
-            panelTop.ResumeLayout(false);
-            panelTop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            //
+            this.ClientSize = new System.Drawing.Size(1400, 720);
+            this.Controls.Add(this.panelTop);
+            this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.labelStart);
+            this.Controls.Add(this.textBoxStartTime);
+            this.Controls.Add(this.comboBoxStartAmPm);
+            this.Controls.Add(this.labelEnd);
+            this.Controls.Add(this.textBoxEndTime);
+            this.Controls.Add(this.comboBoxEndAmPm);
+            this.Controls.Add(this.labelHint);
+            this.Controls.Add(this.flowLayoutPanelRooms);
+            this.Text = "Available Rooms";
+            this.Load += new System.EventHandler(this.Form2_Load);
+            this.panelTop.ResumeLayout(false);
+            this.panelTop.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.logo)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
         }
-        private Button button7;
-        private Button button5;
-        private Button button6;
-        private Panel panelTop;
-        private PictureBox pictureBox4;
-        private TextBox textBox2;
-        private Button button4;
     }
 }

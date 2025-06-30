@@ -158,7 +158,8 @@ namespace UI_WinForms
 
         private void button4_Click(object sender, EventArgs e)
         {
-            var form = _serviceProvider.GetRequiredService<Form1>();
+            var user = _sessionService.LoggedInUser;
+            var form = new Form4(_serviceProvider, user);
             form.Show();
             this.Hide();
         }

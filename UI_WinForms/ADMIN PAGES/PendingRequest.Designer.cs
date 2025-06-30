@@ -185,7 +185,7 @@ namespace UI_WinForms
             tabPage1.Padding = new Padding(3);
             tabPage1.Size = new Size(992, 597);
             tabPage1.TabIndex = 0;
-            tabPage1.Text = "tabPagePending";
+            tabPage1.Text = "Pending Requests";
             tabPage1.UseVisualStyleBackColor = true;
             // 
             // pendingRequestsPanel
@@ -206,7 +206,7 @@ namespace UI_WinForms
             tabPage2.Padding = new Padding(3);
             tabPage2.Size = new Size(992, 597);
             tabPage2.TabIndex = 1;
-            tabPage2.Text = "tabPageRejected";
+            tabPage2.Text = "Approved Requests";
             tabPage2.UseVisualStyleBackColor = true;
             // 
             // rejectedRequestsPanel

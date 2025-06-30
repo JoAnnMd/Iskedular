@@ -39,6 +39,10 @@ namespace UI_WinForms
         // Set UI data when the form loads
         private void Form4_Load(object sender, EventArgs e)
         {
+            textBox9.ReadOnly = false;
+            textBox11.ReadOnly = false;
+            textBox3.ReadOnly = false;
+
             textBox9.Text = _fullName;
             textBox11.Text = _email;
             textBox3.Text = _programSection;
