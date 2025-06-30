@@ -1,144 +1,103 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Iskedular.Models;
-using Iskedular.Core.Services;
-using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection; // Added for IServiceProvider
+using Iskedular.Core.Services; // Added for SessionService
 
 namespace UI_WinForms
 {
     public partial class Form2 : Form
     {
-        private readonly IServiceProvider _serviceProvider;
-        private readonly RoomService _roomService;
-        private readonly ReservationService _reservationService;
-        private readonly SessionService _sessionService;
-        private List<Room> _rooms;
+        private readonly IServiceProvider _serviceProvider; // Added for dependency injection
+        private readonly SessionService _sessionService; // Added for session management
 
-        private Dictionary<string, Panel> _roomPanels;
-
-        public Form2(IServiceProvider serviceProvider)
+        public Form2(IServiceProvider serviceProvider, SessionService sessionService) // Modified constructor
         {
             InitializeComponent();
-            _serviceProvider = serviceProvider;
-            _roomService = _serviceProvider.GetRequiredService<RoomService>();
-            _reservationService = _serviceProvider.GetRequiredService<ReservationService>();
-            _sessionService = _serviceProvider.GetRequiredService<SessionService>();
-            this.Load += Form2_Load;
+            _serviceProvider = serviceProvider; // Assign injected service provider
+            _sessionService = sessionService; // Assign injected session service
         }
 
-        private async void Form2_Load(object sender, EventArgs e)
+        private void textBox5_TextChanged(object sender, EventArgs e)
         {
-            MapRoomControls();
-            await LoadRooms();
-            LoadTimeSlots();
-            await UpdateRoomPanels();
+
         }
 
-        private void MapRoomControls()
+        private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            _roomPanels = new Dictionary<string, Panel>
-            {
-                { "Room 101", P1 }, { "Room 102", P2 }, { "Room 103", P3 }, { "Room 104", P4 },
-                { "Room 105", P5 }, { "Room 106", P6 }, { "Room 201", P7 }, { "Room 202", P8 },
-                { "Room 203", P9 }, { "Room 204", P10 }, { "Room 205", P11 }, { "Room 206", P12 },
-                { "Roth #1", PRoth1 }, { "Roth #2", PRoth2 },
-                { "(AVR) Audio Visual Room", PAVR }, { "Computer Laboratory", PCOMLAB }
-            };
 
-            foreach (var kvp in _roomPanels)
-            {
-                if (kvp.Value == null)
-                    System.Diagnostics.Debug.WriteLine($"Panel for {kvp.Key} is null!");
-            }
         }
 
-        private async Task LoadRooms()
+        private void label1_Click(object sender, EventArgs e)
         {
-            _rooms = await _roomService.GetAllRoomsAsync();
-            foreach (var room in _rooms)
-                System.Diagnostics.Debug.WriteLine($"Loaded room: {room.Name}");
+
         }
 
-        private void LoadTimeSlots()
+        private void label1_Click_1(object sender, EventArgs e)
         {
-            comboBoxTime.Items.Clear();
-            // Start at 6:00 AM (hour = 6) and end at 9:00 PM (hour = 21)
-            for (int hour = 6; hour <= 21; hour++)
-            {
-                var time = new DateTime(2000, 1, 1, hour, 0, 0);
-                comboBoxTime.Items.Add(time.ToString("hh:mm tt"));
-            }
-            comboBoxTime.SelectedIndex = 0;
+
         }
 
-        private async void comboBoxTime_SelectedIndexChanged(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
-            await UpdateRoomPanels();
+
         }
 
-        private async Task UpdateRoomPanels()
+        private void groupBox1_Enter(object sender, EventArgs e)
         {
-            if (_rooms == null || _rooms.Count == 0)
-            {
-                System.Diagnostics.Debug.WriteLine("No rooms loaded.");
-                return;
-            }
 
-            DateTime selectedDate = monthCalendar1.SelectionStart.Date;
+        }
 
-            var selectedTime = comboBoxTime.SelectedItem?.ToString();
-            if (!DateTime.TryParse(selectedTime, out var parsedTime))
-            {
-                System.Diagnostics.Debug.WriteLine("Selected time is invalid.");
-                return;
-            }
-            DateTime selectedDateTime = selectedDate.AddHours(parsedTime.Hour).AddMinutes(parsedTime.Minute);
+        private void label5_Click(object sender, EventArgs e)
+        {
 
-            var reservations = await _reservationService.GetReservationsAsync();
-            var filteredReservations = reservations
-                .Where(r => r.StartTime.Date == selectedDate)
-                .ToList();
+        }
 
-            foreach (var roomName in _roomPanels.Keys)
-            {
-                var panel = _roomPanels[roomName];
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
 
-                var room = _rooms.FirstOrDefault(r =>
-                    r.Name.Equals(roomName, StringComparison.OrdinalIgnoreCase));
-                if (room != null)
-                {
-                    bool isBooked = filteredReservations.Any(r =>
-                        r.RoomId == room.Id &&
-                        selectedDateTime >= r.StartTime && selectedDateTime < r.EndTime);
+        }
 
-                    System.Diagnostics.Debug.WriteLine($"Panel: {panel.Name}, Room: {room.Name}, Booked: {isBooked}");
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
 
-                    panel.BackColor = isBooked ? Color.Maroon : Color.LawnGreen;
-                }
-                else
-                {
-                    panel.BackColor = Color.LightGray;
-                    System.Diagnostics.Debug.WriteLine($"Room {roomName} not found in loaded rooms.");
-                }
-            }
+        }
+
+        private void label23_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Form1 homeForm = new Form1(_serviceProvider);
+            Form1 homeForm = _serviceProvider.GetRequiredService<Form1>(); // Get Form1 from DI
             homeForm.Show();
-            this.Hide();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            Form3 reserveForm = new Form3(_serviceProvider, _roomService, _reservationService, _sessionService);
-            reserveForm.Show();
             this.Hide();
         }
 
@@ -147,35 +106,28 @@ namespace UI_WinForms
             MessageBox.Show("You are already on the Rooms screen.", "Navigation", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button6_Click(object sender, EventArgs e)
         {
-            Form4 profileForm = _serviceProvider.GetRequiredService<Form4>();
-            profileForm.Show();
+            Form3 reserveForm = _serviceProvider.GetRequiredService<Form3>(); // Get Form3 from DI
+            reserveForm.Show();
             this.Hide();
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e) { }
-        private void textBox1_TextChanged(object sender, EventArgs e) { }
-        private void panel5_Paint(object sender, PaintEventArgs e) { }
-        private void label5_Click(object sender, EventArgs e) { }
-        private void label2_Click(object sender, EventArgs e) { }
-        private void label23_Click(object sender, EventArgs e) { }
-        private void label21_Click(object sender, EventArgs e) { }
-        private void label1_Click_1(object sender, EventArgs e) { }
-
-        private void panel17_Paint(object sender, PaintEventArgs e)
+        private void button4_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private async void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
-        {
-            await UpdateRoomPanels();
+            // Get current user from session service
+            var currentUser = _sessionService.LoggedInUser;
+            if (currentUser != null)
+            {
+                // Create Form4 with user information
+                Form4 profileForm = new Form4(_serviceProvider, currentUser);
+                profileForm.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("User not logged in. Please log in first.", "Authentication Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

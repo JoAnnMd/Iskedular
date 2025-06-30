@@ -29,17 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
-            monthCalendar1 = new MonthCalendar();
             pictureBox2 = new PictureBox();
             button2 = new Button();
             textBox10 = new TextBox();
             textBox5 = new TextBox();
             button3 = new Button();
             textBox1 = new TextBox();
-            textBox3 = new TextBox();
             textBox9 = new TextBox();
-            textBox11 = new TextBox();
-            textBox12 = new TextBox();
             pictureBox4 = new PictureBox();
             button6 = new Button();
             button7 = new Button();
@@ -47,22 +43,14 @@
             textBox13 = new TextBox();
             button4 = new Button();
             pictureBox1 = new PictureBox();
+            monthCalendar1 = new MonthCalendar();
+            textBox2 = new TextBox();
+            textBox3 = new TextBox();
+            textBox11 = new TextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // monthCalendar1
-            // 
-            monthCalendar1.BackColor = Color.Maroon;
-            monthCalendar1.ForeColor = Color.FromArgb(255, 192, 192);
-            monthCalendar1.Location = new Point(0, 81);
-            monthCalendar1.Margin = new Padding(9, 11, 9, 11);
-            monthCalendar1.Name = "monthCalendar1";
-            monthCalendar1.TabIndex = 64;
-            monthCalendar1.TitleBackColor = Color.DarkRed;
-            monthCalendar1.TitleForeColor = Color.White;
-            monthCalendar1.TrailingForeColor = Color.LightGray;
             // 
             // pictureBox2
             // 
@@ -76,16 +64,17 @@
             // 
             // button2
             // 
-            button2.BackColor = Color.FromArgb(255, 255, 128);
+            button2.BackColor = Color.FromArgb(192, 0, 0);
             button2.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.FromArgb(192, 0, 0);
-            button2.Location = new Point(60, 342);
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(465, 518);
             button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
-            button2.Size = new Size(142, 29);
+            button2.Size = new Size(86, 31);
             button2.TabIndex = 71;
-            button2.Text = "Cancel Booking";
+            button2.Text = "Log Out";
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // textBox10
             // 
@@ -93,10 +82,11 @@
             textBox10.BorderStyle = BorderStyle.None;
             textBox10.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox10.ForeColor = Color.Black;
-            textBox10.Location = new Point(295, 332);
+            textBox10.Location = new Point(295, 307);
             textBox10.Margin = new Padding(3, 4, 3, 4);
             textBox10.Multiline = true;
             textBox10.Name = "textBox10";
+            textBox10.ReadOnly = true;
             textBox10.Size = new Size(78, 39);
             textBox10.TabIndex = 72;
             textBox10.Text = "Name:";
@@ -118,10 +108,10 @@
             // button3
             // 
             button3.Image = (Image)resources.GetObject("button3.Image");
-            button3.Location = new Point(414, 155);
+            button3.Location = new Point(437, 157);
             button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
-            button3.Size = new Size(114, 131);
+            button3.Size = new Size(114, 103);
             button3.TabIndex = 74;
             button3.UseVisualStyleBackColor = true;
             // 
@@ -131,55 +121,28 @@
             textBox1.BorderStyle = BorderStyle.None;
             textBox1.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             textBox1.ForeColor = Color.Black;
-            textBox1.Location = new Point(295, 408);
+            textBox1.Location = new Point(295, 438);
             textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(78, 39);
+            textBox1.ReadOnly = true;
+            textBox1.Size = new Size(51, 39);
             textBox1.TabIndex = 75;
-            textBox1.Text = "Student ID:";
+            textBox1.Text = "Email:";
             textBox1.TextChanged += textBox1_TextChanged;
-            // 
-            // textBox3
-            // 
-            textBox3.BackColor = SystemColors.Control;
-            textBox3.BorderStyle = BorderStyle.None;
-            textBox3.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox3.ForeColor = Color.Black;
-            textBox3.Location = new Point(295, 465);
-            textBox3.Margin = new Padding(3, 4, 3, 4);
-            textBox3.Multiline = true;
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(120, 39);
-            textBox3.TabIndex = 76;
-            textBox3.Text = "Year & Section: ";
             // 
             // textBox9
             // 
-            textBox9.Location = new Point(379, 316);
+            textBox9.BackColor = Color.White;
+            textBox9.Enabled = false;
+            textBox9.Location = new Point(387, 297);
             textBox9.Margin = new Padding(3, 4, 3, 4);
             textBox9.Multiline = true;
             textBox9.Name = "textBox9";
-            textBox9.Size = new Size(211, 42);
+            textBox9.ReadOnly = true;
+            textBox9.Size = new Size(252, 37);
             textBox9.TabIndex = 77;
-            // 
-            // textBox11
-            // 
-            textBox11.Location = new Point(379, 388);
-            textBox11.Margin = new Padding(3, 4, 3, 4);
-            textBox11.Multiline = true;
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(211, 42);
-            textBox11.TabIndex = 78;
-            // 
-            // textBox12
-            // 
-            textBox12.Location = new Point(432, 450);
-            textBox12.Margin = new Padding(3, 4, 3, 4);
-            textBox12.Multiline = true;
-            textBox12.Name = "textBox12";
-            textBox12.Size = new Size(211, 42);
-            textBox12.TabIndex = 79;
+            textBox9.TextChanged += textBox9_TextChanged;
             // 
             // pictureBox4
             // 
@@ -273,11 +236,66 @@
             pictureBox1.TabIndex = 100;
             pictureBox1.TabStop = false;
             // 
+            // monthCalendar1
+            // 
+            monthCalendar1.BackColor = Color.Maroon;
+            monthCalendar1.ForeColor = Color.FromArgb(255, 192, 192);
+            monthCalendar1.Location = new Point(0, 81);
+            monthCalendar1.Margin = new Padding(9, 11, 9, 11);
+            monthCalendar1.Name = "monthCalendar1";
+            monthCalendar1.TabIndex = 64;
+            monthCalendar1.TitleBackColor = Color.DarkRed;
+            monthCalendar1.TitleForeColor = Color.White;
+            monthCalendar1.TrailingForeColor = Color.LightGray;
+            // 
+            // textBox2
+            // 
+            textBox2.BackColor = SystemColors.Control;
+            textBox2.BorderStyle = BorderStyle.None;
+            textBox2.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox2.ForeColor = Color.Black;
+            textBox2.Location = new Point(295, 364);
+            textBox2.Margin = new Padding(3, 4, 3, 4);
+            textBox2.Multiline = true;
+            textBox2.Name = "textBox2";
+            textBox2.ReadOnly = true;
+            textBox2.Size = new Size(88, 39);
+            textBox2.TabIndex = 107;
+            textBox2.Text = "Program & Section:";
+            textBox2.TextChanged += textBox2_TextChanged;
+            // 
+            // textBox3
+            // 
+            textBox3.BackColor = Color.White;
+            textBox3.Enabled = false;
+            textBox3.Location = new Point(389, 358);
+            textBox3.Margin = new Padding(3, 4, 3, 4);
+            textBox3.Multiline = true;
+            textBox3.Name = "textBox3";
+            textBox3.ReadOnly = true;
+            textBox3.Size = new Size(252, 37);
+            textBox3.TabIndex = 108;
+            textBox3.TextChanged += textBox3_TextChanged;
+            // 
+            // textBox11
+            // 
+            textBox11.BackColor = Color.White;
+            textBox11.Enabled = false;
+            textBox11.Location = new Point(387, 432);
+            textBox11.Name = "textBox11";
+            textBox11.ReadOnly = true;
+            textBox11.Size = new Size(252, 27);
+            textBox11.TabIndex = 1;
+            textBox11.TextChanged += textBox11_TextChanged;
+            // 
             // Form4
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 562);
+            Controls.Add(textBox11);
+            Controls.Add(textBox3);
+            Controls.Add(textBox2);
             Controls.Add(pictureBox4);
             Controls.Add(button6);
             Controls.Add(button7);
@@ -285,10 +303,7 @@
             Controls.Add(textBox13);
             Controls.Add(button4);
             Controls.Add(pictureBox1);
-            Controls.Add(textBox12);
-            Controls.Add(textBox11);
             Controls.Add(textBox9);
-            Controls.Add(textBox3);
             Controls.Add(textBox1);
             Controls.Add(button3);
             Controls.Add(textBox5);
@@ -308,17 +323,13 @@
         }
 
         #endregion
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.TextBox textBox12;
         private PictureBox pictureBox4;
         private Button button6;
         private Button button7;
@@ -326,5 +337,9 @@
         private TextBox textBox13;
         private Button button4;
         private PictureBox pictureBox1;
+        private MonthCalendar monthCalendar1;
+        private TextBox textBox2;
+        private TextBox textBox3;
+        private TextBox textBox11;
     }
 }

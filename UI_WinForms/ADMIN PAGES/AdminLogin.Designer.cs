@@ -17,184 +17,165 @@
 
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminLogin));
-
-            this.mainContentPanel = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox(); // IskedularLogo
-            this.pictureBox2 = new System.Windows.Forms.PictureBox(); // Admin Icon (if used)
-            this.textBox13 = new System.Windows.Forms.TextBox(); // Iskedular title
-            this.textBox3 = new System.Windows.Forms.TextBox(); // Admin Login title
-            this.textBox1 = new System.Windows.Forms.TextBox(); // Email Label
-            this.textBox2 = new System.Windows.Forms.TextBox(); // Email Input
-            this.textBox8 = new System.Windows.Forms.TextBox(); // Password Label
-            this.textBox7 = new System.Windows.Forms.TextBox(); // Password Input
-            this.button4 = new System.Windows.Forms.Button(); // Login Button
-
-            this.mainContentPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.SuspendLayout();
-
-            //
+            mainContentPanel = new Panel();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            textBox13 = new TextBox();
+            textBox3 = new TextBox();
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
+            textBox8 = new TextBox();
+            textBox7 = new TextBox();
+            button4 = new Button();
+            mainContentPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            SuspendLayout();
+            // 
             // mainContentPanel
-            //
-            // Changed BackColor to White to make the panel visible
-            this.mainContentPanel.BackColor = System.Drawing.Color.White;
-            this.mainContentPanel.Controls.Add(this.pictureBox1);
-            this.mainContentPanel.Controls.Add(this.pictureBox2);
-            this.mainContentPanel.Controls.Add(this.textBox13);
-            this.mainContentPanel.Controls.Add(this.textBox3);
-            this.mainContentPanel.Controls.Add(this.textBox1);
-            this.mainContentPanel.Controls.Add(this.textBox2);
-            this.mainContentPanel.Controls.Add(this.textBox8);
-            this.mainContentPanel.Controls.Add(this.textBox7);
-            this.mainContentPanel.Controls.Add(this.button4);
-            this.mainContentPanel.Size = new System.Drawing.Size(325, 524); // Size based on Form7's main content panel
-            // The Location for mainContentPanel will be set dynamically in AdminLogin.cs Load event
-            this.mainContentPanel.Location = new System.Drawing.Point(
-                (this.ClientSize.Width - this.mainContentPanel.Width) / 2,
-                (this.ClientSize.Height - this.mainContentPanel.Height) / 2
-            );
-            this.mainContentPanel.Name = "mainContentPanel";
-            this.mainContentPanel.TabIndex = 0; // Set appropriate tab index for the panel
-            //
-            // pictureBox1 (Iskedular Logo - assuming this is the main logo like in Form7)
-            //
-            this.pictureBox1.BackColor = System.Drawing.Color.White; // Inherit from panel or set explicitly
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            // Assuming this is the main Iskedular logo from your resources, same as Form7
-            this.pictureBox1.Image = Properties.Resources.IskedularLogo;
-            // Adjusted location relative to mainContentPanel (similar to Form7's PictureBox1)
-            this.pictureBox1.Location = new System.Drawing.Point(101, 34);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(124, 101);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 99;
-            this.pictureBox1.TabStop = false;
-            //
-            // pictureBox2 (Optional: Admin Icon if it's different from IskedularLogo, or remove if not needed)
-            // If this is meant to be a separate admin icon, ensure its resource is correct.
-            // If it's not needed, remove it from mainContentPanel.Controls.Add() and here.
-            this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            // You might need to change "pictureBox2.Image" to your specific admin icon resource
-            // Example: this.pictureBox2.Image = Properties.Resources.AdminIcon;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(134, 10); // Example relative position within the panel
-            this.pictureBox2.Size = new System.Drawing.Size(57, 49); // Keep existing size
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 100; // Adjusted for new control order if needed
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Visible = false; // Hide if not strictly needed or conflicting with pictureBox1
-            //
-            // textBox13 (App Name: Iskedular)
-            //
-            this.textBox13.BackColor = System.Drawing.Color.White;
-            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox13.Font = new System.Drawing.Font("Elephant", 18F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic);
-            this.textBox13.ForeColor = System.Drawing.Color.Red;
-            // Adjusted location relative to mainContentPanel (similar to Form7's textBox13)
-            this.textBox13.Location = new System.Drawing.Point(73, 143);
-            this.textBox13.Multiline = true;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(189, 36);
-            this.textBox13.TabIndex = 101; // Adjusted tab index
-            this.textBox13.Text = "Iskedular";
-            //
-            // textBox3 (Admin Login Title)
-            //
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic);
-            // Adjusted location relative to mainContentPanel, centered below Iskedular title
-            this.textBox3.Location = new System.Drawing.Point(110, 185); // Adjusted to be below the Iskedular title
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(120, 24);
-            this.textBox3.TabIndex = 102; // Adjusted tab index
-            this.textBox3.Text = "Admin Login";
-            //
-            // textBox1 (Email Label)
-            //
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0); // Changed font size to match Form7
-            // Adjusted location relative to mainContentPanel (similar to Form7's textBox3)
-            this.textBox1.Location = new System.Drawing.Point(35, 230); // Adjusted for better spacing
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(45, 28); // Adjusted size to match Form7
-            this.textBox1.TabIndex = 103; // Adjusted tab index
-            this.textBox1.Text = "Email";
-            //
-            // textBox2 (Email Input)
-            //
-            this.textBox2.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            // Adjusted location relative to mainContentPanel (similar to Form7's textBox2)
-            this.textBox2.Location = new System.Drawing.Point(58, 266); // Adjusted for better spacing
-            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(204, 27); // Standard size from Form7
-            this.textBox2.TabIndex = 104; // Adjusted tab index
-            //
-            // textBox8 (Password Label)
-            //
-            this.textBox8.BackColor = System.Drawing.Color.White;
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, 0); // Changed font size to match Form7
-            // Adjusted location relative to mainContentPanel (similar to Form7's textBox8)
-            this.textBox8.Location = new System.Drawing.Point(35, 305); // Adjusted for better spacing
-            this.textBox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(75, 28); // Standard size from Form7
-            this.textBox8.TabIndex = 105; // Adjusted tab index
-            this.textBox8.Text = "Password";
-            //
-            // textBox7 (Password Input)
-            //
-            this.textBox7.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            // Adjusted location relative to mainContentPanel (similar to Form7's textBox7)
-            this.textBox7.Location = new System.Drawing.Point(58, 341); // Adjusted for better spacing
-            this.textBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.PasswordChar = '*'; // Set in Designer for security
-            this.textBox7.Size = new System.Drawing.Size(204, 27); // Standard size from Form7
-            this.textBox7.TabIndex = 106; // Adjusted tab index
-            //
-            // button4 (Login Button)
-            //
-            this.button4.BackColor = System.Drawing.Color.Maroon;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            // Adjusted location relative to mainContentPanel (similar to Form7's loginButton)
-            this.button4.Location = new System.Drawing.Point(129, 390);
-            this.button4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 29); // Standard size from Form7
-            this.button4.TabIndex = 107; // Adjusted tab index
-            this.button4.Text = "Log In";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-
-            //
-            // AdminLogin (the form)
-            //
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonShadow; // Still kept as a fallback for the main form
-            this.BackgroundImage = UI_WinForms.Properties.Resources.Screenshot_2025_06_15_224250;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 562); // Set initial client size, will be overridden by Bounds in AdminLogin.cs
-            this.Controls.Add(this.mainContentPanel);
-            this.Load += new System.EventHandler(this.AdminLogin_Load);
-            this.mainContentPanel.ResumeLayout(false);
-            this.mainContentPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            // 
+            mainContentPanel.BackColor = Color.White;
+            mainContentPanel.Controls.Add(pictureBox1);
+            mainContentPanel.Controls.Add(pictureBox2);
+            mainContentPanel.Controls.Add(textBox13);
+            mainContentPanel.Controls.Add(textBox3);
+            mainContentPanel.Controls.Add(textBox1);
+            mainContentPanel.Controls.Add(textBox2);
+            mainContentPanel.Controls.Add(textBox8);
+            mainContentPanel.Controls.Add(textBox7);
+            mainContentPanel.Controls.Add(button4);
+            mainContentPanel.Location = new Point(282, 253);
+            mainContentPanel.Name = "mainContentPanel";
+            mainContentPanel.Size = new Size(325, 524);
+            mainContentPanel.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackColor = Color.White;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.Image = Properties.Resources.IskedularLogo;
+            pictureBox1.Location = new Point(101, 34);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(124, 101);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 99;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.BackColor = Color.White;
+            pictureBox2.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(134, 10);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(57, 49);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 100;
+            pictureBox2.TabStop = false;
+            pictureBox2.Visible = false;
+            // 
+            // textBox13
+            // 
+            textBox13.BackColor = Color.White;
+            textBox13.BorderStyle = BorderStyle.None;
+            textBox13.Font = new Font("Elephant", 18F, FontStyle.Bold | FontStyle.Italic);
+            textBox13.ForeColor = Color.Red;
+            textBox13.Location = new Point(73, 143);
+            textBox13.Multiline = true;
+            textBox13.Name = "textBox13";
+            textBox13.ReadOnly = true;
+            textBox13.Size = new Size(189, 36);
+            textBox13.TabIndex = 101;
+            textBox13.Text = "Iskedular";
+            // 
+            // textBox3
+            // 
+            textBox3.BackColor = Color.White;
+            textBox3.BorderStyle = BorderStyle.None;
+            textBox3.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold | FontStyle.Italic);
+            textBox3.Location = new Point(110, 185);
+            textBox3.Multiline = true;
+            textBox3.Name = "textBox3";
+            textBox3.ReadOnly = true;
+            textBox3.Size = new Size(120, 24);
+            textBox3.TabIndex = 102;
+            textBox3.Text = "Admin Login";
+            // 
+            // textBox1
+            // 
+            textBox1.BackColor = Color.White;
+            textBox1.BorderStyle = BorderStyle.None;
+            textBox1.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(35, 230);
+            textBox1.Multiline = true;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(45, 28);
+            textBox1.TabIndex = 103;
+            textBox1.Text = "Email";
+            // 
+            // textBox2
+            // 
+            textBox2.BackColor = SystemColors.InactiveCaption;
+            textBox2.Location = new Point(58, 266);
+            textBox2.Margin = new Padding(3, 4, 3, 4);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(204, 27);
+            textBox2.TabIndex = 104;
+            // 
+            // textBox8
+            // 
+            textBox8.BackColor = Color.White;
+            textBox8.BorderStyle = BorderStyle.None;
+            textBox8.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox8.Location = new Point(35, 305);
+            textBox8.Margin = new Padding(3, 4, 3, 4);
+            textBox8.Multiline = true;
+            textBox8.Name = "textBox8";
+            textBox8.Size = new Size(75, 28);
+            textBox8.TabIndex = 105;
+            textBox8.Text = "Password";
+            // 
+            // textBox7
+            // 
+            textBox7.BackColor = SystemColors.InactiveCaption;
+            textBox7.Location = new Point(58, 341);
+            textBox7.Margin = new Padding(3, 4, 3, 4);
+            textBox7.Name = "textBox7";
+            textBox7.PasswordChar = '*';
+            textBox7.Size = new Size(204, 27);
+            textBox7.TabIndex = 106;
+            // 
+            // button4
+            // 
+            button4.BackColor = Color.Maroon;
+            button4.ForeColor = Color.White;
+            button4.Location = new Point(129, 390);
+            button4.Margin = new Padding(3, 4, 3, 4);
+            button4.Name = "button4";
+            button4.Size = new Size(75, 29);
+            button4.TabIndex = 107;
+            button4.Text = "Log In";
+            button4.UseVisualStyleBackColor = false;
+            button4.Click += button4_Click;
+            // 
+            // AdminLogin
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.ButtonShadow;
+            BackgroundImage = Properties.Resources.Screenshot_2025_06_15_224250;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(800, 562);
+            Controls.Add(mainContentPanel);
+            Name = "AdminLogin";
+            Load += AdminLogin_Load;
+            mainContentPanel.ResumeLayout(false);
+            mainContentPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion

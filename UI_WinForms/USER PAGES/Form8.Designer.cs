@@ -28,232 +28,235 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.mainContentPanel = new System.Windows.Forms.Panel();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.mainContentPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
-            //
+            mainContentPanel = new Panel();
+            textBox12 = new TextBox();
+            textBox11 = new TextBox();
+            button2 = new Button();
+            textBox10 = new TextBox();
+            textBox13 = new TextBox();
+            button1 = new Button();
+            textBox9 = new TextBox();
+            textBox8 = new TextBox();
+            textBox7 = new TextBox();
+            textBox6 = new TextBox();
+            pictureBox1 = new PictureBox();
+            textBox5 = new TextBox();
+            textBox4 = new TextBox();
+            textBox3 = new TextBox();
+            textBox2 = new TextBox();
+            mainContentPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            SuspendLayout();
+            // 
             // mainContentPanel
-            //
-            this.mainContentPanel.BackColor = System.Drawing.Color.White;
-            this.mainContentPanel.Controls.Add(this.textBox12);
-            this.mainContentPanel.Controls.Add(this.textBox11);
-            this.mainContentPanel.Controls.Add(this.button2);
-            this.mainContentPanel.Controls.Add(this.textBox10);
-            this.mainContentPanel.Controls.Add(this.textBox13);
-            this.mainContentPanel.Controls.Add(this.button1);
-            this.mainContentPanel.Controls.Add(this.textBox9);
-            this.mainContentPanel.Controls.Add(this.textBox8);
-            this.mainContentPanel.Controls.Add(this.textBox7);
-            this.mainContentPanel.Controls.Add(this.textBox6);
-            this.mainContentPanel.Controls.Add(this.pictureBox1);
-            this.mainContentPanel.Controls.Add(this.textBox5);
-            this.mainContentPanel.Controls.Add(this.textBox4);
-            this.mainContentPanel.Controls.Add(this.textBox3);
-            this.mainContentPanel.Controls.Add(this.textBox2);
-            this.mainContentPanel.Location = new System.Drawing.Point(0, 0);
-            this.mainContentPanel.Name = "mainContentPanel";
-            this.mainContentPanel.Size = new System.Drawing.Size(274, 532);
-            this.mainContentPanel.TabIndex = 0;
-            //
+            // 
+            mainContentPanel.BackColor = Color.White;
+            mainContentPanel.Controls.Add(textBox12);
+            mainContentPanel.Controls.Add(textBox11);
+            mainContentPanel.Controls.Add(button2);
+            mainContentPanel.Controls.Add(textBox10);
+            mainContentPanel.Controls.Add(textBox13);
+            mainContentPanel.Controls.Add(button1);
+            mainContentPanel.Controls.Add(textBox9);
+            mainContentPanel.Controls.Add(textBox8);
+            mainContentPanel.Controls.Add(textBox7);
+            mainContentPanel.Controls.Add(textBox6);
+            mainContentPanel.Controls.Add(pictureBox1);
+            mainContentPanel.Controls.Add(textBox5);
+            mainContentPanel.Controls.Add(textBox4);
+            mainContentPanel.Controls.Add(textBox3);
+            mainContentPanel.Controls.Add(textBox2);
+            mainContentPanel.Location = new Point(0, 0);
+            mainContentPanel.Name = "mainContentPanel";
+            mainContentPanel.Size = new Size(274, 532);
+            mainContentPanel.TabIndex = 0;
+            // 
             // textBox12
-            //
-            this.textBox12.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox12.Location = new System.Drawing.Point(32, 430);
-            this.textBox12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.PasswordChar = '*';
-            this.textBox12.Size = new System.Drawing.Size(204, 27);
-            this.textBox12.TabIndex = 98;
-            //
+            // 
+            textBox12.BackColor = SystemColors.InactiveCaption;
+            textBox12.Location = new Point(32, 430);
+            textBox12.Margin = new Padding(3, 4, 3, 4);
+            textBox12.Name = "textBox12";
+            textBox12.PasswordChar = '*';
+            textBox12.Size = new Size(204, 27);
+            textBox12.TabIndex = 98;
+            // 
             // textBox11
-            //
-            this.textBox11.BackColor = System.Drawing.Color.White;
-            this.textBox11.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox11.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.ForeColor = System.Drawing.Color.Black;
-            this.textBox11.Location = new System.Drawing.Point(15, 407);
-            this.textBox11.Multiline = true;
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(152, 28);
-            this.textBox11.TabIndex = 97;
-            this.textBox11.Text = "Confirm Password";
-            //
+            // 
+            textBox11.BackColor = Color.White;
+            textBox11.BorderStyle = BorderStyle.None;
+            textBox11.Font = new Font("Microsoft Sans Serif", 7.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox11.ForeColor = Color.Black;
+            textBox11.Location = new Point(15, 407);
+            textBox11.Multiline = true;
+            textBox11.Name = "textBox11";
+            textBox11.Size = new Size(152, 28);
+            textBox11.TabIndex = 97;
+            textBox11.Text = "Confirm Password";
+            // 
             // button2
-            //
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Red;
-            this.button2.Location = new System.Drawing.Point(175, 501);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 20);
-            this.button2.TabIndex = 96;
-            this.button2.Text = "Log In";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            //
+            // 
+            button2.BackColor = Color.White;
+            button2.Font = new Font("Microsoft Sans Serif", 6F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.ForeColor = Color.Red;
+            button2.Location = new Point(175, 501);
+            button2.Name = "button2";
+            button2.Size = new Size(75, 20);
+            button2.TabIndex = 96;
+            button2.Text = "Log In";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
+            // 
             // textBox10
-            //
-            this.textBox10.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox10.Font = new System.Drawing.Font("Microsoft Sans Serif", 4.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(48, 510);
-            this.textBox10.Multiline = true;
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(121, 11);
-            this.textBox10.TabIndex = 95;
-            this.textBox10.Text = "Have an existing account?";
-            //
+            // 
+            textBox10.BorderStyle = BorderStyle.None;
+            textBox10.Font = new Font("Microsoft Sans Serif", 4.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox10.Location = new Point(48, 510);
+            textBox10.Multiline = true;
+            textBox10.Name = "textBox10";
+            textBox10.Size = new Size(121, 11);
+            textBox10.TabIndex = 95;
+            textBox10.Text = "Have an existing account?";
+            // 
             // textBox13
-            //
-            this.textBox13.BackColor = System.Drawing.Color.White;
-            this.textBox13.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox13.Font = new System.Drawing.Font("Elephant", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox13.ForeColor = System.Drawing.Color.Red;
-            this.textBox13.Location = new System.Drawing.Point(48, 126);
-            this.textBox13.Multiline = true;
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(176, 32);
-            this.textBox13.TabIndex = 94;
-            this.textBox13.Text = "Iskedular";
-            //
+            // 
+            textBox13.BackColor = Color.White;
+            textBox13.BorderStyle = BorderStyle.None;
+            textBox13.Font = new Font("Elephant", 18F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            textBox13.ForeColor = Color.Red;
+            textBox13.Location = new Point(48, 126);
+            textBox13.Multiline = true;
+            textBox13.Name = "textBox13";
+            textBox13.Size = new Size(176, 32);
+            textBox13.TabIndex = 94;
+            textBox13.Text = "Iskedular";
+            // 
             // button1
-            //
-            this.button1.BackColor = System.Drawing.Color.Maroon;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(92, 473);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 29);
-            this.button1.TabIndex = 21;
-            this.button1.Text = "Sign Up";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            //
+            // 
+            button1.BackColor = Color.Maroon;
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(92, 473);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 29);
+            button1.TabIndex = 21;
+            button1.Text = "Sign Up";
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
             // textBox9
-            //
-            this.textBox9.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox9.Location = new System.Drawing.Point(32, 372);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(204, 27);
-            this.textBox9.TabIndex = 20;
-            //
+            // 
+            textBox9.BackColor = SystemColors.InactiveCaption;
+            textBox9.Location = new Point(32, 372);
+            textBox9.Name = "textBox9";
+            textBox9.Size = new Size(204, 27);
+            textBox9.TabIndex = 20;
+            // 
             // textBox8
-            //
-            this.textBox8.BackColor = System.Drawing.Color.White;
-            this.textBox8.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.ForeColor = System.Drawing.Color.Black;
-            this.textBox8.Location = new System.Drawing.Point(18, 347);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(75, 28);
-            this.textBox8.TabIndex = 19;
-            this.textBox8.Text = "Password";
-            //
+            // 
+            textBox8.BackColor = Color.White;
+            textBox8.BorderStyle = BorderStyle.None;
+            textBox8.Font = new Font("Microsoft Sans Serif", 7.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox8.ForeColor = Color.Black;
+            textBox8.Location = new Point(18, 347);
+            textBox8.Multiline = true;
+            textBox8.Name = "textBox8";
+            textBox8.Size = new Size(75, 28);
+            textBox8.TabIndex = 19;
+            textBox8.Text = "Password";
+            // 
             // textBox7
-            //
-            this.textBox7.BackColor = System.Drawing.Color.White;
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.ForeColor = System.Drawing.Color.Black;
-            this.textBox7.Location = new System.Drawing.Point(15, 232);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(78, 14);
-            this.textBox7.TabIndex = 18;
-            this.textBox7.Text = "Last Name";
-            //
+            // 
+            textBox7.BackColor = Color.White;
+            textBox7.BorderStyle = BorderStyle.None;
+            textBox7.Font = new Font("Microsoft Sans Serif", 7.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox7.ForeColor = Color.Black;
+            textBox7.Location = new Point(15, 232);
+            textBox7.Multiline = true;
+            textBox7.Name = "textBox7";
+            textBox7.Size = new Size(132, 17);
+            textBox7.TabIndex = 18;
+            textBox7.Text = "Program & Section";
+            textBox7.TextChanged += textBox7_TextChanged;
+            // 
             // textBox6
-            //
-            this.textBox6.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox6.Location = new System.Drawing.Point(32, 309);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(204, 27);
-            this.textBox6.TabIndex = 17;
-            //
+            // 
+            textBox6.BackColor = SystemColors.InactiveCaption;
+            textBox6.Location = new Point(32, 309);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(204, 27);
+            textBox6.TabIndex = 17;
+            // 
             // pictureBox1
-            //
-            this.pictureBox1.BackColor = System.Drawing.Color.White;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Image = global::UI_WinForms.Properties.Resources.IskedularLogo;
-            this.pictureBox1.Location = new System.Drawing.Point(78, 17);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(124, 101);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 16;
-            this.pictureBox1.TabStop = false;
-            //
+            // 
+            pictureBox1.BackColor = Color.White;
+            pictureBox1.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox1.Image = Properties.Resources.IskedularLogo;
+            pictureBox1.Location = new Point(78, 17);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(124, 101);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 16;
+            pictureBox1.TabStop = false;
+            // 
             // textBox5
-            //
-            this.textBox5.BackColor = System.Drawing.Color.White;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.ForeColor = System.Drawing.Color.Black;
-            this.textBox5.Location = new System.Drawing.Point(18, 288);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(43, 28);
-            this.textBox5.TabIndex = 12;
-            this.textBox5.Text = "Email";
-            //
+            // 
+            textBox5.BackColor = Color.White;
+            textBox5.BorderStyle = BorderStyle.None;
+            textBox5.Font = new Font("Microsoft Sans Serif", 7.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox5.ForeColor = Color.Black;
+            textBox5.Location = new Point(18, 288);
+            textBox5.Multiline = true;
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(43, 28);
+            textBox5.TabIndex = 12;
+            textBox5.Text = "Email";
+            // 
             // textBox4
-            //
-            this.textBox4.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox4.Location = new System.Drawing.Point(32, 255);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(204, 27);
-            this.textBox4.TabIndex = 11;
-            //
+            // 
+            textBox4.BackColor = SystemColors.InactiveCaption;
+            textBox4.Location = new Point(32, 255);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(204, 27);
+            textBox4.TabIndex = 11;
+            // 
             // textBox3
-            //
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(15, 175);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(78, 14);
-            this.textBox3.TabIndex = 10;
-            this.textBox3.Text = "First Name";
-            //
+            // 
+            textBox3.BackColor = Color.White;
+            textBox3.BorderStyle = BorderStyle.None;
+            textBox3.Font = new Font("Microsoft Sans Serif", 7.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox3.ForeColor = Color.Black;
+            textBox3.Location = new Point(15, 175);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(78, 14);
+            textBox3.TabIndex = 10;
+            textBox3.Text = "Full Name";
+            textBox3.TextChanged += textBox3_TextChanged;
+            // 
             // textBox2
-            //
-            this.textBox2.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.textBox2.Location = new System.Drawing.Point(32, 196);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(204, 27);
-            this.textBox2.TabIndex = 9;
-            //
+            // 
+            textBox2.BackColor = SystemColors.InactiveCaption;
+            textBox2.Location = new Point(32, 196);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(204, 27);
+            textBox2.TabIndex = 9;
+            // 
             // Form8
-            //
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.BackgroundImage = global::UI_WinForms.Properties.Resources.Screenshot_2025_06_15_224250;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 562);
-            this.Controls.Add(this.mainContentPanel);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "Form8";
-            this.Text = "Form8";
-            this.mainContentPanel.ResumeLayout(false);
-            this.mainContentPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(192, 0, 0);
+            BackgroundImage = Properties.Resources.Screenshot_2025_06_15_224250;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(800, 562);
+            Controls.Add(mainContentPanel);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "Form8";
+            Text = "Form8";
+            Load += Form8_Load_1;
+            mainContentPanel.ResumeLayout(false);
+            mainContentPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ResumeLayout(false);
 
         }
 

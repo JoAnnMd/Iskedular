@@ -34,8 +34,8 @@ namespace UI_WinForms
         // The button1_Click event was configured to navigate to Form13 (Rooms).
         private void button1_Click(object sender, EventArgs e)
         {
-            Rooms_Main form = _serviceProvider.GetRequiredService<Rooms_Main>();
-            form.Show();
+            Rooms_Main form13 = _serviceProvider.GetRequiredService<Rooms_Main>(); // The form was retrieved from DI.
+            form13.Show();
             this.Hide();
         }
 

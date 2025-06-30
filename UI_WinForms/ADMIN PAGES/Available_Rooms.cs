@@ -168,8 +168,8 @@ namespace UI_WinForms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Rooms_Main form = _serviceProvider.GetRequiredService<Rooms_Main>();
-            form.Show();
+            Rooms_Main form13 = _serviceProvider.GetRequiredService<Rooms_Main>();
+            form13.Show();
             this.Hide();
         }
 

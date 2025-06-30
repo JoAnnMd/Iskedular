@@ -14,14 +14,16 @@ namespace UI_WinForms
     {
         private readonly UserService _userService;
         private readonly IServiceProvider _serviceProvider;
+        private readonly SessionService _sessionService; // Added for session management
         // Removed: ErrorProvider declarations are no longer needed.
 
 
-        public Form8(UserService userService, IServiceProvider serviceProvider)
+        public Form8(UserService userService, IServiceProvider serviceProvider, SessionService sessionService)
         {
             InitializeComponent();
             _userService = userService;
             _serviceProvider = serviceProvider;
+            _sessionService = sessionService; // Assign injected session service
 
             textBox9.PasswordChar = '*';    // Password field
             textBox12.PasswordChar = '*';   // Confirm Password field
@@ -67,29 +69,21 @@ namespace UI_WinForms
         // The button1_Click event handles the "Sign Up" button click.
         private async void button1_Click(object sender, EventArgs e)
         {
-            // Removed: Clearing individual ErrorProvider errors.
-            // errorProviderFirstName.SetError(textBox2, "");
-            // errorProviderLastName.SetError(textBox4, "");
-            // errorProviderEmail.SetError(textBox6, "");
-            // errorProviderPassword.SetError(textBox9, "");
-            // errorProviderConfirmPassword.SetError(textBox12, "");
-
-            string firstName = textBox2.Text.Trim();
-            string lastName = textBox4.Text.Trim();
+            string fullName = textBox2.Text.Trim(); // Full Name
+            string programSection = textBox4.Text.Trim(); // Program & Section
             string email = textBox6.Text.Trim();
             string password = textBox9.Text;
             string confirmPassword = textBox12.Text;
 
-            List<string> errors = new List<string>(); // List to collect all validation errors
+            List<string> errors = new List<string>();
 
-            // 1. Basic Field Validation: All fields are required.
-            if (string.IsNullOrEmpty(firstName))
+            if (string.IsNullOrEmpty(fullName))
             {
-                errors.Add("First Name is required.");
+                errors.Add("Full Name is required.");
             }
-            if (string.IsNullOrEmpty(lastName))
+            if (string.IsNullOrEmpty(programSection))
             {
-                errors.Add("Last Name is required.");
+                errors.Add("Program & Section is required.");
             }
             if (string.IsNullOrEmpty(email))
             {
@@ -104,26 +98,22 @@ namespace UI_WinForms
                 errors.Add("Confirm Password is required.");
             }
 
-            // 2. Email Format Validation
             if (!string.IsNullOrEmpty(email) && (!email.Contains("@") || email.IndexOf(".") <= email.IndexOf("@")))
             {
                 errors.Add("Please enter a valid email address format (e.g., user@example.com).");
             }
 
-            // 3. Password and Confirm Password Matching (only if both are not empty)
             if (!string.IsNullOrEmpty(password) && !string.IsNullOrEmpty(confirmPassword) && password != confirmPassword)
             {
                 errors.Add("Passwords do not match.");
-                textBox9.Clear(); // Clear both for security
+                textBox9.Clear();
                 textBox12.Clear();
                 textBox9.Focus();
             }
 
-            // 4. Consolidated Password Complexity Validation
-            if (!string.IsNullOrEmpty(password)) // Only validate complexity if password is not empty
+            if (!string.IsNullOrEmpty(password))
             {
                 StringBuilder passwordErrors = new StringBuilder();
-
                 if (password.Length < 8)
                 {
                     passwordErrors.AppendLine("- At least 8 characters long.");
@@ -132,44 +122,42 @@ namespace UI_WinForms
                 {
                     passwordErrors.AppendLine("- At least one number.");
                 }
-                if (!password.Any(ch => !char.IsLetterOrDigit(ch))) // Checks for any character that is not a letter or a digit
+                if (!password.Any(ch => !char.IsLetterOrDigit(ch)))
                 {
                     passwordErrors.AppendLine("- At least one symbol (e.g., !, @, #, $).");
                 }
-
                 if (passwordErrors.Length > 0)
                 {
                     errors.Add($"Password must meet the following criteria:\n{passwordErrors.ToString()}");
-                    textBox9.Clear(); // Clear both for security
+                    textBox9.Clear();
                     textBox12.Clear();
                     textBox9.Focus();
                 }
             }
 
-
-            // If any validation failed, show consolidated message and stop.
             if (errors.Count > 0)
             {
                 MessageBox.Show("Please correct the following errors:\n\n" + string.Join("\n", errors), "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            // If all validations pass, proceed with registration
             try
             {
-                var newUser = await _userService.RegisterUserAsync(firstName, lastName, email, password);
+                // For now, split fullName into first and last name for the User model
+                string firstName = fullName;
+                string lastName = ""; // Not used anymore
+                var newUser = await _userService.RegisterUserAsync(firstName, lastName, email, password, programSection);
 
                 if (newUser != null)
                 {
                     MessageBox.Show("Account created successfully! You can now log in.", "Sign Up Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                    _sessionService.SetLoggedInUser(newUser);
                     Form7 loginForm = _serviceProvider.GetRequiredService<Form7>();
                     loginForm.Show();
                     this.Hide();
                 }
                 else
                 {
-                    // This typically means email already registered (as per UserService logic)
                     MessageBox.Show("Email already registered. Please use a different email or log in.", "Sign Up Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     textBox6.Focus();
                 }
@@ -215,8 +203,22 @@ namespace UI_WinForms
 
         private void textBox9_TextChanged(object sender, EventArgs e)
         {
-            // Removed: Logic for textBox9's TextChanged event related to ErrorProvider.
-            // (Already removed from constructor as a lambda)
+            // Logic for textBox9's TextChanged event is here.
+        }
+
+        private void Form8_Load_1(object sender, EventArgs e)
+        {
+            // Logic for Form8_Load_1 event is here.
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

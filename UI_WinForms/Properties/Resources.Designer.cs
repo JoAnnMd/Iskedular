@@ -63,16 +63,6 @@ namespace UI_WinForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap close_sign {
-            get {
-                object obj = ResourceManager.GetObject("close_sign", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap image {
             get {
                 object obj = ResourceManager.GetObject("image", resourceCulture);
@@ -86,16 +76,6 @@ namespace UI_WinForms.Properties {
         internal static System.Drawing.Bitmap IskedularLogo {
             get {
                 object obj = ResourceManager.GetObject("IskedularLogo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap rooms_image {
-            get {
-                object obj = ResourceManager.GetObject("rooms_image", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

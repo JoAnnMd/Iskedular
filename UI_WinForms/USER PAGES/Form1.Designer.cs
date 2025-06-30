@@ -33,13 +33,19 @@
             pictureBox2 = new PictureBox();
             monthCalendar1 = new MonthCalendar();
             pictureBox3 = new PictureBox();
+            textBox10 = new TextBox();
+            textBox7 = new TextBox();
+            textBox11 = new TextBox();
+            textBox12 = new TextBox();
             button4 = new Button();
             textBox13 = new TextBox();
             button5 = new Button();
             button7 = new Button();
             button6 = new Button();
-            userdisplay = new TextBox();
+            textBox6 = new TextBox();
+            label1 = new Label();
             label2 = new Label();
+            textBox8 = new TextBox();
             pictureBox4 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -91,6 +97,64 @@
             pictureBox3.Size = new Size(1, 1);
             pictureBox3.TabIndex = 10;
             pictureBox3.TabStop = false;
+            // 
+            // textBox10
+            // 
+            textBox10.BackColor = SystemColors.ScrollBar;
+            textBox10.BorderStyle = BorderStyle.FixedSingle;
+            textBox10.Location = new Point(339, 399);
+            textBox10.Margin = new Padding(3, 4, 3, 4);
+            textBox10.Multiline = true;
+            textBox10.Name = "textBox10";
+            textBox10.ReadOnly = true;
+            textBox10.Size = new Size(442, 148);
+            textBox10.TabIndex = 15;
+            // 
+            // textBox7
+            // 
+            textBox7.BackColor = Color.Maroon;
+            textBox7.BorderStyle = BorderStyle.None;
+            textBox7.Font = new Font("Segoe UI Emoji", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox7.ForeColor = Color.White;
+            textBox7.Location = new Point(370, 188);
+            textBox7.Margin = new Padding(3, 4, 3, 4);
+            textBox7.Name = "textBox7";
+            textBox7.ReadOnly = true;
+            textBox7.Size = new Size(53, 18);
+            textBox7.TabIndex = 85;
+            textBox7.Text = "Status: ";
+            textBox7.TextChanged += textBox7_TextChanged_1;
+            // 
+            // textBox11
+            // 
+            textBox11.BackColor = Color.Maroon;
+            textBox11.BorderStyle = BorderStyle.None;
+            textBox11.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox11.ForeColor = Color.White;
+            textBox11.Location = new Point(370, 234);
+            textBox11.Margin = new Padding(3, 4, 3, 4);
+            textBox11.Multiline = true;
+            textBox11.Name = "textBox11";
+            textBox11.ReadOnly = true;
+            textBox11.Size = new Size(156, 28);
+            textBox11.TabIndex = 87;
+            textBox11.Text = "Laboratory Room";
+            textBox11.TextChanged += textBox11_TextChanged;
+            // 
+            // textBox12
+            // 
+            textBox12.BackColor = Color.Maroon;
+            textBox12.BorderStyle = BorderStyle.None;
+            textBox12.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox12.ForeColor = Color.White;
+            textBox12.Location = new Point(370, 280);
+            textBox12.Margin = new Padding(3, 4, 3, 4);
+            textBox12.Multiline = true;
+            textBox12.Name = "textBox12";
+            textBox12.ReadOnly = true;
+            textBox12.Size = new Size(258, 42);
+            textBox12.TabIndex = 88;
+            textBox12.Text = "June 15, 8:00am - 12:00pm";
             // 
             // button4
             // 
@@ -160,34 +224,55 @@
             button6.UseVisualStyleBackColor = false;
             button6.Click += button6_Click;
             // 
-            // userdisplay
+            // textBox6
             // 
-            userdisplay.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            userdisplay.BackColor = Color.Maroon;
-            userdisplay.BorderStyle = BorderStyle.FixedSingle;
-            userdisplay.Font = new Font("Arial Rounded MT Bold", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            userdisplay.ForeColor = SystemColors.Menu;
-            userdisplay.Location = new Point(334, 192);
-            userdisplay.Margin = new Padding(3, 4, 3, 4);
-            userdisplay.Multiline = true;
-            userdisplay.Name = "userdisplay";
-            userdisplay.ReadOnly = true;
-            userdisplay.ScrollBars = ScrollBars.Vertical;
-            userdisplay.Size = new Size(417, 310);
-            userdisplay.TabIndex = 84;
-            userdisplay.WordWrap = false;
-            userdisplay.TextChanged += textBox6_TextChanged;
+            textBox6.BackColor = Color.Maroon;
+            textBox6.BorderStyle = BorderStyle.FixedSingle;
+            textBox6.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox6.Location = new Point(339, 165);
+            textBox6.Margin = new Padding(3, 4, 3, 4);
+            textBox6.Multiline = true;
+            textBox6.Name = "textBox6";
+            textBox6.ReadOnly = true;
+            textBox6.Size = new Size(351, 176);
+            textBox6.TabIndex = 84;
+            textBox6.TextChanged += textBox6_TextChanged;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Elephant", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(354, 362);
+            label1.Name = "label1";
+            label1.Size = new Size(150, 22);
+            label1.TabIndex = 97;
+            label1.Text = "Announcement";
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.Transparent;
-            label2.Font = new Font("Elephant", 16.1999989F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            label2.Location = new Point(347, 121);
+            label2.Font = new Font("Elephant", 12F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            label2.Location = new Point(347, 116);
             label2.Name = "label2";
-            label2.Size = new Size(205, 35);
+            label2.Size = new Size(156, 26);
             label2.TabIndex = 98;
             label2.Text = "Hi, Isko/Iska";
+            // 
+            // textBox8
+            // 
+            textBox8.BackColor = Color.Maroon;
+            textBox8.BorderStyle = BorderStyle.None;
+            textBox8.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            textBox8.ForeColor = Color.FromArgb(255, 192, 128);
+            textBox8.Location = new Point(429, 188);
+            textBox8.Margin = new Padding(3, 4, 3, 4);
+            textBox8.Multiline = true;
+            textBox8.Name = "textBox8";
+            textBox8.ReadOnly = true;
+            textBox8.Size = new Size(74, 28);
+            textBox8.TabIndex = 86;
+            textBox8.Text = "Pending";
             // 
             // pictureBox4
             // 
@@ -212,12 +297,18 @@
             ClientSize = new Size(800, 562);
             Controls.Add(pictureBox4);
             Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(button6);
             Controls.Add(button7);
             Controls.Add(button5);
             Controls.Add(textBox13);
             Controls.Add(button4);
-            Controls.Add(userdisplay);
+            Controls.Add(textBox12);
+            Controls.Add(textBox11);
+            Controls.Add(textBox8);
+            Controls.Add(textBox7);
+            Controls.Add(textBox6);
+            Controls.Add(textBox10);
             Controls.Add(pictureBox3);
             Controls.Add(monthCalendar1);
             Controls.Add(pictureBox2);
@@ -225,7 +316,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             StartPosition = FormStartPosition.Manual;
-            Text = "Form1";
+            Text = "Dashboard";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -250,7 +341,7 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.TextBox userdisplay;
+        private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox8;

@@ -17,7 +17,7 @@ namespace Iskedular.Core.Services
             _dbContextFactory = dbContextFactory;
         }
 
-        public async Task<User?> RegisterUserAsync(string firstName, string lastName, string email, string plainTextPassword) // Return type was updated to nullable User?
+        public async Task<User?> RegisterUserAsync(string firstName, string lastName, string email, string plainTextPassword, string programSection) // Added programSection
         {
             // CHANGED: Create a new DbContext instance for this operation
             using (var context = _dbContextFactory.CreateDbContext())
@@ -36,7 +36,7 @@ namespace Iskedular.Core.Services
                     FirstName = firstName,
                     LastName = lastName,
                     Email = email,
-                    // PasswordHash will be set by the User model's method.
+                    ProgramSection = programSection // Store programSection
                 };
 
                 // The password was hashed before storing (using the method in the User model).

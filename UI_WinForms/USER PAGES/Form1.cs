@@ -7,83 +7,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.Extensions.DependencyInjection;
-using Iskedular.Core.Services;
-using Iskedular.Models;
+using Microsoft.Extensions.DependencyInjection; // Added for IServiceProvider
+using Iskedular.Core.Services; // Added for SessionService
 
 namespace UI_WinForms
 {
     public partial class Form1 : Form
     {
-        private readonly IServiceProvider _serviceProvider;
-        private readonly ReservationService _reservationService;
-        private readonly SessionService _sessionService;
+        private readonly IServiceProvider _serviceProvider; // Added for dependency injection
+        private readonly SessionService _sessionService; // Added for session management
 
-
-        public Form1(IServiceProvider serviceProvider)
+        public Form1(IServiceProvider serviceProvider, SessionService sessionService) // Modified constructor
         {
             InitializeComponent();
-            _serviceProvider = serviceProvider;
-            _reservationService = _serviceProvider.GetRequiredService<ReservationService>();
-            _sessionService = _serviceProvider.GetRequiredService<SessionService>();
-        }
-
-        private async void Form1_Load(object sender, EventArgs e)
-        {
-            await LoadUserReservations();
-        }
-
-        private async Task LoadUserReservations()
-        {
-            var user = _sessionService.LoggedInUser;
-            if (user == null)
-            {
-                userdisplay.Text = "You are not logged in.";
-                MessageBox.Show("Please log in to view your reservation details.", "Not Logged In", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            if (userdisplay == null)
-            {
-                MessageBox.Show("Display area for reservation details is missing (userdisplay is null).", "UI Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            // Get all reservations for the current user
-            var allReservations = await _reservationService.GetReservationsAsync();
-            var userReservations = allReservations
-                .Where(r => r.UserId == user.Id)
-                .OrderByDescending(r => r.StartTime)
-                .ToList();
-
-            if (userReservations.Count == 0)
-            {
-                userdisplay.Text = "You have no bookings yet.";
-                MessageBox.Show("No reservations found for your account.", "No Bookings", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-
-            // Show all reservations
-            var sb = new StringBuilder();
-            int count = 1;
-            foreach (var reservation in userReservations)
-            {
-                sb.AppendLine($"Reservation #{count++}");
-                sb.AppendLine($"Room: {reservation.Room?.Name ?? "N/A"}");
-                sb.AppendLine($"Date: {reservation.StartTime:MMMM dd, yyyy}");
-                sb.AppendLine($"Time: {reservation.StartTime:hh:mm tt} - {reservation.EndTime:hh:mm tt}");
-                sb.AppendLine($"Purpose: {reservation.Purpose}");
-                sb.AppendLine($"Program: {reservation.Program}");
-                sb.AppendLine($"Year/Section: {reservation.YearSection}");
-                sb.AppendLine($"Professor: {reservation.Professor}");
-                sb.AppendLine($"Status: {reservation.Status}");
-                sb.AppendLine(new string('-', 65));
-            }
-
-            userdisplay.Text = sb.ToString();
+            _serviceProvider = serviceProvider; // Assign injected service provider
+            _sessionService = sessionService; // Assign injected session service
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
@@ -150,7 +96,7 @@ namespace UI_WinForms
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Form2 roomsForm = _serviceProvider.GetRequiredService<Form2>();
+            Form2 roomsForm = _serviceProvider.GetRequiredService<Form2>(); // Get Form2 from DI
             roomsForm.Show();
             this.Hide();
         }
@@ -162,16 +108,26 @@ namespace UI_WinForms
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Form3 reserveForm = _serviceProvider.GetRequiredService<Form3>();
+            Form3 reserveForm = _serviceProvider.GetRequiredService<Form3>(); // Get Form3 from DI
             reserveForm.Show();
             this.Hide();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Form4 profileForm = _serviceProvider.GetRequiredService<Form4>();
-            profileForm.Show();
-            this.Hide();
+            // Get current user from session service
+            var currentUser = _sessionService.LoggedInUser;
+            if (currentUser != null)
+            {
+                // Create Form4 with user information
+                Form4 profileForm = new Form4(_serviceProvider, currentUser);
+                profileForm.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("User not logged in. Please log in first.", "Authentication Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

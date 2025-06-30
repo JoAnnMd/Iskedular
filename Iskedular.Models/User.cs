@@ -27,6 +27,9 @@ namespace Iskedular.Models
         [Required(ErrorMessage = "Password hash is required.")]
         public string PasswordHash { get; set; } = string.Empty; // Initialize to empty string
 
+        [MaxLength(100)]
+        public string ProgramSection { get; set; } = string.Empty; // Stores the user's program and section
+
         // You can keep FullName if you wish, but it won't be mapped directly to a DB column by default.
         // It could be a computed property:
         // public string FullName => $"{FirstName} {LastName}";
