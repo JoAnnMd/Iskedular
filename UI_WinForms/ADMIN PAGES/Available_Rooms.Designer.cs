@@ -69,14 +69,14 @@
             panelTopNav.Dock = DockStyle.Top;
             panelTopNav.Location = new Point(0, 0);
             panelTopNav.Name = "panelTopNav";
-            panelTopNav.Size = new Size(800, 89);
+            panelTopNav.Size = new Size(1335, 89);
             panelTopNav.TabIndex = 0;
             // 
             // button4
             // 
             button4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             button4.Image = (Image)resources.GetObject("button4.Image");
-            button4.Location = new Point(742, 9);
+            button4.Location = new Point(1277, 9);
             button4.Margin = new Padding(3, 4, 3, 4);
             button4.Name = "button4";
             button4.Size = new Size(48, 69);
@@ -90,7 +90,7 @@
             button3.BackColor = Color.FromArgb(192, 0, 0);
             button3.FlatStyle = FlatStyle.Flat;
             button3.ForeColor = Color.White;
-            button3.Location = new Point(646, 27);
+            button3.Location = new Point(1181, 27);
             button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
             button3.Size = new Size(86, 29);
@@ -106,7 +106,7 @@
             button5.FlatStyle = FlatStyle.Flat;
             button5.Font = new Font("Microsoft Sans Serif", 7.2F);
             button5.ForeColor = Color.White;
-            button5.Location = new Point(550, 27);
+            button5.Location = new Point(897, 27);
             button5.Margin = new Padding(3, 4, 3, 4);
             button5.Name = "button5";
             button5.Size = new Size(86, 29);
@@ -121,7 +121,7 @@
             button1.BackColor = Color.FromArgb(192, 0, 0);
             button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = Color.White;
-            button1.Location = new Point(454, 27);
+            button1.Location = new Point(997, 27);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new Size(86, 29);
@@ -136,7 +136,7 @@
             button2.BackColor = Color.FromArgb(192, 0, 0);
             button2.FlatStyle = FlatStyle.Flat;
             button2.ForeColor = Color.White;
-            button2.Location = new Point(358, 27);
+            button2.Location = new Point(1089, 27);
             button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
             button2.Size = new Size(86, 29);
@@ -181,7 +181,7 @@
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(800, 89);
+            pictureBox1.Size = new Size(1335, 89);
             pictureBox1.TabIndex = 142;
             pictureBox1.TabStop = false;
             // 
@@ -201,7 +201,7 @@
             panelMainContent.Dock = DockStyle.Fill;
             panelMainContent.Location = new Point(0, 89);
             panelMainContent.Name = "panelMainContent";
-            panelMainContent.Size = new Size(800, 473);
+            panelMainContent.Size = new Size(1335, 473);
             panelMainContent.TabIndex = 1;
             // 
             // textBox6
@@ -269,7 +269,7 @@
             button6.BackColor = SystemColors.ControlDarkDark;
             button6.FlatStyle = FlatStyle.Flat;
             button6.ForeColor = Color.White;
-            button6.Location = new Point(563, 15);
+            button6.Location = new Point(1098, 15);
             button6.Margin = new Padding(3, 4, 3, 4);
             button6.Name = "button6";
             button6.Size = new Size(213, 44);
@@ -298,14 +298,14 @@
             flowLayoutPanelRooms.AutoScroll = true;
             flowLayoutPanelRooms.Location = new Point(285, 103);
             flowLayoutPanelRooms.Name = "flowLayoutPanelRooms";
-            flowLayoutPanelRooms.Size = new Size(686, 367);
+            flowLayoutPanelRooms.Size = new Size(1221, 367);
             flowLayoutPanelRooms.TabIndex = 242;
             // 
             // Available_Rooms
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 562);
+            ClientSize = new Size(1335, 562);
             Controls.Add(panelMainContent);
             Controls.Add(panelTopNav);
             Margin = new Padding(3, 4, 3, 4);

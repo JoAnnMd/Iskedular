@@ -17,13 +17,14 @@
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(admin_bookings));
             panelTopNav = new Panel();
             button4 = new Button();
+            pictureBox4 = new PictureBox();
             button3 = new Button();
             button5 = new Button();
             button1 = new Button();
             button2 = new Button();
-            pictureBox4 = new PictureBox();
             textBox4 = new TextBox();
             pictureBox1 = new PictureBox();
             panelMainContent = new Panel();
@@ -49,11 +50,11 @@
             // 
             panelTopNav.BackColor = Color.FromArgb(192, 0, 0);
             panelTopNav.Controls.Add(button4);
+            panelTopNav.Controls.Add(pictureBox4);
             panelTopNav.Controls.Add(button3);
             panelTopNav.Controls.Add(button5);
             panelTopNav.Controls.Add(button1);
             panelTopNav.Controls.Add(button2);
-            panelTopNav.Controls.Add(pictureBox4);
             panelTopNav.Controls.Add(textBox4);
             panelTopNav.Controls.Add(pictureBox1);
             panelTopNav.Dock = DockStyle.Top;
@@ -65,12 +66,27 @@
             // button4
             // 
             button4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button4.Location = new Point(944, 10);
+            button4.Image = (Image)resources.GetObject("button4.Image");
+            button4.Location = new Point(942, 10);
+            button4.Margin = new Padding(3, 4, 3, 4);
             button4.Name = "button4";
             button4.Size = new Size(48, 69);
-            button4.TabIndex = 240;
+            button4.TabIndex = 249;
             button4.UseVisualStyleBackColor = true;
-            button4.Click += button4_Click;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.BackColor = Color.FromArgb(192, 0, 0);
+            pictureBox4.BackgroundImageLayout = ImageLayout.Center;
+            pictureBox4.Enabled = false;
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(14, 16);
+            pictureBox4.Margin = new Padding(3, 4, 3, 4);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(72, 57);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 248;
+            pictureBox4.TabStop = false;
             // 
             // button3
             // 
@@ -90,9 +106,9 @@
             button5.BackColor = Color.FromArgb(192, 0, 0);
             button5.FlatStyle = FlatStyle.Flat;
             button5.ForeColor = Color.White;
-            button5.Location = new Point(754, 30);
+            button5.Location = new Point(561, 30);
             button5.Name = "button5";
-            button5.Size = new Size(86, 29);
+            button5.Size = new Size(100, 29);
             button5.TabIndex = 242;
             button5.Text = "Dashboard";
             button5.UseVisualStyleBackColor = false;
@@ -103,7 +119,7 @@
             button1.BackColor = Color.FromArgb(192, 0, 0);
             button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = Color.White;
-            button1.Location = new Point(658, 30);
+            button1.Location = new Point(667, 30);
             button1.Name = "button1";
             button1.Size = new Size(86, 29);
             button1.TabIndex = 243;
@@ -116,21 +132,13 @@
             button2.BackColor = Color.FromArgb(192, 0, 0);
             button2.FlatStyle = FlatStyle.Flat;
             button2.ForeColor = Color.White;
-            button2.Location = new Point(562, 30);
+            button2.Location = new Point(758, 30);
             button2.Name = "button2";
             button2.Size = new Size(86, 29);
             button2.TabIndex = 244;
             button2.Text = "Bookings";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
-            // 
-            // pictureBox4
-            // 
-            pictureBox4.Location = new Point(12, 13);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(72, 57);
-            pictureBox4.TabIndex = 245;
-            pictureBox4.TabStop = false;
             // 
             // textBox4
             // 
@@ -141,9 +149,10 @@
             textBox4.Location = new Point(90, 27);
             textBox4.Multiline = true;
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(100, 27);
+            textBox4.Size = new Size(143, 43);
             textBox4.TabIndex = 246;
             textBox4.Text = "Iskedular";
+            textBox4.TextChanged += textBox4_TextChanged;
             // 
             // pictureBox1
             // 
@@ -267,12 +276,10 @@
         #endregion
 
         private System.Windows.Forms.Panel panelTopNav;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panelMainContent;
@@ -284,5 +291,7 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private PictureBox pictureBox4;
+        private Button button4;
     }
 }

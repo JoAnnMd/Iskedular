@@ -138,8 +138,8 @@ namespace UI_WinForms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            admin_bookings adminBookingsForm = _serviceProvider.GetRequiredService<admin_bookings>();
-            adminBookingsForm.Show();
+            Admin_Dashboard form9 = _serviceProvider.GetRequiredService<Admin_Dashboard>();
+            form9.Show();
             this.Hide();
         }
 

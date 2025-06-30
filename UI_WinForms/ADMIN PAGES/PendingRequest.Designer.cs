@@ -29,8 +29,8 @@ namespace UI_WinForms
             panelContentToCenter = new Panel();
             tabControlRequests = new TabControl();
             tabPage1 = new TabPage();
-            tabPage2 = new TabPage();
             pendingRequestsPanel = new FlowLayoutPanel();
+            tabPage2 = new TabPage();
             rejectedRequestsPanel = new FlowLayoutPanel();
             panelTopNav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
@@ -54,14 +54,14 @@ namespace UI_WinForms
             panelTopNav.Dock = DockStyle.Top;
             panelTopNav.Location = new Point(0, 0);
             panelTopNav.Name = "panelTopNav";
-            panelTopNav.Size = new Size(1024, 89);
+            panelTopNav.Size = new Size(1034, 89);
             panelTopNav.TabIndex = 1;
             // 
             // button4
             // 
             button4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             button4.Image = (Image)resources.GetObject("button4.Image");
-            button4.Location = new Point(944, 10);
+            button4.Location = new Point(958, 10);
             button4.Name = "button4";
             button4.Size = new Size(48, 64);
             button4.TabIndex = 0;
@@ -74,7 +74,7 @@ namespace UI_WinForms
             button3.BackColor = Color.FromArgb(192, 0, 0);
             button3.FlatStyle = FlatStyle.Flat;
             button3.ForeColor = Color.White;
-            button3.Location = new Point(854, 30);
+            button3.Location = new Point(864, 32);
             button3.Name = "button3";
             button3.Size = new Size(86, 29);
             button3.TabIndex = 1;
@@ -88,9 +88,9 @@ namespace UI_WinForms
             button5.BackColor = Color.FromArgb(192, 0, 0);
             button5.FlatStyle = FlatStyle.Flat;
             button5.ForeColor = Color.White;
-            button5.Location = new Point(762, 30);
+            button5.Location = new Point(568, 32);
             button5.Name = "button5";
-            button5.Size = new Size(86, 29);
+            button5.Size = new Size(95, 29);
             button5.TabIndex = 2;
             button5.Text = "Dashboard";
             button5.UseVisualStyleBackColor = false;
@@ -102,7 +102,7 @@ namespace UI_WinForms
             button1.BackColor = Color.FromArgb(192, 0, 0);
             button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = Color.White;
-            button1.Location = new Point(670, 30);
+            button1.Location = new Point(672, 32);
             button1.Name = "button1";
             button1.Size = new Size(86, 29);
             button1.TabIndex = 3;
@@ -116,7 +116,7 @@ namespace UI_WinForms
             button2.BackColor = Color.FromArgb(192, 0, 0);
             button2.FlatStyle = FlatStyle.Flat;
             button2.ForeColor = Color.White;
-            button2.Location = new Point(578, 30);
+            button2.Location = new Point(768, 32);
             button2.Name = "button2";
             button2.Size = new Size(86, 29);
             button2.TabIndex = 4;
@@ -155,7 +155,7 @@ namespace UI_WinForms
             panelMainContentWrapper.Dock = DockStyle.Fill;
             panelMainContentWrapper.Location = new Point(0, 89);
             panelMainContentWrapper.Name = "panelMainContentWrapper";
-            panelMainContentWrapper.Size = new Size(1024, 639);
+            panelMainContentWrapper.Size = new Size(1034, 639);
             panelMainContentWrapper.TabIndex = 0;
             // 
             // panelContentToCenter
@@ -164,7 +164,7 @@ namespace UI_WinForms
             panelContentToCenter.Dock = DockStyle.Fill;
             panelContentToCenter.Location = new Point(0, 0);
             panelContentToCenter.Name = "panelContentToCenter";
-            panelContentToCenter.Size = new Size(1024, 639);
+            panelContentToCenter.Size = new Size(1034, 639);
             panelContentToCenter.TabIndex = 0;
             // 
             // tabControlRequests
@@ -183,10 +183,20 @@ namespace UI_WinForms
             tabPage1.Location = new Point(4, 29);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(882, 555);
+            tabPage1.Size = new Size(992, 597);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "tabPagePending";
             tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // pendingRequestsPanel
+            // 
+            pendingRequestsPanel.AutoScroll = true;
+            pendingRequestsPanel.Dock = DockStyle.Fill;
+            pendingRequestsPanel.Location = new Point(3, 3);
+            pendingRequestsPanel.Name = "pendingRequestsPanel";
+            pendingRequestsPanel.Size = new Size(986, 591);
+            pendingRequestsPanel.TabIndex = 1;
+            pendingRequestsPanel.Paint += pendingRequestsPanel_Paint;
             // 
             // tabPage2
             // 
@@ -198,15 +208,6 @@ namespace UI_WinForms
             tabPage2.TabIndex = 1;
             tabPage2.Text = "tabPageRejected";
             tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // pendingRequestsPanel
-            // 
-            pendingRequestsPanel.AutoScroll = true;
-            pendingRequestsPanel.Dock = DockStyle.Fill;
-            pendingRequestsPanel.Location = new Point(3, 3);
-            pendingRequestsPanel.Name = "pendingRequestsPanel";
-            pendingRequestsPanel.Size = new Size(876, 549);
-            pendingRequestsPanel.TabIndex = 1;
             // 
             // rejectedRequestsPanel
             // 
@@ -221,7 +222,7 @@ namespace UI_WinForms
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(1024, 728);
+            ClientSize = new Size(1034, 728);
             Controls.Add(panelMainContentWrapper);
             Controls.Add(panelTopNav);
             Name = "PendingRequest";
