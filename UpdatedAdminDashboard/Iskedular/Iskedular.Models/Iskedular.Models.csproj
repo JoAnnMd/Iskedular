@@ -1,0 +1,17 @@
+    <Project Sdk="Microsoft.NET.Sdk">
+
+      <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>Iskedular.Models</RootNamespace>
+      </PropertyGroup>
+
+      <ItemGroup>
+        <!-- Add any necessary package references for your models here, e.g., DataAnnotations for [Required] -->
+        <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
+        <PackageReference Include="BCrypt.Net-Core" Version="1.6.0" /> <!-- Needed for User.cs -->
+      </ItemGroup>
+
+    </Project>
+    
