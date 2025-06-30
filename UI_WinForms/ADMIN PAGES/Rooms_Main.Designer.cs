@@ -15,189 +15,227 @@
 
         private void InitializeComponent()
         {
-            this.panelTopNav = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonRoomsManage = new System.Windows.Forms.Button();
-            this.buttonTotalRooms = new System.Windows.Forms.Button();
-            this.buttonAvailableRooms = new System.Windows.Forms.Button();
-            this.labelTitle = new System.Windows.Forms.Label();
-            this.panelTopNav.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.SuspendLayout();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Rooms_Main));
+            panelTopNav = new Panel();
+            button3 = new Button();
+            button5 = new Button();
+            button1 = new Button();
+            button2 = new Button();
+            textBox4 = new TextBox();
+            pictureBox1 = new PictureBox();
+            panel1 = new Panel();
+            labelTitle = new Label();
+            buttonAvailableRooms = new Button();
+            buttonTotalRooms = new Button();
+            buttonRoomsManage = new Button();
+            pictureBox4 = new PictureBox();
+            button4 = new Button();
+            panelTopNav.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            SuspendLayout();
             // 
             // panelTopNav
             // 
-            this.panelTopNav.BackColor = System.Drawing.Color.Maroon;
-            this.panelTopNav.Controls.Add(this.button4);
-            this.panelTopNav.Controls.Add(this.button3);
-            this.panelTopNav.Controls.Add(this.button5);
-            this.panelTopNav.Controls.Add(this.button1);
-            this.panelTopNav.Controls.Add(this.button2);
-            this.panelTopNav.Controls.Add(this.pictureBox4);
-            this.panelTopNav.Controls.Add(this.textBox4);
-            this.panelTopNav.Controls.Add(this.pictureBox1);
-            this.panelTopNav.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTopNav.Location = new System.Drawing.Point(0, 0);
-            this.panelTopNav.Name = "panelTopNav";
-            this.panelTopNav.Size = new System.Drawing.Size(1000, 89);
-            this.panelTopNav.TabIndex = 0;
+            panelTopNav.BackColor = Color.Maroon;
+            panelTopNav.Controls.Add(button4);
+            panelTopNav.Controls.Add(pictureBox4);
+            panelTopNav.Controls.Add(button3);
+            panelTopNav.Controls.Add(button5);
+            panelTopNav.Controls.Add(button1);
+            panelTopNav.Controls.Add(button2);
+            panelTopNav.Controls.Add(textBox4);
+            panelTopNav.Controls.Add(pictureBox1);
+            panelTopNav.Dock = DockStyle.Top;
+            panelTopNav.Location = new Point(0, 0);
+            panelTopNav.Name = "panelTopNav";
+            panelTopNav.Size = new Size(1190, 89);
+            panelTopNav.TabIndex = 0;
             // 
-            // button4 (Profile)
+            // button3
             // 
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            this.button4.Location = new System.Drawing.Point(944, 10);
-            this.button4.Size = new System.Drawing.Size(48, 69);
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            button3.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button3.BackColor = Color.FromArgb(192, 0, 0);
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.ForeColor = Color.White;
+            button3.Location = new Point(1028, 32);
+            button3.Name = "button3";
+            button3.Size = new Size(86, 29);
+            button3.TabIndex = 1;
+            button3.Text = "Requests";
+            button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
-            // button3 (Requests)
+            // button5
             // 
-            this.button3.BackColor = System.Drawing.Color.Maroon;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(850, 30);
-            this.button3.Size = new System.Drawing.Size(86, 29);
-            this.button3.Text = "Requests";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            button5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button5.BackColor = Color.FromArgb(192, 0, 0);
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.ForeColor = Color.White;
+            button5.Location = new Point(728, 31);
+            button5.Name = "button5";
+            button5.Size = new Size(96, 29);
+            button5.TabIndex = 2;
+            button5.Text = "Dashboard";
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
-            // button5 (Dashboard)
+            // button1
             // 
-            this.button5.BackColor = System.Drawing.Color.Maroon;
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(754, 30);
-            this.button5.Size = new System.Drawing.Size(86, 29);
-            this.button5.Text = "Dashboard";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            button1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button1.BackColor = Color.FromArgb(192, 0, 0);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.ForeColor = Color.White;
+            button1.Location = new Point(835, 31);
+            button1.Name = "button1";
+            button1.Size = new Size(86, 29);
+            button1.TabIndex = 3;
+            button1.Text = "Rooms";
+            button1.UseVisualStyleBackColor = false;
             // 
-            // button1 (Rooms)
+            // button2
             // 
-            this.button1.BackColor = System.Drawing.Color.Maroon;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(658, 30);
-            this.button1.Size = new System.Drawing.Size(86, 29);
-            this.button1.Text = "Rooms";
-            this.button1.UseVisualStyleBackColor = false;
+            button2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button2.BackColor = Color.FromArgb(192, 0, 0);
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.ForeColor = Color.White;
+            button2.Location = new Point(931, 32);
+            button2.Name = "button2";
+            button2.Size = new Size(86, 29);
+            button2.TabIndex = 4;
+            button2.Text = "Bookings";
+            button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
-            // button2 (Bookings)
+            // textBox4
             // 
-            this.button2.BackColor = System.Drawing.Color.Maroon;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(562, 30);
-            this.button2.Size = new System.Drawing.Size(86, 29);
-            this.button2.Text = "Bookings";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            textBox4.BackColor = Color.FromArgb(192, 0, 0);
+            textBox4.BorderStyle = BorderStyle.None;
+            textBox4.Font = new Font("Elephant", 13.8F, FontStyle.Bold | FontStyle.Italic);
+            textBox4.ForeColor = Color.White;
+            textBox4.Location = new Point(90, 27);
+            textBox4.Multiline = true;
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(146, 43);
+            textBox4.TabIndex = 6;
+            textBox4.Text = "Iskedular";
             // 
-            // pictureBox4 (Logo)
+            // pictureBox1
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(12, 13);
-            this.pictureBox4.Size = new System.Drawing.Size(72, 57);
+            pictureBox1.BackColor = Color.FromArgb(192, 0, 0);
+            pictureBox1.Dock = DockStyle.Fill;
+            pictureBox1.Location = new Point(0, 0);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(1190, 89);
+            pictureBox1.TabIndex = 7;
+            pictureBox1.TabStop = false;
             // 
-            // textBox4 (Iskedular)
+            // panel1
             // 
-            this.textBox4.BackColor = System.Drawing.Color.Maroon;
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox4.Font = new System.Drawing.Font("Elephant", 13.8F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic);
-            this.textBox4.ForeColor = System.Drawing.Color.White;
-            this.textBox4.Location = new System.Drawing.Point(90, 27);
-            this.textBox4.Size = new System.Drawing.Size(100, 27);
-            this.textBox4.Text = "Iskedular";
-            // 
-            // pictureBox1 (Top bar fill)
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Size = new System.Drawing.Size(1000, 89);
-            // 
-            // panel1 (Main background with image)
-            // 
-            this.panel1.BackgroundImage = global::UI_WinForms.Properties.Resources.rooms_image;
-            this.panel1.BackgroundImageLayout = ImageLayout.Stretch;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Controls.Add(this.labelTitle);
-            this.panel1.Controls.Add(this.buttonAvailableRooms);
-            this.panel1.Controls.Add(this.buttonTotalRooms);
-            this.panel1.Controls.Add(this.buttonRoomsManage);
-            this.panel1.Location = new System.Drawing.Point(0, 89);
-            this.panel1.Size = new System.Drawing.Size(1000, 611);
-            this.panel1.TabIndex = 1;
+            panel1.BackgroundImage = Properties.Resources.rooms_image;
+            panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Controls.Add(labelTitle);
+            panel1.Controls.Add(buttonAvailableRooms);
+            panel1.Controls.Add(buttonTotalRooms);
+            panel1.Controls.Add(buttonRoomsManage);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 89);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1190, 611);
+            panel1.TabIndex = 1;
             // 
             // labelTitle
             // 
-            this.labelTitle.Text = "Rooms";
-            this.labelTitle.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
-            this.labelTitle.ForeColor = Color.White;
-            this.labelTitle.BackColor = Color.Transparent;
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.Location = new Point(40, 40);
+            labelTitle.AutoSize = true;
+            labelTitle.BackColor = Color.Transparent;
+            labelTitle.Font = new Font("Segoe UI", 20F, FontStyle.Bold);
+            labelTitle.ForeColor = Color.White;
+            labelTitle.Location = new Point(40, 40);
+            labelTitle.Name = "labelTitle";
+            labelTitle.Size = new Size(129, 46);
+            labelTitle.TabIndex = 0;
+            labelTitle.Text = "Rooms";
             // 
             // buttonAvailableRooms
             // 
-            this.buttonAvailableRooms.Name = "buttonAvailableRooms";
-            this.buttonAvailableRooms.Size = new System.Drawing.Size(150, 40);
-            this.buttonAvailableRooms.Text = "Available Rooms";
-            this.buttonAvailableRooms.UseVisualStyleBackColor = true;
-            this.buttonAvailableRooms.Click += new System.EventHandler(this.buttonAvailableRooms_Click);
+            buttonAvailableRooms.Location = new Point(0, 0);
+            buttonAvailableRooms.Name = "buttonAvailableRooms";
+            buttonAvailableRooms.Size = new Size(150, 40);
+            buttonAvailableRooms.TabIndex = 1;
+            buttonAvailableRooms.Text = "Available Rooms";
+            buttonAvailableRooms.UseVisualStyleBackColor = true;
+            buttonAvailableRooms.Click += buttonAvailableRooms_Click;
             // 
             // buttonTotalRooms
             // 
-            this.buttonTotalRooms.Name = "buttonTotalRooms";
-            this.buttonTotalRooms.Size = new System.Drawing.Size(150, 40);
-            this.buttonTotalRooms.Text = "Total Rooms";
-            this.buttonTotalRooms.UseVisualStyleBackColor = true;
-            this.buttonTotalRooms.Click += new System.EventHandler(this.buttonTotalRooms_Click);
+            buttonTotalRooms.Location = new Point(0, 0);
+            buttonTotalRooms.Name = "buttonTotalRooms";
+            buttonTotalRooms.Size = new Size(150, 40);
+            buttonTotalRooms.TabIndex = 2;
+            buttonTotalRooms.Text = "Total Rooms";
+            buttonTotalRooms.UseVisualStyleBackColor = true;
+            buttonTotalRooms.Click += buttonTotalRooms_Click;
             // 
             // buttonRoomsManage
             // 
-            this.buttonRoomsManage.Name = "buttonRoomsManage";
-            this.buttonRoomsManage.Size = new System.Drawing.Size(150, 40);
-            this.buttonRoomsManage.Text = "Manage Rooms";
-            this.buttonRoomsManage.UseVisualStyleBackColor = true;
-            this.buttonRoomsManage.Click += new System.EventHandler(this.buttonRoomsManage_Click);
+            buttonRoomsManage.Location = new Point(0, 0);
+            buttonRoomsManage.Name = "buttonRoomsManage";
+            buttonRoomsManage.Size = new Size(150, 40);
+            buttonRoomsManage.TabIndex = 3;
+            buttonRoomsManage.Text = "Manage Rooms";
+            buttonRoomsManage.UseVisualStyleBackColor = true;
+            buttonRoomsManage.Click += buttonRoomsManage_Click;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.BackColor = Color.FromArgb(192, 0, 0);
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(12, 15);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(64, 64);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 8;
+            pictureBox4.TabStop = false;
+            // 
+            // button4
+            // 
+            button4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button4.Image = (Image)resources.GetObject("button4.Image");
+            button4.Location = new Point(1130, 15);
+            button4.Name = "button4";
+            button4.Size = new Size(48, 64);
+            button4.TabIndex = 9;
+            button4.UseVisualStyleBackColor = true;
             // 
             // Rooms_Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1000, 700);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panelTopNav);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Rooms_Main";
-            this.Text = "Rooms_Main";
-            this.Load += new System.EventHandler(this.Rooms_Main_Load);
-            this.Resize += new System.EventHandler(this.Rooms_Main_Resize);
-            this.panelTopNav.ResumeLayout(false);
-            this.panelTopNav.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.ResumeLayout(false);
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1190, 700);
+            Controls.Add(panel1);
+            Controls.Add(panelTopNav);
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "Rooms_Main";
+            Text = "Rooms_Main";
+            Load += Rooms_Main_Load;
+            Resize += Rooms_Main_Resize;
+            panelTopNav.ResumeLayout(false);
+            panelTopNav.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
 
         private System.Windows.Forms.Panel panelTopNav;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel1;
@@ -205,6 +243,8 @@
         private System.Windows.Forms.Button buttonTotalRooms;
         private System.Windows.Forms.Button buttonRoomsManage;
         private System.Windows.Forms.Label labelTitle;
+        private PictureBox pictureBox4;
+        private Button button4;
     }
 }
 

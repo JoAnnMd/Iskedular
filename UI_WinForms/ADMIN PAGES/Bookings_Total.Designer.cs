@@ -19,7 +19,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Bookings_Total));
             panelTopNav = new Panel();
-            button4 = new Button();
             button3 = new Button();
             button5 = new Button();
             button1 = new Button();
@@ -30,6 +29,7 @@
             panelMainContent = new Panel();
             textBox5 = new TextBox();
             dataGridView1 = new DataGridView();
+            button4 = new Button();
             panelTopNav.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -53,16 +53,6 @@
             panelTopNav.Name = "panelTopNav";
             panelTopNav.Size = new Size(1000, 89);
             panelTopNav.TabIndex = 1;
-            // 
-            // button4
-            // 
-            button4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            button4.Image = (Image)resources.GetObject("button4.Image");
-            button4.Location = new Point(944, 10);
-            button4.Name = "button4";
-            button4.Size = new Size(48, 69);
-            button4.TabIndex = 0;
-            button4.Click += button4_Click;
             // 
             // button3
             // 
@@ -187,6 +177,17 @@
             dataGridView1.Size = new Size(960, 500);
             dataGridView1.TabIndex = 1;
             // 
+            // button4
+            // 
+            button4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button4.Image = (Image)resources.GetObject("button4.Image");
+            button4.Location = new Point(942, 13);
+            button4.Margin = new Padding(3, 4, 3, 4);
+            button4.Name = "button4";
+            button4.Size = new Size(48, 69);
+            button4.TabIndex = 241;
+            button4.UseVisualStyleBackColor = true;
+            // 
             // Bookings_Total
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -211,7 +212,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panelTopNav;
-        private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button1;
@@ -223,5 +223,6 @@
         private System.Windows.Forms.Panel panelMainContent;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private Button button4;
     }
 }

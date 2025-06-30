@@ -166,7 +166,7 @@ namespace UI_WinForms
 
             return card;
         }
-     
+
 
 
 
@@ -211,6 +211,11 @@ namespace UI_WinForms
             var form18 = _serviceProvider.GetRequiredService<Form18>();
             form18.Show();
             this.Hide();
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -15,133 +15,142 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.panelTopNav = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button(); // Home
-            this.button6 = new System.Windows.Forms.Button(); // Reserve
-            this.button7 = new System.Windows.Forms.Button(); // Rooms
-            this.button4 = new System.Windows.Forms.Button(); // Profile
-            this.textBoxTitle = new System.Windows.Forms.TextBox();
-            this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.flowLayoutPanelReservations = new System.Windows.Forms.FlowLayoutPanel();
-            this.panelTopNav.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
-            this.SuspendLayout();
-
+            panelTopNav = new Panel();
+            button4 = new Button();
+            pictureBox4 = new PictureBox();
+            button5 = new Button();
+            button6 = new Button();
+            button7 = new Button();
+            textBoxTitle = new TextBox();
+            monthCalendar1 = new MonthCalendar();
+            flowLayoutPanelReservations = new FlowLayoutPanel();
+            panelTopNav.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            SuspendLayout();
             // 
             // panelTopNav
             // 
-            this.panelTopNav.BackColor = System.Drawing.Color.FromArgb(192, 0, 0);
-            this.panelTopNav.Controls.Add(this.button5);
-            this.panelTopNav.Controls.Add(this.button6);
-            this.panelTopNav.Controls.Add(this.button7);
-            this.panelTopNav.Controls.Add(this.button4);
-            this.panelTopNav.Controls.Add(this.textBoxTitle);
-            this.panelTopNav.Controls.Add(this.pictureBoxLogo);
-            this.panelTopNav.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTopNav.Location = new System.Drawing.Point(0, 0);
-            this.panelTopNav.Name = "panelTopNav";
-            this.panelTopNav.Size = new System.Drawing.Size(1200, 80);
-            this.panelTopNav.TabIndex = 0;
-
+            panelTopNav.BackColor = Color.FromArgb(192, 0, 0);
+            panelTopNav.Controls.Add(button4);
+            panelTopNav.Controls.Add(pictureBox4);
+            panelTopNav.Controls.Add(button5);
+            panelTopNav.Controls.Add(button6);
+            panelTopNav.Controls.Add(button7);
+            panelTopNav.Controls.Add(textBoxTitle);
+            panelTopNav.Dock = DockStyle.Top;
+            panelTopNav.Location = new Point(0, 0);
+            panelTopNav.Name = "panelTopNav";
+            panelTopNav.Size = new Size(1208, 80);
+            panelTopNav.TabIndex = 0;
+            panelTopNav.Paint += panelTopNav_Paint;
             // 
-            // button5 (Home)
+            // button4
             // 
-            this.button5.Text = "Home";
-            this.button5.Size = new System.Drawing.Size(100, 35);
-            this.button5.Location = new System.Drawing.Point(850, 25);
-            this.button5.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            this.button5.BackColor = System.Drawing.Color.FromArgb(192, 0, 0);
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-
+            button4.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button4.Image = (Image)resources.GetObject("button4.Image");
+            button4.Location = new Point(1145, 13);
+            button4.Name = "button4";
+            button4.Size = new Size(51, 52);
+            button4.TabIndex = 109;
+            button4.UseVisualStyleBackColor = true;
             // 
-            // button6 (Reserve)
+            // pictureBox4
             // 
-            this.button6.Text = "Reserve";
-            this.button6.Size = new System.Drawing.Size(100, 35);
-            this.button6.Location = new System.Drawing.Point(960, 25);
-            this.button6.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            this.button6.BackColor = System.Drawing.Color.FromArgb(192, 0, 0);
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(12, 8);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(72, 57);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 108;
+            pictureBox4.TabStop = false;
             // 
-            // button7 (Rooms)
+            // button5
             // 
-            this.button7.Text = "Rooms";
-            this.button7.Size = new System.Drawing.Size(100, 35);
-            this.button7.Location = new System.Drawing.Point(1070, 25);
-            this.button7.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            this.button7.BackColor = System.Drawing.Color.FromArgb(192, 0, 0);
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-
+            button5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button5.BackColor = Color.FromArgb(192, 0, 0);
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.ForeColor = Color.White;
+            button5.Location = new Point(814, 23);
+            button5.Name = "button5";
+            button5.Size = new Size(100, 35);
+            button5.TabIndex = 0;
+            button5.Text = "Home";
+            button5.UseVisualStyleBackColor = false;
+            button5.Click += button5_Click;
             // 
-            // button4 (Profile)
+            // button6
             // 
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(1180, 20);
-            this.button4.Size = new System.Drawing.Size(40, 40);
-            this.button4.Anchor = System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-
+            button6.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button6.BackColor = Color.FromArgb(192, 0, 0);
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.ForeColor = Color.White;
+            button6.Location = new Point(1026, 23);
+            button6.Name = "button6";
+            button6.Size = new Size(100, 35);
+            button6.TabIndex = 1;
+            button6.Text = "Room";
+            button6.UseVisualStyleBackColor = false;
+            button6.Click += button6_Click;
+            // 
+            // button7
+            // 
+            button7.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            button7.BackColor = Color.FromArgb(192, 0, 0);
+            button7.FlatStyle = FlatStyle.Flat;
+            button7.ForeColor = Color.White;
+            button7.Location = new Point(920, 23);
+            button7.Name = "button7";
+            button7.Size = new Size(100, 35);
+            button7.TabIndex = 2;
+            button7.Text = "Reserve";
+            button7.UseVisualStyleBackColor = false;
+            button7.Click += button7_Click;
             // 
             // textBoxTitle
             // 
-            this.textBoxTitle.Text = "Iskedular";
-            this.textBoxTitle.Font = new System.Drawing.Font("Elephant", 14F, System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic);
-            this.textBoxTitle.ForeColor = System.Drawing.Color.White;
-            this.textBoxTitle.BackColor = System.Drawing.Color.FromArgb(192, 0, 0);
-            this.textBoxTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxTitle.Location = new System.Drawing.Point(85, 25);
-            this.textBoxTitle.Multiline = true;
-            this.textBoxTitle.Size = new System.Drawing.Size(200, 40);
-            this.textBoxTitle.ReadOnly = true;
-
-            // 
-            // pictureBoxLogo
-            // 
-            this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBoxLogo.Location = new System.Drawing.Point(15, 8);
-            this.pictureBoxLogo.Size = new System.Drawing.Size(60, 60);
-            this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-
+            textBoxTitle.BackColor = Color.FromArgb(192, 0, 0);
+            textBoxTitle.BorderStyle = BorderStyle.None;
+            textBoxTitle.Font = new Font("Elephant", 14F, FontStyle.Bold | FontStyle.Italic);
+            textBoxTitle.ForeColor = Color.White;
+            textBoxTitle.Location = new Point(85, 25);
+            textBoxTitle.Multiline = true;
+            textBoxTitle.Name = "textBoxTitle";
+            textBoxTitle.ReadOnly = true;
+            textBoxTitle.Size = new Size(200, 40);
+            textBoxTitle.TabIndex = 4;
+            textBoxTitle.Text = "Iskedular";
             // 
             // monthCalendar1
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(30, 120);
-            this.monthCalendar1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.monthCalendar1.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.monthCalendar1_DateChanged);
-
+            monthCalendar1.Font = new Font("Segoe UI", 10F);
+            monthCalendar1.Location = new Point(17, 101);
+            monthCalendar1.Name = "monthCalendar1";
+            monthCalendar1.TabIndex = 1;
+            monthCalendar1.DateChanged += monthCalendar1_DateChanged;
             // 
             // flowLayoutPanelReservations
             // 
-            this.flowLayoutPanelReservations.AutoScroll = true;
-            this.flowLayoutPanelReservations.Location = new System.Drawing.Point(300, 120);
-            this.flowLayoutPanelReservations.Size = new System.Drawing.Size(850, 600);
-            this.flowLayoutPanelReservations.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            this.flowLayoutPanelReservations.WrapContents = true;
-
+            flowLayoutPanelReservations.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            flowLayoutPanelReservations.AutoScroll = true;
+            flowLayoutPanelReservations.Location = new Point(300, 101);
+            flowLayoutPanelReservations.Name = "flowLayoutPanelReservations";
+            flowLayoutPanelReservations.Size = new Size(878, 619);
+            flowLayoutPanelReservations.TabIndex = 0;
             // 
             // Form1
             // 
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1200, 750);
-            this.Controls.Add(this.flowLayoutPanelReservations);
-            this.Controls.Add(this.monthCalendar1);
-            this.Controls.Add(this.panelTopNav);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.panelTopNav.ResumeLayout(false);
-            this.panelTopNav.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).EndInit();
-            this.ResumeLayout(false);
+            BackColor = Color.WhiteSmoke;
+            ClientSize = new Size(1208, 750);
+            Controls.Add(flowLayoutPanelReservations);
+            Controls.Add(monthCalendar1);
+            Controls.Add(panelTopNav);
+            Name = "Form1";
+            Text = "Form1";
+            Load += Form1_Load;
+            panelTopNav.ResumeLayout(false);
+            panelTopNav.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
@@ -150,11 +159,11 @@
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.TextBox textBoxTitle;
-        private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelReservations;
+        private TextBox textBoxTitle;
+        private PictureBox pictureBox4;
+        private Button button4;
     }
 }
 

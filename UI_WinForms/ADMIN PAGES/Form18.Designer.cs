@@ -91,7 +91,6 @@
             pictureBox2.Margin = new Padding(3, 4, 3, 4);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(115, 129);
-            pictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox2.TabIndex = 126;
             pictureBox2.TabStop = false;
             // 
@@ -228,8 +227,8 @@
             // 
             // button7
             // 
-            button7.BackColor = Color.FromArgb(192, 0, 0);
-            button7.ForeColor = SystemColors.ButtonHighlight;
+            button7.BackColor = Color.Khaki;
+            button7.ForeColor = SystemColors.ActiveCaptionText;
             button7.Location = new Point(636, 471);
             button7.Margin = new Padding(3, 4, 3, 4);
             button7.Name = "button7";
@@ -283,12 +282,12 @@
             button2.BackColor = Color.FromArgb(192, 0, 0);
             button2.FlatStyle = FlatStyle.Flat;
             button2.ForeColor = Color.White;
-            button2.Location = new Point(359, 31);
+            button2.Location = new Point(537, 31);
             button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
-            button2.Size = new Size(86, 29);
+            button2.Size = new Size(93, 29);
             button2.TabIndex = 231;
-            button2.Text = "Bookings";
+            button2.Text = "Dashboard";
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
@@ -297,10 +296,10 @@
             button1.BackColor = Color.FromArgb(192, 0, 0);
             button1.FlatStyle = FlatStyle.Flat;
             button1.ForeColor = Color.White;
-            button1.Location = new Point(450, 31);
+            button1.Location = new Point(443, 32);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(86, 29);
+            button1.Size = new Size(86, 28);
             button1.TabIndex = 232;
             button1.Text = "Rooms";
             button1.UseVisualStyleBackColor = false;
@@ -312,12 +311,12 @@
             button5.FlatStyle = FlatStyle.Flat;
             button5.Font = new Font("Microsoft Sans Serif", 7.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button5.ForeColor = Color.White;
-            button5.Location = new Point(542, 31);
+            button5.Location = new Point(349, 32);
             button5.Margin = new Padding(3, 4, 3, 4);
             button5.Name = "button5";
             button5.Size = new Size(86, 29);
             button5.TabIndex = 233;
-            button5.Text = "Dashboard";
+            button5.Text = "Bookings";
             button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
             // 
@@ -326,7 +325,7 @@
             button3.BackColor = Color.FromArgb(192, 0, 0);
             button3.FlatStyle = FlatStyle.Flat;
             button3.ForeColor = Color.White;
-            button3.Location = new Point(636, 31);
+            button3.Location = new Point(638, 31);
             button3.Margin = new Padding(3, 4, 3, 4);
             button3.Name = "button3";
             button3.Size = new Size(86, 29);
@@ -350,7 +349,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 562);
+            ClientSize = new Size(803, 562);
             Controls.Add(button4);
             Controls.Add(button3);
             Controls.Add(button5);
@@ -369,7 +368,6 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "Form18";
             Text = "Form18";
-            // The 'WindowState = FormWindowState.Maximized;' line has been removed from here.
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             tableLayoutPanel1.ResumeLayout(false);
             tableLayoutPanel1.PerformLayout();

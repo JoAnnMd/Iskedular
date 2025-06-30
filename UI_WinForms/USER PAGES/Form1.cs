@@ -162,14 +162,14 @@ namespace UI_WinForms
 
         private void button7_Click(object sender, EventArgs e)
         {
-            var form = _serviceProvider.GetRequiredService<Form2>();
+            var form = _serviceProvider.GetRequiredService<Form3>();
             form.Show();
             this.Hide();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            var form = _serviceProvider.GetRequiredService<Form3>();
+            var form = _serviceProvider.GetRequiredService<Form2>();
             form.Show();
             this.Hide();
         }
@@ -179,6 +179,11 @@ namespace UI_WinForms
             var form = _serviceProvider.GetRequiredService<Form4>();
             form.Show();
             this.Hide();
+        }
+
+        private void panelTopNav_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

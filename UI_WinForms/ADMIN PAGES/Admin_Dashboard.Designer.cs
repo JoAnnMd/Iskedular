@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.DirectoryServices.SortOption sortOption3 = new System.DirectoryServices.SortOption();
+            System.DirectoryServices.SortOption sortOption2 = new System.DirectoryServices.SortOption();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_Dashboard));
             textBox5 = new TextBox();
             textBox1 = new TextBox();
@@ -70,9 +70,9 @@
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(127, 26);
             textBox5.TabIndex = 95;
+            textBox5.TabStop = false;
             textBox5.Text = "Dashboard\r\n";
             textBox5.TextChanged += textBox5_TextChanged;
-            textBox5.TabStop = false; // <<< --- THIS IS THE ADDED LINE
             // 
             // textBox1
             // 
@@ -263,7 +263,7 @@
             directorySearcher1.ClientTimeout = TimeSpan.Parse("-00:00:01");
             directorySearcher1.ServerPageTimeLimit = TimeSpan.Parse("-00:00:01");
             directorySearcher1.ServerTimeLimit = TimeSpan.Parse("-00:00:01");
-            directorySearcher1.Sort = sortOption3;
+            directorySearcher1.Sort = sortOption2;
             // 
             // pictureBox4
             // 
@@ -282,10 +282,10 @@
             // button4
             // 
             button4.Image = (Image)resources.GetObject("button4.Image");
-            button4.Location = new Point(746, 15);
+            button4.Location = new Point(730, 15);
             button4.Margin = new Padding(3, 4, 3, 4);
             button4.Name = "button4";
-            button4.Size = new Size(48, 69);
+            button4.Size = new Size(64, 61);
             button4.TabIndex = 229;
             button4.UseVisualStyleBackColor = true;
             button4.Click += button4_Click;
@@ -309,7 +309,7 @@
             button2.BackColor = Color.FromArgb(192, 0, 0);
             button2.FlatStyle = FlatStyle.Flat;
             button2.ForeColor = Color.White;
-            button2.Location = new Point(363, 32);
+            button2.Location = new Point(547, 31);
             button2.Margin = new Padding(3, 4, 3, 4);
             button2.Name = "button2";
             button2.Size = new Size(86, 29);
@@ -338,7 +338,7 @@
             button5.FlatStyle = FlatStyle.Flat;
             button5.Font = new Font("Microsoft Sans Serif", 7.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
             button5.ForeColor = Color.White;
-            button5.Location = new Point(546, 32);
+            button5.Location = new Point(363, 31);
             button5.Margin = new Padding(3, 4, 3, 4);
             button5.Name = "button5";
             button5.Size = new Size(86, 29);
@@ -359,6 +359,7 @@
             textBox4.Size = new Size(162, 40);
             textBox4.TabIndex = 224;
             textBox4.Text = "Iskedular";
+            textBox4.TextChanged += textBox4_TextChanged;
             // 
             // pictureBox1
             // 
@@ -371,7 +372,7 @@
             pictureBox1.TabIndex = 223;
             pictureBox1.TabStop = false;
             // 
-            // Form9
+            // Admin_Dashboard
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -401,7 +402,7 @@
             Controls.Add(textBox1);
             Controls.Add(textBox5);
             Margin = new Padding(3, 4, 3, 4);
-            Name = "Form9";
+            Name = "Admin_Dashboard";
             Text = "Form9";
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

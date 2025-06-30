@@ -177,9 +177,14 @@ namespace UI_WinForms
 
         private void button5_Click(object sender, EventArgs e)
         {
-            var form = _serviceProvider.GetRequiredService<Form4>();
+            var form = _serviceProvider.GetRequiredService<Form1>();
             form.Show();
             this.Hide();
+        }
+
+        private void panelTop_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

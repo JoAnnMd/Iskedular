@@ -230,5 +230,10 @@ namespace UI_WinForms
             form.Show();
             this.Hide();
         }
+
+        private void pendingRequestsPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
