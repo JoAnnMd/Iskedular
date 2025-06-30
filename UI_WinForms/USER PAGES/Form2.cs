@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,9 +16,6 @@ namespace UI_WinForms
         private readonly RoomService _roomService;
         private readonly ReservationService _reservationService;
         private readonly SessionService _sessionService;
-        private List<Room> _rooms;
-
-        private Dictionary<string, Panel> _roomPanels;
 
         public Form2(IServiceProvider serviceProvider)
         {
@@ -28,154 +24,162 @@ namespace UI_WinForms
             _roomService = _serviceProvider.GetRequiredService<RoomService>();
             _reservationService = _serviceProvider.GetRequiredService<ReservationService>();
             _sessionService = _serviceProvider.GetRequiredService<SessionService>();
-            this.Load += Form2_Load;
         }
 
         private async void Form2_Load(object sender, EventArgs e)
         {
-            MapRoomControls();
-            await LoadRooms();
-            LoadTimeSlots();
-            await UpdateRoomPanels();
+            comboBoxStartAmPm.Items.AddRange(new[] { "AM", "PM" });
+            comboBoxEndAmPm.Items.AddRange(new[] { "AM", "PM" });
+            comboBoxStartAmPm.SelectedIndex = 0;
+            comboBoxEndAmPm.SelectedIndex = 0;
+
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+
+            await LoadAvailableRooms();
         }
 
-        private void MapRoomControls()
+        private async Task LoadAvailableRooms()
         {
-            _roomPanels = new Dictionary<string, Panel>
-            {
-                { "Room 101", P1 }, { "Room 102", P2 }, { "Room 103", P3 }, { "Room 104", P4 },
-                { "Room 105", P5 }, { "Room 106", P6 }, { "Room 201", P7 }, { "Room 202", P8 },
-                { "Room 203", P9 }, { "Room 204", P10 }, { "Room 205", P11 }, { "Room 206", P12 },
-                { "Roth #1", PRoth1 }, { "Roth #2", PRoth2 },
-                { "(AVR) Audio Visual Room", PAVR }, { "Computer Laboratory", PCOMLAB }
-            };
-
-            foreach (var kvp in _roomPanels)
-            {
-                if (kvp.Value == null)
-                    System.Diagnostics.Debug.WriteLine($"Panel for {kvp.Key} is null!");
-            }
-        }
-
-        private async Task LoadRooms()
-        {
-            _rooms = await _roomService.GetAllRoomsAsync();
-            foreach (var room in _rooms)
-                System.Diagnostics.Debug.WriteLine($"Loaded room: {room.Name}");
-        }
-
-        private void LoadTimeSlots()
-        {
-            comboBoxTime.Items.Clear();
-            // Start at 6:00 AM (hour = 6) and end at 9:00 PM (hour = 21)
-            for (int hour = 6; hour <= 21; hour++)
-            {
-                var time = new DateTime(2000, 1, 1, hour, 0, 0);
-                comboBoxTime.Items.Add(time.ToString("hh:mm tt"));
-            }
-            comboBoxTime.SelectedIndex = 0;
-        }
-
-        private async void comboBoxTime_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            await UpdateRoomPanels();
-        }
-
-        private async Task UpdateRoomPanels()
-        {
-            if (_rooms == null || _rooms.Count == 0)
-            {
-                System.Diagnostics.Debug.WriteLine("No rooms loaded.");
-                return;
-            }
-
+            flowLayoutPanelRooms.Controls.Clear();
+            List<Room> rooms = await _roomService.GetAllRoomsAsync();
             DateTime selectedDate = monthCalendar1.SelectionStart.Date;
 
-            var selectedTime = comboBoxTime.SelectedItem?.ToString();
-            if (!DateTime.TryParse(selectedTime, out var parsedTime))
+            string startInput = textBoxStartTime.Text.Trim();
+            string endInput = textBoxEndTime.Text.Trim();
+            string startAmPm = comboBoxStartAmPm.Text;
+            string endAmPm = comboBoxEndAmPm.Text;
+
+            if (!TryParseTime(startInput, startAmPm, out DateTime parsedStart) ||
+                !TryParseTime(endInput, endAmPm, out DateTime parsedEnd))
             {
-                System.Diagnostics.Debug.WriteLine("Selected time is invalid.");
+                //MessageBox.Show("Invalid time format. Please enter valid start and end time.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            DateTime selectedDateTime = selectedDate.AddHours(parsedTime.Hour).AddMinutes(parsedTime.Minute);
 
-            var reservations = await _reservationService.GetReservationsAsync();
-            var filteredReservations = reservations
-                .Where(r => r.StartTime.Date == selectedDate)
-                .ToList();
-
-            foreach (var roomName in _roomPanels.Keys)
+            DateTime startDateTime = selectedDate.Add(parsedStart.TimeOfDay);
+            DateTime endDateTime = selectedDate.Add(parsedEnd.TimeOfDay);
+            if (startDateTime >= endDateTime)
             {
-                var panel = _roomPanels[roomName];
+                MessageBox.Show("Start time must be earlier than end time.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
-                var room = _rooms.FirstOrDefault(r =>
-                    r.Name.Equals(roomName, StringComparison.OrdinalIgnoreCase));
-                if (room != null)
+            List<Reservation> reservations = await _reservationService.GetReservationsAsync(null, selectedDate, ReservationStatus.Approved);
+
+            foreach (Room room in rooms)
+            {
+                bool isAvailable = !reservations.Any(r => r.RoomId == room.Id && startDateTime < r.EndTime && endDateTime > r.StartTime);
+
+                Panel panel = new Panel
                 {
-                    bool isBooked = filteredReservations.Any(r =>
-                        r.RoomId == room.Id &&
-                        selectedDateTime >= r.StartTime && selectedDateTime < r.EndTime);
+                    Size = new Size(220, 180),
+                    BorderStyle = BorderStyle.FixedSingle,
+                    BackColor = isAvailable ? Color.LightGreen : Color.LightCoral,
+                    Margin = new Padding(10)
+                };
 
-                    System.Diagnostics.Debug.WriteLine($"Panel: {panel.Name}, Room: {room.Name}, Booked: {isBooked}");
-
-                    panel.BackColor = isBooked ? Color.Maroon : Color.LawnGreen;
-                }
-                else
+                panel.Controls.Add(new Label
                 {
-                    panel.BackColor = Color.LightGray;
-                    System.Diagnostics.Debug.WriteLine($"Room {roomName} not found in loaded rooms.");
+                    Text = room.Name,
+                    Font = new Font("Segoe UI", 12, FontStyle.Bold),
+                    Location = new Point(10, 10),
+                    AutoSize = true
+                });
+
+                panel.Controls.Add(new Label
+                {
+                    Text = isAvailable ? "Status: Available" : "Status: Occupied",
+                    Font = new Font("Segoe UI", 9, FontStyle.Italic),
+                    Location = new Point(10, 35),
+                    AutoSize = true,
+                    ForeColor = isAvailable ? Color.DarkGreen : Color.DarkRed
+                });
+
+                panel.Controls.Add(new Label
+                {
+                    Text = $"Capacity: {room.Capacity}",
+                    Font = new Font("Segoe UI", 9),
+                    Location = new Point(10, 55),
+                    AutoSize = true
+                });
+
+                panel.Controls.Add(new Label
+                {
+                    Text = $"Floor: {room.Floor}",
+                    Font = new Font("Segoe UI", 9),
+                    Location = new Point(10, 75),
+                    AutoSize = true
+                });
+
+                string features = "";
+                if (room.HasProjector) features += "Projector, ";
+                if (room.HasWhiteboard) features += "Whiteboard, ";
+                if (room.HasTV) features += "TV, ";
+                if (room.HasAirConditioning) features += "A/C, ";
+                if (room.HasSoundSystem) features += "Sound System, ";
+                features = string.IsNullOrWhiteSpace(features) ? "None" : features.TrimEnd(',', ' ');
+
+                panel.Controls.Add(new Label
+                {
+                    Text = $"Features: {features}",
+                    Font = new Font("Segoe UI", 9),
+                    Location = new Point(10, 95),
+                    AutoSize = true,
+                    MaximumSize = new Size(panel.Width - 20, 0)
+                });
+
+                if (room.NumberOfComputers > 0)
+                {
+                    panel.Controls.Add(new Label
+                    {
+                        Text = $"Computers: {room.NumberOfComputers}",
+                        Font = new Font("Segoe UI", 9),
+                        Location = new Point(10, 145),
+                        AutoSize = true
+                    });
                 }
+
+                flowLayoutPanelRooms.Controls.Add(panel);
             }
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private bool TryParseTime(string input, string amPm, out DateTime result)
         {
-            Form1 homeForm = new Form1(_serviceProvider);
-            homeForm.Show();
+            input = input.Contains(":") ? input : $"{input}:00";
+            return DateTime.TryParse($"{input} {amPm}", out result);
+        }
+
+        private async void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e) => await LoadAvailableRooms();
+        private async void comboBoxStartAmPm_SelectedIndexChanged(object sender, EventArgs e) => await LoadAvailableRooms();
+        private async void comboBoxEndAmPm_SelectedIndexChanged(object sender, EventArgs e) => await LoadAvailableRooms();
+        private async void textBoxStartTime_TextChanged(object sender, EventArgs e) => await LoadAvailableRooms();
+        private async void textBoxEndTime_TextChanged(object sender, EventArgs e) => await LoadAvailableRooms();
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            var form = _serviceProvider.GetRequiredService<Form1>();
+            form.Show();
             this.Hide();
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Form3 reserveForm = new Form3(_serviceProvider, _roomService, _reservationService, _sessionService);
-            reserveForm.Show();
+            var form = _serviceProvider.GetRequiredService<Form3>();
+            form.Show();
             this.Hide();
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("You are already on the Rooms screen.", "Navigation", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("You are already on the Rooms screen.");
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
-            Form4 profileForm = _serviceProvider.GetRequiredService<Form4>();
-            profileForm.Show();
+            var form = _serviceProvider.GetRequiredService<Form4>();
+            form.Show();
             this.Hide();
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e) { }
-        private void textBox1_TextChanged(object sender, EventArgs e) { }
-        private void panel5_Paint(object sender, PaintEventArgs e) { }
-        private void label5_Click(object sender, EventArgs e) { }
-        private void label2_Click(object sender, EventArgs e) { }
-        private void label23_Click(object sender, EventArgs e) { }
-        private void label21_Click(object sender, EventArgs e) { }
-        private void label1_Click_1(object sender, EventArgs e) { }
-
-        private void panel17_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private async void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
-        {
-            await UpdateRoomPanels();
         }
     }
 }
