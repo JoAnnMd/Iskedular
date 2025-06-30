@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.DirectoryServices.SortOption sortOption2 = new System.DirectoryServices.SortOption();
+            System.DirectoryServices.SortOption sortOption1 = new System.DirectoryServices.SortOption();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin_Dashboard));
             textBox5 = new TextBox();
             textBox1 = new TextBox();
@@ -263,7 +263,7 @@
             directorySearcher1.ClientTimeout = TimeSpan.Parse("-00:00:01");
             directorySearcher1.ServerPageTimeLimit = TimeSpan.Parse("-00:00:01");
             directorySearcher1.ServerTimeLimit = TimeSpan.Parse("-00:00:01");
-            directorySearcher1.Sort = sortOption2;
+            directorySearcher1.Sort = sortOption1;
             // 
             // pictureBox4
             // 
@@ -376,7 +376,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 562);
+            ClientSize = new Size(802, 562);
             Controls.Add(pictureBox4);
             Controls.Add(button4);
             Controls.Add(button3);
